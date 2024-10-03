@@ -1,0 +1,5 @@
+train (t-bauxvoay9tevxs7j7dxt0bifu) {
+  utterance ("[g:SendServerRequest] (get)[v:RequestType:GET] 요청 보내줘")
+  plan (Y2BmUEytSMwtyEnVS87Py0tNLsnMz9MLTi0qSy0KSi0uyM8rTmVQwaokLwWmrLA0tbiEQQ6LKqhcSGVBKgMTAyMQMwBJRgYQgPIB)
+  last-modified (1727977417232)
+}

@@ -1,0 +1,4 @@
+//input 컨셉- post 한정
+text (ApplianceName) {
+  description ("가전 기기 이름을 나타냅니다.")
+}

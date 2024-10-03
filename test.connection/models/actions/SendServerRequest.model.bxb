@@ -1,0 +1,15 @@
+action (SendServerRequest) {
+  type (Constructor)
+  description ("서버로 GET 혹은 POST 요청을 보냅니다.")
+  collect {
+    input (requestType) {
+      type (RequestType)
+      min (Required) max (One)
+    }
+    input (applianceName) {
+      type (ApplianceName)
+      min (Optional) max (One)
+    }
+  }
+  output (ServerResponse)
+}
