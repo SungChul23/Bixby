@@ -11,6 +11,10 @@ capsule {
     all
   }
 
+  store-sections{
+    section (Productivity)
+  }
+
   targets {
     target (bixby-mobile-ko-KR)
   }

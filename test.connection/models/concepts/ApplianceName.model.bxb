@@ -1,4 +1,9 @@
-//input 컨셉- post 한정
-text (ApplianceName) {
+enum (ApplianceName) {
   description ("가전 기기 이름을 나타냅니다.")
+  
+  symbol (선풍기) 
+  symbol (에어컨) 
+  symbol (TV)
+  symbol (조명)
+  symbol (충전기)
 }

@@ -1,0 +1,4 @@
+train (t-9rw8o16003m3i0goc1fc6xjmt) {
+  utterance ("[g:SendServerRequest] (에어컨)[v:ApplianceName:에어컨]을 (포스트)[v:RequestType:POST] 요청으로 제어해줘.")
+  last-modified (1728213974632)
+}

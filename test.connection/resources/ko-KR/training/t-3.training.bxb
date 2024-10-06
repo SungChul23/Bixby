@@ -1,0 +1,4 @@
+train (t-3qyozu8adc8xxnh97v3luxysh) {
+  utterance ("[g:SendServerRequest] (선풍기)[v:ApplianceName:선풍기]를 (POST)[v:RequestType:POST] 요청으로 제어해줘")
+  last-modified (1728213859141)
+}

@@ -4,4 +4,9 @@ structure (ServerResponse) {
     type (viv.core.Text)  
     min (Optional) max (One)
   }
+
+  property (userMessage){
+    type (viv.core.MultiModalString)
+    min (Optional) max(One)
+  }
 }

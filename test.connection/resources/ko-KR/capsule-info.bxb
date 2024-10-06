@@ -1,8 +1,12 @@
 capsule-info {
-  display-name (Example Name)
-  developer-name (Example Developer)
-  description ("Example capsule description")
-  dispatch-name (Example Capsule)
+  display-name (서버 연결 테스트 캡슐)
+  developer-name (SungChul23)
+  description (대충 서버로 get/post 요청 보내는 캡슐)
+  dispatch-name (서버 연결)
   // Set your own image for your capsule's icon
-  icon-asset (images/icons/bixby_launcher.png)
+  icon-asset (images/icons/urmaSUNSHINE.jpg)
+  
+  search-keywords{
+    keyword (AWS 서버 통신)
+  }
 }
