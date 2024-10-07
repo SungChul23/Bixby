@@ -9,25 +9,30 @@ export default function sendServerRequest({
   try {
     if (requestType === 'GET') {
       // GET 요청을 처리
-      response = http.getUrl('https://jkah.shop/getTest', {
-        format: 'json'
+      const timestamp = new Date().getTime(); // 타임스탬프 추가하여 매번 고유한 요청으로 만듦
+      response = http.getUrl(`https://jkah.shop/getTest?timestamp=${timestamp}`, {
+        format: 'json',
+        headers: {
+          'Cache-Control': 'no-cache' // 캐시 방지
+        }
       });
 
       // message와 userMessage를 기본값으로 처리하여 반환
       return {
         message: response.message ? response.message : "응답 메시지가 없습니다",
-        
       };
 
     } else if (requestType === 'POST' && applianceName) {
-      // POST 요청을 처리
-      response = http.postUrl('https://jkah.shop/postTest', {
+      // POST 요청을 처리 
+      const timestamp = new Date().getTime(); // 타임스탬프 추가하여 매번 고유한 요청으로 만듦
+      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, {
         format: 'json',
         headers: {
-          'Content-Type': 'application/json' // JSON 형식으로 요청할 때 필요
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache' // 캐시 방지
         },
         body: {
-          message: applianceName // 
+          message: applianceName
         }
       });
 

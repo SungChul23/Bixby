@@ -1,0 +1,19 @@
+//빅스비 스튜디오 개인정보처리방침
+
+legal {
+  country-documents {
+    store-country(KR)
+    terms-and-conditions {
+      url(https://mycapsule.com/korean-toc)
+    }
+    privacy-policy {
+      url(https://mycapsule.com/korean-privacy-policy) //개인정보 처리 방침을 가리킵니다.
+    }
+    additional-terms-and-conditions {
+      url (https://mycapsule.com/korean-location-terms.com) //추가적인 약관 및 조건을 설명합니다.
+    }
+    cross-border-data-transfer {
+      url (https://mycapsule.com/korean-cross-border-data-transfer.com) //국경 간 데이터 전송에 대한 정책을 설명합니다.
+    }
+  }
+}

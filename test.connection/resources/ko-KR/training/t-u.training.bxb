@@ -1,0 +1,5 @@
+train (t-uyihnzd4pus4x4hnplnq6qqi0) {
+  utterance ("[g:SendServerRequest] (꼣뜨)[v:RequestType:GET] 요청 슛")
+  enabled (false)
+  last-modified (1728289049389)
+}

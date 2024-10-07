@@ -18,4 +18,10 @@ capsule {
   targets {
     target (bixby-mobile-ko-KR)
   }
+
+
+  
+
+
+
 }
