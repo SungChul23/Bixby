@@ -1,12 +1,13 @@
 structure (ServerResponse) {
   description ("서버로부터 받은 응답 메시지")
+  
   property (message) {
     type (viv.core.Text)  
     min (Optional) max (One)
   }
 
   property (userMessage){
-    type (viv.core.MultiModalString)
+    type (viv.core.Text)
     min (Optional) max(One)
   }
 }

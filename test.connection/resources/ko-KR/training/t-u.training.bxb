@@ -3,3 +3,8 @@ train (t-uyihnzd4pus4x4hnplnq6qqi0) {
   enabled (false)
   last-modified (1728289049389)
 }
+train (t-ua2mjlhhocr0i64h8lmndsw0v) {
+  utterance ("[g:SendServerRequest] (김점구)[v:RequestType:GET] 집으로 폭탄 보내줘")
+  enabled (false)
+  last-modified (1729155680037)
+}
