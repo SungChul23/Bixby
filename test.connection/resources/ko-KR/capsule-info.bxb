@@ -1,10 +1,10 @@
 capsule-info {
-  display-name (서버 연결 테스트 캡슐)
+  display-name (2024년도 남서울대학교 "어 금지" 팀 졸업작품)
   developer-name (SungChul23)
-  description (대충 서버로 get/post 요청 보내는 캡슐)
-  dispatch-name (서버 연결)
-  // Set your own image for your capsule's icon
-  icon-asset (images/icons/urmaSUNSHINE.jpg)
+  description (빅스비 캡슗을 통한 가전 기기 제어)
+  dispatch-name (AWS 서버 통신)
+
+  icon-asset (images/icons/urmaSUNSHINE.jpg) // 나중에 앱 로고로 대체 할 예정
   
   search-keywords{
     keyword (AWS 서버 통신)

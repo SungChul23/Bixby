@@ -1,5 +1,5 @@
 structure (ServerResponse) {
-  description ("서버로부터 받은 응답 메시지")
+  description ("서버로부터 받은 응답 메시지.")
   
   property (message) {
     type (viv.core.Text)  
@@ -11,3 +11,4 @@ structure (ServerResponse) {
     min (Optional) max(One)
   }
 }
+
