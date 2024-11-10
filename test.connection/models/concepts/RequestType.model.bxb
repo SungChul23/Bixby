@@ -1,6 +1,9 @@
 enum (RequestType) {
-  description ("요청 유형을 나타냅니다. GET 또는 POST")
+  description ("요청 유형을 나타냅니다,.")
 
   symbol (GET)
   symbol (POST)
 }
+
+
+

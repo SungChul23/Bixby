@@ -11,7 +11,7 @@ export default function sendServerRequest({
     if (requestType === 'GET') {
       // GET 요청을 처리
       const timestamp = new Date().getTime();
-      response = http.getUrl(`https://jkah.shop/getTest?timestamp=${timestamp}`, {
+      response = http.getUrl(`https://jkah.shop/getTest?timestamp=${timestamp}`, { // 매요청을 고유하게 만들자(캐시 방지)
         format: 'json',
         headers: {
           'Cache-Control': 'no-cache' // 캐시 방지
@@ -35,12 +35,12 @@ export default function sendServerRequest({
         returnHeaders: true,
         format: 'json',
         headers: {
-          'Authorization': 'Bearer <your-auth-token>', // 인증 헤더 추가 할거임
+          'Authorization': 'Bearer <your-auth-token>', // 나중에 인증 헤더 추가 할거임
 
         }
       };
 
-      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, body, options);
+      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, body, options); // 매요청을 고유하게 만들자(캐시 방지)
 
       console.log('서버 응답 전체: ', JSON.stringify(response)); // 서버 응답을 로그로 출력
 
@@ -57,3 +57,5 @@ export default function sendServerRequest({
     throw new Error("서버 요청 중 오류가 발생했습니다.");
   }
 }
+
+

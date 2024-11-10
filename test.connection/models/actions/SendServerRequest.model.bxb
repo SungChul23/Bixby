@@ -1,7 +1,7 @@
 action (SendServerRequest) {
 
   type (Constructor)
-  description ("서버로 GET 혹은 POST 요청 슛.")
+  description ("서버로 GET 혹은 POST 요청")
   collect {
     
     input (requestType) {
@@ -17,3 +17,4 @@ action (SendServerRequest) {
   }
   output (ServerResponse)
 }
+
