@@ -1,0 +1,5 @@
+enum (ActionType) {
+  description ("기기의 상태를 제어합니다.")
+  symbol (켜줘)
+  symbol (꺼줘)
+}

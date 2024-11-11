@@ -6,9 +6,9 @@ structure (ServerResponse) {
     min (Optional) max (One)
   }
 
-  property (userMessage){
-    type (viv.core.Text)
-    min (Optional) max(One)
-  }
+    //  property (userMessage){
+    //    type (viv.core.Text)
+    //    min (Optional) max(One)
+    //  }
 }
 

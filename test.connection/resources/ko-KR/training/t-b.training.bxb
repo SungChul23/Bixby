@@ -8,5 +8,6 @@ train (t-bjnljjcpzhoy6739hvs6939po) {
 }
 train (t-b7mb7ozc9vbu9d6a6gi4kkr2e) {
   utterance ("[g:SendServerRequest] (에어컨)[v:ApplianceName:에어컨]을 (POST)[v:RequestType:POST] 요청으로 제어해줘")
-  last-modified (1728213903920)
+  enabled (false)
+  last-modified (1731293950931)
 }

@@ -1,4 +1,5 @@
 train (t-k60twt5ma58jsp6ek7tnv7jmz) {
   utterance ("[g:SendServerRequest] (헤어드라이기)[v:ApplianceName:헤어드라이기] (켜줘)[v:RequestType:POST]")
-  last-modified (1731250255339)
+  enabled (false)
+  last-modified (1731293939163)
 }

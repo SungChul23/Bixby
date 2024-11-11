@@ -11,8 +11,7 @@ vocab (RequestType) {
     "POST"
     "POST 요청"
     "포스트"
-
-
+    "전원"  // 전원이라는 말을 POST로 맵핑
     "On"
     "Off"
     "켜줘"

@@ -1,4 +1,5 @@
 train (t-x5g5nmseura8kyv4tvb3kho1m) {
   utterance ("[g:SendServerRequest] (post)[v:RequestType:POST] 요청으로 (충전기)[v:ApplianceName:충전기] 꺼줘")
-  last-modified (1729156077424)
+  enabled (false)
+  last-modified (1731293961095)
 }

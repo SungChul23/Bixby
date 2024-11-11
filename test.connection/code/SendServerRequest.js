@@ -3,7 +3,8 @@ import console from 'console'; // Bixby에서 log 모듈 가져오기
 
 export default function sendServerRequest({
   requestType,
-  applianceName
+  applianceName,
+  actionType // 추가된 파라미터
 }) {
   let response;
 
@@ -11,36 +12,38 @@ export default function sendServerRequest({
     if (requestType === 'GET') {
       // GET 요청을 처리
       const timestamp = new Date().getTime();
-      response = http.getUrl(`https://jkah.shop/getTest?timestamp=${timestamp}`, { // 매요청을 고유하게 만들자(캐시 방지)
+      response = http.getUrl(`http://jkah.shop:5000/getTest?timestamp=${timestamp}`, { // 매 요청을 고유하게 만들자 (캐시 방지)
         format: 'json',
         headers: {
           'Cache-Control': 'no-cache' // 캐시 방지
         }
       });
       return {
-        message: response.message ? response.message : "응답 메시지가 없습니다",
+        message: response.message ? response.message : "응답 메시지가 없습니다.",
       };
 
-    } else if (requestType === 'POST' && applianceName) {
-
+    } else if (requestType === 'POST' && applianceName && actionType) {
       // POST 요청을 처리
       const timestamp = new Date().getTime();
 
+      // JSON 형식으로 기기명과 상태를 전달
       const body = {
-        message: applianceName // 'applianceName' 값을 message로 전송
+        actual_device: applianceName, // 기기명
+        action: actionType, // 상태
+        message: '${applianceName}, ${actionType}'
+
       };
 
       const options = {
-        passAsJson: true, //기본적으로  json 형식 
+        passAsJson: true, // 기본적으로 JSON 형식
         returnHeaders: true,
         format: 'json',
         headers: {
-          'Authorization': 'Bearer <your-auth-token>', // 나중에 인증 헤더 추가 할거임
-
+          'Authorization': 'Bearer <your-auth-token>', // 인증 헤더 추가 (필요시)
         }
       };
 
-      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, body, options); // 매요청을 고유하게 만들자(캐시 방지)
+      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, body, options); // 매 요청을 고유하게 만들자 (캐시 방지)
 
       console.log('서버 응답 전체: ', JSON.stringify(response)); // 서버 응답을 로그로 출력
 
@@ -50,12 +53,10 @@ export default function sendServerRequest({
       };
 
     } else {
-      throw new Error("POST 요청에는 가전 기기 이름이 필요합니다 !!");
+      throw new Error("POST 요청에는 기기 이름과 상태가 필요합니다!!");
     }
   } catch (error) {
     console.error('서버 요청 중 오류가 발생했습니다: ', error); // 오류 로그 출력
     throw new Error("서버 요청 중 오류가 발생했습니다.");
   }
 }
-
-
