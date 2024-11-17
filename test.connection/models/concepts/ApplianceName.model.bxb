@@ -5,7 +5,7 @@ enum (ApplianceName) {
   symbol (에어컨) 
   symbol (TV)
   symbol (조명)
-  symbol (충전기)
+  symbol (핸드폰충전기)
   symbol (헤어드라이기)
   symbol (밥솥)
   symbol (전자레인지)

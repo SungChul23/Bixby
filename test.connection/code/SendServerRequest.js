@@ -30,8 +30,7 @@ export default function sendServerRequest({
       const body = {
         actual_device: applianceName, // 기기명
         action: actionType, // 상태
-        message: '${applianceName}, ${actionType}'
-
+        //message: '${applianceName}, ${actionType}'
       };
 
       const options = {
@@ -43,7 +42,7 @@ export default function sendServerRequest({
         }
       };
 
-      response = http.postUrl(`https://jkah.shop/postTest?timestamp=${timestamp}`, body, options); // 매 요청을 고유하게 만들자 (캐시 방지)
+      response = http.postUrl(`http://jkah.shop:5000/plug/control?timestamp=${timestamp}`, body, options); // 매 요청을 고유하게 만들자 (캐시 방지)
 
       console.log('서버 응답 전체: ', JSON.stringify(response)); // 서버 응답을 로그로 출력
 
