@@ -1,12 +1,16 @@
 capsule-info {
-  display-name (2024년도 남서울대학교 "어 금지" 팀 졸업작품)
-  developer-name (SungChul23)
-  description (빅스비 캡슗을 통한 가전 기기 제어)
+  display-name (Bixby 플러그 제어) // 추후 수정
+  developer-name (2025년도 남서울대학교 "어 금지" 팀 졸업작품)
+  description ([Bixby 플러그 제어]는 언제 어디서나 손 쉽게 Iot플러그 제어할 수 있습니다.)
   dispatch-name (AWS 서버 통신)
+  dispatch-aliases{
+    alias (빅스비 플러그 제어)// 추후 수정 [캡슐 이름이 어떻게 들리는지]
+  }
 
   icon-asset (images/icons/urmaSUNSHINE.jpg) // 나중에 앱 로고로 대체 할 예정
   
   search-keywords{
-    keyword (AWS 서버 통신)
+    keyword (스마트 홈)
+    keyword (Iot 플러그)
   }
 }

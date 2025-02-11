@@ -1,26 +1,25 @@
 action (SendServerRequest) {
   type (Constructor)
-  description ("서버로 GET 혹은 POST 요청")
-  collect {
-    // 요청 타입 
-    input (requestType) {
-      type (RequestType)
-      min (Required) max (One)
-    }
-
+  description ("발화 옵션 지정[기기명, 기기상태, 모드상태]")
+  collect { 
     // 기기 이름 
     input (applianceName) {
       type (ApplianceName)
-      min (Optional) max (One)
-    }
+      min (Optional)
+      max (One)
 
-    // ActionType
+    } // 기기상태 변경
     input (actionType) {
       type (ActionType)
-      min (Optional) max (One)
+      min (Optional)
+      max (One)
     }
-  }
-  
-  // 서버로부터 받은 응답 처리
+    //모드 상태 변경
+    input (changeMode) { // 나중에 변수명 조심 해야함
+      type (ChangeMode)
+      min (Optional)
+      max (One)
+    }
+  } // 서버로부터 받은 응답 처리
   output (ServerResponse)
 }

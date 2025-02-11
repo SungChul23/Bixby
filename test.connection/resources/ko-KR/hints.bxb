@@ -1,0 +1,35 @@
+hints {
+  hint ("메인10 켜줘") {
+    goal (SendServerRequest)  // ✅ goal을 명확히 지정해야 함
+  }
+  hint ("메인10 플러그 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("메인10 전원 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("거실 플러그 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("주방 플러그 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("침실 플러그 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("컴퓨터 플러그 켜줘") {
+    goal (SendServerRequest)
+  }
+  hint ("거실 플러그 꺼줘") {
+    goal (SendServerRequest)
+  }
+  hint ("주방 플러그 꺼줘") {
+    goal (SendServerRequest)
+  }
+  hint ("침실 플러그 꺼줘") {
+    goal (SendServerRequest)
+  }
+  hint ("컴퓨터 플러그 꺼줘") {
+    goal (SendServerRequest)
+  }
+}

@@ -1,5 +1,0 @@
-train (t-5jkz7xjl0x27n4urthosz95mv) {
-  utterance ("[g:SendServerRequest] (겟또)[v:RequestType:GET] 요청 보내줘 지금 당장")
-  enabled (false)
-  last-modified (1729155938766)
-}

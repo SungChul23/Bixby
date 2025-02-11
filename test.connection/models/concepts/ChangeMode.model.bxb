@@ -1,0 +1,9 @@
+enum (ChangeMode) {
+  description ("모드를 변경합니다.")
+  symbol (outdoor)
+
+}
+
+
+
+

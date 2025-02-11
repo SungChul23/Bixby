@@ -1,0 +1,4 @@
+train (t-g4hwdz1kuut0jjnpjlb9tjmv2) {
+  utterance ("[g:SendServerRequest] (메인10 콘센트)[v:ApplianceName:eb418184ceec03c8af32ig] (켜줘)[v:ActionType:on]")
+  last-modified (1739268986809)
+}

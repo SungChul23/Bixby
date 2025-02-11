@@ -1,61 +1,47 @@
-import http from 'http'; // Bixby에서 http 모듈 가져오기
-import console from 'console'; // Bixby에서 log 모듈 가져오기
+import http from 'http';
+import console from 'console';
 
 export default function sendServerRequest({
-  requestType,
   applianceName,
-  actionType // 추가된 파라미터
+  actionType
 }) {
-  let response;
-
   try {
-    if (requestType === 'GET') {
-      // GET 요청을 처리
-      const timestamp = new Date().getTime();
-      response = http.getUrl(`http://jkah.shop:5000/getTest?timestamp=${timestamp}`, { // 매 요청을 고유하게 만들자 (캐시 방지)
-        format: 'json',
-        headers: {
-          'Cache-Control': 'no-cache' // 캐시 방지
-        }
-      });
-      return {
-        message: response.message ? response.message : "응답 메시지가 없습니다.",
-      };
+    if (!applianceName || !actionType) {
+      return { message: "잘못된 요청입니다. 기기명과 액션을 확인하세요." };
+    }
 
-    } else if (requestType === 'POST' && applianceName && actionType) {
-      // POST 요청을 처리
-      const timestamp = new Date().getTime();
+ const timestamp = new Date().getTime(); //현재 시간 타임스탬프 추가로 매 요청 고유하게 수정
+    const url = `https://jkah.shop:8443/control/device/${applianceName}?timestamp=${timestamp}`; 
+    const body = { action: actionType };
 
-      // JSON 형식으로 기기명과 상태를 전달
-      const body = {
-        actual_device: applianceName, // 기기명
-        action: actionType, // 상태
-        //message: '${applianceName}, ${actionType}'
-      };
+    const options = {
+      passAsJson: true,
+      returnHeaders: false, // 일단 리턴 헤더 비활성화
+      format: 'json',
+      headers: {
+        'Authorization': 'Bearer <your-auth-token>',
+        'Content-Type': 'application/json'
+      }
+    };
 
-      const options = {
-        passAsJson: true, // 기본적으로 JSON 형식
-        returnHeaders: true,
-        format: 'json',
-        headers: {
-          'Authorization': 'Bearer <your-auth-token>', // 인증 헤더 추가 (필요시)
-        }
-      };
+    const response = http.postUrl(url, body, options);
 
-      response = http.postUrl(`http://jkah.shop:5000/plug/control?timestamp=${timestamp}`, body, options); // 매 요청을 고유하게 만들자 (캐시 방지)
+    
+    console.log(`POST 요청 서버 응답: ${JSON.stringify(response, null, 2)}`);
 
-      console.log('서버 응답 전체: ', JSON.stringify(response)); // 서버 응답을 로그로 출력
-
-      return {
-        message: response.parsed.message ? response.parsed.message : "응답 메시지가 없습니다.",
-        userMessage: response.parsed.userMessage ? response.parsed.userMessage : "유저 메시지가 없습니다."
-      };
-
+    // 🔹 응답이 정상적으로 들어오는지 확인 후 처리
+    if (response && response.message) {
+      return { message: response.message }; 
+    } else if (response?.body?.message) {
+      return { message: response.body.message };
     } else {
-      throw new Error("POST 요청에는 기기 이름과 상태가 필요합니다!!");
+      console.error("[오류] 응답에 message 필드가 없음");
+      return { message: "서버에서 올바른 응답을 받지 못했습니다." };
     }
   } catch (error) {
-    console.error('서버 요청 중 오류가 발생했습니다: ', error); // 오류 로그 출력
-    throw new Error("서버 요청 중 오류가 발생했습니다.");
+    console.error('서버 요청 중 오류 발생:', error);
+    return {
+      message: "서버 요청 중 오류가 발생했습니다. 다시 시도해 주세요."
+    };
   }
 }

@@ -1,5 +1,0 @@
-train (t-fhik3ejiyszz9k46isksfwhyv) {
-  utterance ("[g:SendServerRequest] (충전기)[v:ApplianceName:충전기] (전원)[v:RequestType:POST] (켜줘)[v:ActionType:켜줘]")
-  enabled (false)
-  last-modified (1731845442599)
-}
