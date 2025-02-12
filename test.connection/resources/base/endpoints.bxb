@@ -1,8 +1,13 @@
 endpoints {
   action-endpoints {
-    action-endpoint (SendServerRequest) {
-      accepted-inputs (applianceName,actionType,changeMode)
-      local-endpoint (SendServerRequest.js)
+    action-endpoint (DeviceControl) { // 기기 제어 엔드포인트
+      accepted-inputs (applianceName, actionType, changeMode)
+      local-endpoint (DeviceControl.js)
+    }
+
+    action-endpoint (CheckPlugStatus) { // 플러그 상태 조회 엔드포인트
+      accepted-inputs (applianceName)
+      local-endpoint (CheckPlugStatus.js)
     }
   }
 }

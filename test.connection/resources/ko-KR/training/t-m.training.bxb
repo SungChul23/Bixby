@@ -1,4 +1,8 @@
 train (t-mojk03234ipe63mav0fksvgj9) {
-  utterance ("[g:SendServerRequest] (동게이)[v:ApplianceName:eb0e02f3f896b44f7bkunv] (켜줘)[v:ActionType:on]")
-  last-modified (1739264582352)
+  utterance ("[g:DeviceControl] (동게이)[v:ApplianceName:eb0e02f3f896b44f7bkunv] (켜줘)[v:ActionType:on]")
+  last-modified (1739372886074)
+}
+train (t-m5snbfsr5xzdq730faj7rtkou) {
+  utterance ("[g:CheckPlugStatus] (동게이)[v:ApplianceName:eb0e02f3f896b44f7bkunv] 켜져있어 꺼져있어 ?")
+  last-modified (1739376506969)
 }

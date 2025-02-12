@@ -1,0 +1,8 @@
+train (t-5js1vwyxrb80g5r7p985babmg) {
+  utterance ("[g:CheckPlugStatus] (메인10)[v:ApplianceName:eb418184ceec03c8af32ig] 켜져있어 꺼져있어 ?")
+  last-modified (1739373995954)
+}
+train (t-5wom62o3e2yzyx8rz5t119xv4) {
+  utterance ("[g:DeviceControl] (성철개발용2)[v:ApplianceName:eb418184ceec03c8af32ig] (꺼줘)[v:ActionType:off]")
+  last-modified (1739377965372)
+}

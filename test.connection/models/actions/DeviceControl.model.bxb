@@ -1,4 +1,4 @@
-action (SendServerRequest) {
+action (DeviceControl) {
   type (Constructor)
   description ("발화 옵션 지정[기기명, 기기상태, 모드상태]")
   collect { 
@@ -21,5 +21,5 @@ action (SendServerRequest) {
       max (One)
     }
   } // 서버로부터 받은 응답 처리
-  output (ServerResponse)
+  output (viv.core.Text)
 }

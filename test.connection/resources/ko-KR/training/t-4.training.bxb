@@ -1,0 +1,4 @@
+train (t-4abtzs5xtdusdy49lg1ka5g8h) {
+  utterance ("[g:DeviceControl] (메인10)[v:ApplianceName:eb418184ceec03c8af32i] 플러그 오류용 (켜줘)[v:ActionType:on]")
+  last-modified (1739375933821)
+}

@@ -1,5 +1,4 @@
 train (t-jfv73w51y7j712uekgs7ujt74) {
-  utterance ("[g:SendServerRequest] (메인10)[v:ApplianceName:eb418184ceec03c8af32ig] (켜줘)[v:ActionType:on]")
-  last-modified (1739265846314)
+  utterance ("[g:DeviceControl] (메인10)[v:ApplianceName:eb418184ceec03c8af32ig] (켜줘)[v:ActionType:on]")
+  last-modified (1739372881694)
 }
-
