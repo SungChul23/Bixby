@@ -1,14 +1,14 @@
 enum (ApplianceName) {
-  description ("다양한 가전 기기 이름을 나타냅니다. -> 플러그id로 변경")
-  symbol (eb93422b93d4779663cltg)
-  symbol (eb5926ea2e2cc6a3a1hhch)
-  symbol (ebf3b877b6c2a593eefygj)
-  symbol (eb8fd0a2d8c5f32c06eewp)
-  symbol (eb35d8d2cda1521998hok1)
-  symbol (ebaa3d69095c0f9048iipj)
-  symbol (eb5607bd7dcddce97bsmno)
-  symbol (eb57d28ce6e3827541yzow)
-  symbol (eb7b2264d54895f402ppzp)
+  description ("다양한 가전 기기 이름을 나타냅니다.")
+  symbol (eb93422b93d4779663cltg) //핸드폰충전기
+  symbol (eb5926ea2e2cc6a3a1hhch) //드라이기
+  symbol (ebf3b877b6c2a593eefygj) //에어컨
+  symbol (eb8fd0a2d8c5f32c06eewp) //전자레인지
+  symbol (eb35d8d2cda1521998hok1) //전기밥솥
+  symbol (ebaa3d69095c0f9048iipj) //컴퓨터모니터
+  symbol (eb5607bd7dcddce97bsmno) //컴퓨터 본체
+  symbol (eb57d28ce6e3827541yzow) //티비
+  symbol (eb7b2264d54895f402ppzp) //셋톱박스
 /////////////////////////////////////
 
 

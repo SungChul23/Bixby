@@ -1,0 +1,4 @@
+train (t-r95b410i1zxvpqz21nns82d8p) {
+  utterance ([g:GroupList] 설정된 그룹 목록 확인해줘)
+  last-modified (1739630575901)
+}

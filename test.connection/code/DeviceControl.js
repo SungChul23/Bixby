@@ -1,7 +1,7 @@
 import http from 'http';
 import console from 'console';
 
-export default function sendServerRequest({ applianceName, actionType }) {
+export default function DeviceControl({ applianceName, actionType }) {
   try {
     if (!applianceName || !actionType) {
       return "⚠️ 음... 뭔가 빠진 것 같아요! 기기명을 다시 한번 확인해 주세요. 🙏";

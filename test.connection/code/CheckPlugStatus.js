@@ -1,7 +1,7 @@
 import http from 'http';
 import console from 'console';
 
-export default function checkPlugStatus({ applianceName }) {
+export default function CheckPlugStatus({ applianceName }) {
   try {
     if (!applianceName) {
       return "⚠️ 앗! 기기 이름을 확인해 주세요. 🤔";

@@ -1,0 +1,6 @@
+action (GroupList) {
+  type (Constructor)
+  description ("등록된 그룹 리스트를 불러오는 기능")
+  
+  output (viv.core.Text) 
+}

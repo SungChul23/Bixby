@@ -9,5 +9,9 @@ endpoints {
       accepted-inputs (applianceName)
       local-endpoint (CheckPlugStatus.js)
     }
+    action-endpoint (GroupList) { // 그룹 별 리스트 엔드포인트
+      accepted-inputs ()
+      local-endpoint (GroupList.js)
+    }
   }
 }
