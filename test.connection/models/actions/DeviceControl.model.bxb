@@ -14,12 +14,7 @@ action (DeviceControl) {
       min (Optional)
       max (One)
     }
-    //모드 상태 변경
-    input (changeMode) { // 나중에 변수명 조심 해야함
-      type (ChangeMode)
-      min (Optional)
-      max (One)
-    }
+
   } // 서버로부터 받은 응답 처리
   output (viv.core.Text)
 }

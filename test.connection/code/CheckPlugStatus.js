@@ -14,7 +14,7 @@ export default function CheckPlugStatus({ applianceName }) {
 
     console.log(`✅ [로그] GET 요청 서버 응답: ${JSON.stringify(response, null, 2)}`);
 
-    if (response.power === true) {
+    if (response.power === true) { //power 값이 true면 켜진겨
       return `💡 ${response.name}이(가) 지금 켜져 있어요! 💡`;
     } else if (response.power === false) {
       return `🔴 ${response.name}이(가) 꺼져 있어요. 🔴`;
