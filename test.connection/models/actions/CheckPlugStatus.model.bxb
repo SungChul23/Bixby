@@ -1,5 +1,5 @@
 action (CheckPlugStatus) {
-  type (Constructor)
+  type (Search)
   description ("기기 상태 조회")
   collect { 
     // 기기 이름 

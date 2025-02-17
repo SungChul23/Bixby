@@ -10,11 +10,7 @@ export default function GroupList() {
       return ["🚨 현재 등록된 그룹이 없습니다. 먼저 그룹을 만들어 주세요. 🚨"];
     }
 
-    let groupMap = {};
-    let groupNames = response.map(group => {
-      groupMap[group.groupName] = group.groupId;  // ✅ 서버에서 받은 그룹을 매핑
-      return `📌 ${group.groupName}`;
-    });
+    let groupNames = response.map(group => `📌 ${group.groupName}`);
 
     console.log(`✅ [출력될 그룹 리스트]`, groupNames);
 

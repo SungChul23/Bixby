@@ -1,0 +1,17 @@
+match {
+  intent {
+    goal (RunGroupAction)
+  }
+
+  rule {
+    pattern {
+      utterance ("#(groupName) 작동해줘")  
+      utterance ("#(groupName) 실행해줘")
+      utterance ("#(groupName) 켜줘")
+    }
+
+    output {
+      groupName (#{groupName})  // ✅ 정확한 그룹명 추출
+    }
+  }
+}

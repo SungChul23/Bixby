@@ -1,0 +1,14 @@
+action (RunGroup) {
+  type (Constructor) 
+  description ("사용자가 선택한 그룹을 실행하는 기능")
+  
+  collect {
+    input (groupName) {
+      type (viv.core.Text)
+      min (Required) // 발화에 입력 값이 꼭 들어가야 함
+      description ("사용자가 실행할 그룹 이름")
+    }
+  }
+
+  output (viv.core.Text)
+}
