@@ -6,3 +6,7 @@ train (t-5wom62o3e2yzyx8rz5t119xv4) {
   utterance ("[g:DeviceControl] (성철개발용2)[v:ApplianceName:eb418184ceec03c8af32ig] (꺼줘)[v:ActionType:off]")
   last-modified (1739377965372)
 }
+train (t-50nh95eq9efixygaqyheb8id2) {
+  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 시작해줘")
+  last-modified (1739887837440)
+}
