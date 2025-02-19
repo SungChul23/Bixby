@@ -19,10 +19,10 @@ export default function CheckPlugStatus({ applianceName }) {
     } else if (response.power === false) {
       return `🔴 ${response.name}이(가) 꺼져 있어요. 🔴`;
     } else {
-      return "❓ 플러그 상태를 확인할 수 없어요! 다시 시도해 주세요. 😵‍💫";
+      return "😵‍💫 플러그 상태를 확인할 수 없어요! 다시 시도해 주세요. 😵‍💫";
     }
   } catch (error) {
     console.error("❌ 서버 요청 중 오류 발생:", error);
-    return "😵‍💫 서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.💖 서버 담당자 정준영 010-2842-5267";
+    return "😵‍💫 서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.\n 😵‍💫 서버 담당자 정준영 010-2842-5267";
   }
 }

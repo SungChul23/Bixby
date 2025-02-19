@@ -7,7 +7,7 @@ export default function RunGroup(request) {
 
     if (!request || !request.groupName) {
       console.error("🚨 [오류] groupName 값이 전달되지 않음");
-      return "🚨 그룹 이름을 인식하지 못했습니다. 다시 시도해 주세요.";
+      return "🚨 그룹 이름을 인식하지 못했습니다. 다시 한번 말씀 해 주세요 🚨";
     }
 
     const groupName = request.groupName.trim();
@@ -20,7 +20,7 @@ export default function RunGroup(request) {
 
     if (!groupList || groupList.length === 0) {
       console.error("🚨 [오류] 등록된 그룹이 없습니다.");
-      return "🚨 현재 등록된 그룹이 없습니다. 먼저 그룹을 만들어 주세요.";
+      return "🚨 현재 등록된 그룹이 없습니다. 먼저 앱에서 그룹을 만들어 주세요. 🚨";
     }
 
     let groupMap = {};

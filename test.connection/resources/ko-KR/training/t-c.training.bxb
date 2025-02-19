@@ -1,4 +1,4 @@
-train (t-cr0j5kjylij4d7frbffzivd3z) {
-  utterance ("[g:DeviceControl] (메인10 플러그)[v:ApplianceName:eb418184ceec03c8af32ig] (켜줘)[v:ActionType:on]")
-  last-modified (1739372876589)
+train (t-ckd97pcto21sm3ajlka2bnmbv) {
+  utterance ("[g:CheckPlugStatus] (준영 개발 플러그)[v:ApplianceName:eb2a96cb6783d22765mnum] 상태 확인해줘")
+  last-modified (1739960316152)
 }

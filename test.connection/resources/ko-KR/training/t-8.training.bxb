@@ -2,3 +2,7 @@ train (t-8wmbqpwwg5z6kmhzv97t699au) {
   utterance ([g:GroupList] 내가 만든 그룹 뭐 있어?)
   last-modified (1739630660219)
 }
+train (t-8bkrm763wom6u0td84v61bdfr) {
+  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 작동시켜줘 지금")
+  last-modified (1739810842373)
+}

@@ -1,0 +1,4 @@
+train (t-wktykyvo39l24qcu5zxh3vf4z) {
+  utterance ("[g:DeviceControl] (셋톱박스)[v:ApplianceName:eb7b2264d54895f402ppzp] (정지)[v:ActionType:off]시켜줘")
+  last-modified (1739964269462)
+}

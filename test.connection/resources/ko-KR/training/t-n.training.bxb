@@ -1,0 +1,4 @@
+train (t-nkk5x2vt3mgudfgl9z7qlb148) {
+  utterance ("[g:DeviceControl] (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜)[v:ActionType:on]")
+  last-modified (1739965481911)
+}

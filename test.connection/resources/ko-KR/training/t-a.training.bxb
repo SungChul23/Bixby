@@ -1,0 +1,8 @@
+train (t-a9cq77uogxh9au80f3mpqg0hg) {
+  utterance ("[g:DeviceControl] (준영 개발 플러그)[v:ApplianceName:eb2a96cb6783d22765mnum] (작동)[v:ActionType:on]시켜줘")
+  last-modified (1739963634380)
+}
+train (t-aznsd7rzhx3pmr9ktho5w5qko) {
+  utterance ("[g:DeviceControl] (TV)[v:ApplianceName:eb57d28ce6e3827541yzow] (꺼볼래)[v:ActionType:off]? 이제 잘 거야")
+  last-modified (1739964867991)
+}

@@ -1,0 +1,4 @@
+train (t-tvc7yufi3p6ax5wa22vfttwfq) {
+  utterance ("[g:DeviceControl] (컴퓨터본체)[v:ApplianceName:eb5607bd7dcddce97bsmno] 좀 (가동시켜)[v:ActionType:on] 줄래?")
+  last-modified (1739963913876)
+}

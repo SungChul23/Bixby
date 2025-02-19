@@ -1,0 +1,12 @@
+train (t-vab3u95og5d39c8aat3a1gofq) {
+  utterance ("[g:CheckPlugStatus] 내가 (컴퓨터본체)[v:ApplianceName:eb5607bd7dcddce97bsmno]를 키고 나왔나?")
+  last-modified (1739961476593)
+}
+train (t-vct786vc2ehq8htn57pf4wt1r) {
+  utterance ("[g:DeviceControl] (성철 개발 플러그 1)[v:ApplianceName:eb0bf86fb8c2b3d20fwq6m] (켜주라)[v:ActionType:on]")
+  last-modified (1739963763898)
+}
+train (t-vvb7fpdbr5vz0sna54t4jty0y) {
+  utterance ("[g:DeviceControl] 내 방에 있는 (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] 좀 (꺼줄래)[v:ActionType:off]?")
+  last-modified (1739964780708)
+}

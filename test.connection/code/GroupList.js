@@ -7,7 +7,7 @@ export default function GroupList() {
     const response = http.getUrl(url, { format: 'json' });
 
     if (!response || response.length === 0) {
-      return ["🚨 현재 등록된 그룹이 없습니다. 먼저 그룹을 만들어 주세요. 🚨"];
+      return ["🚨 현재 등록된 그룹이 없습니다. 먼저 앱에서 그룹을 만들어 주세요. 🚨"];
     }
 
     let groupNames = response.map(group => `📌 ${group.groupName}`);
