@@ -3,7 +3,8 @@ import console from 'console';
 
 export default function GroupList() {
   try {
-    const url = `https://jkah.shop:8443/group/check/list`;
+    const timestamp = new Date().getTime(); // 현재 시간을 밀리초 단위로 가져오기
+    const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
     const response = http.getUrl(url, { format: 'json' });
 
     if (!response || response.length === 0) {

@@ -36,6 +36,6 @@ export default function DeviceControl({ applianceName, actionType }) {
     }
   } catch (error) {
     console.error("[오류] 서버 요청 중 오류 발생:", error);
-    return "😵‍💫 서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.\n 📞 서버 담당자 정준영 010-2842-5267";
+    return "😵‍💫 서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요. ";
   }
 }
