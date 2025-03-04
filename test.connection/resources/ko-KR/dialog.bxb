@@ -1,0 +1,5 @@
+dialog (GroupList) {
+  template (count as Count) {
+    "총 {count.count}개의 그룹이 있습니다."
+  }
+}

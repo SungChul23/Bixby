@@ -1,4 +1,4 @@
-# New Capsule
+<!-- # New Capsule
 
 Welcome to your New Capsule!
 
@@ -32,4 +32,4 @@ Learn about submitting your capsule to the [Marketplace](https://bixbydevelopers
 ### Need Support?
 
 * Have a feature request? Please suggest it in our [Support Community](https://support.bixbydevelopers.com/hc/en-us/community/topics/360000183273-Feature-Requests) to help us prioritize.
-* Have a technical question? Ask on [Stack Overflow](https://stackoverflow.com/questions/tagged/bixby) with tag “bixby”.
+* Have a technical question? Ask on [Stack Overflow](https://stackoverflow.com/questions/tagged/bixby) with tag “bixby”. -->

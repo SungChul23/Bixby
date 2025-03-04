@@ -1,19 +1,34 @@
-// result-view {
-//   match : DeviceControl (Result)
+result-view {
+  match: DeviceControlResult (controlResult)
 
-//   message {
-//     template ("기기 제어 성공했습니다 (뷰 수정)") 
-//   }
+  message {
+    template ("기기 상태 변경에 성공했어요.")
+  }
 
-//   // 📌 레이아웃 적용 (결과 메시지를 기본 텍스트로 표시)
-//   render {
+  render {
+    layout {
+      section {
+        title ("✅기기 제어 결과")
+        content {
+          paragraph ("#{value(controlResult.statusMessage)}") // ✅ 기기 제어 결과 메시지 출력
+        }
+      }
+    }
+  }
+  
 
-//   }
-
-//   // 📌 팔로우 (추가적인 명령 가능)
-//   conversation-drivers {
-//     conversation-driver {
-//       template ("동균 개발 플러그 끄자")
-//     }
-//   }
-// }
+  conversation-drivers {
+    conversation-driver {
+      template ("전기밥솥 켜줘")
+    }
+    conversation-driver {
+      template ("컴퓨터 본체 켜줘")
+    }
+    conversation-driver {
+      template ("드라이기 꺼줘")
+    }
+    conversation-driver {
+      template ("모니터 꺼줘")
+    }
+  }
+}

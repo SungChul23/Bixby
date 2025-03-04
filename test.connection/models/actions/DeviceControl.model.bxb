@@ -1,20 +1,19 @@
 action (DeviceControl) {
   type (Constructor)
-  description ("발화 옵션 지정[기기명, 기기상태, 모드상태]")
+  description ("기기 제어 액션")
+
   collect { 
-    // 기기 이름 
     input (applianceName) {
       type (ApplianceName)
       min (Optional)
       max (One)
-
-    } // 기기상태 변경
+    } 
     input (actionType) {
       type (ActionType)
       min (Optional)
       max (One)
     }
+  } 
 
-  } // 서버로부터 받은 응답 처리
-  output (viv.core.Text)
+  output (DeviceControlResult)
 }

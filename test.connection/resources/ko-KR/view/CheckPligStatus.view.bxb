@@ -1,24 +1,30 @@
 result-view {
   match: CheckPlugStatusResult (plugStatus)
-
+  message {
+    template ("플러그 상태를 확인해 보세요.")
+  }
   render {
     layout {
       section {
-        title ("플러그 상태 확인")
+        title ("✅플러그 상태 확인")
         content {
-          paragraph ("#{value(plugStatus.statusMessage)}") // ✅ statusMessage 속성 참조
+          paragraph ("#{value(plugStatus.statusMessage)}") // ✅ 플러그 상태 출력
         }
       }
     }
   }
-
-  message {
-    template ("플러그 상태를 확인해 보세요.")
-  }
-
   conversation-drivers {
     conversation-driver {
-      template ("다른 플러그 상태도 확인할까요?")
+      template ("컴퓨터 본체 켜져 있어?")
+    }
+    conversation-driver {
+      template ("밥솥 켜져 있어?")
+    }
+    conversation-driver {
+      template ("핸드폰 충전기 켜져 있어?")
+    }
+    conversation-driver {
+      template ("모니터 켜져 있어?")
     }
   }
 }
