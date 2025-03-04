@@ -1,14 +1,15 @@
 action (CheckPlugStatus) {
   type (Search)
   description ("기기 상태 조회")
+
   collect { 
     // 기기 이름 
     input (applianceName) {
       type (ApplianceName)
       min (Required)
       max (One)
-
     } 
-  } // 서버로부터 받은 응답 처리
-  output (viv.core.Text)
+  } 
+
+  output (CheckPlugStatusResult)
 }

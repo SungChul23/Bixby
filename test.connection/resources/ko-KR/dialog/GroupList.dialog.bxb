@@ -1,0 +1,6 @@
+dialog (Result) {
+  match: GroupList 
+  template ("해당 결과를 확인 해 보세요.") {
+    speech ("존재하는 그룹 리스트에요.")
+  }
+}

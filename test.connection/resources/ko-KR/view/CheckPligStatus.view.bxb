@@ -1,0 +1,24 @@
+result-view {
+  match: CheckPlugStatusResult (plugStatus)
+
+  render {
+    layout {
+      section {
+        title ("플러그 상태 확인")
+        content {
+          paragraph ("#{value(plugStatus.statusMessage)}") // ✅ statusMessage 속성 참조
+        }
+      }
+    }
+  }
+
+  message {
+    template ("플러그 상태를 확인해 보세요.")
+  }
+
+  conversation-drivers {
+    conversation-driver {
+      template ("다른 플러그 상태도 확인할까요?")
+    }
+  }
+}

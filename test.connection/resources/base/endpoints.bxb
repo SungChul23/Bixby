@@ -12,7 +12,7 @@ endpoints {
       accepted-inputs ()
       local-endpoint (GroupList.js)
     }
-    action-endpoint (RunGroup) {
+    action-endpoint (RunGroup) { // 그룹 별 제어 엔드포인트
       accepted-inputs (groupName)
       local-endpoint (RunGroup.js)
     }

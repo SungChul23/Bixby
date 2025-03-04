@@ -1,0 +1,10 @@
+structure (CheckPlugStatusResult) {
+  description ("플러그 상태 정보를 포함하는 구조체")
+
+  property (statusMessage) {
+    type (viv.core.Text)
+    description ("플러그 상태 메시지")
+    min (Required) max (One) // 필수 값이 아니라 선택적 값
+    
+  }
+}
