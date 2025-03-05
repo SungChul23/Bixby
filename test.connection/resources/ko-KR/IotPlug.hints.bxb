@@ -1,5 +1,5 @@
 hints {
-  for-category (News) {  // News 카테고리
+  for-category (News) { // News 카테고리
     hint ("우리 집에 있는 티비 켜줘.") {
       preferred-hint ("티비 켜 줘.")
     }
@@ -8,14 +8,12 @@ hints {
     }
     hint ("내가 집에 나올때 컴퓨터 본체 키고 나왔나?") {
       preferred-hint ("컴퓨터 본체 상태 확인해줘.")
-    
     }
-    hint ("내가 만든 그룹 보여 줘.") {
+    hint ("내가 만든 그룹이 뭐가 있더라?") {
       preferred-hint ("그룹 보여줘")
     }
     hint ("OO 그룹 실행 시켜줘") {
       preferred-hint ("OO 그룹 실행 시켜줘")
     }
   }
-
 }

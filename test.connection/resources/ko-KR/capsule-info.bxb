@@ -1,5 +1,5 @@
 capsule-info {
-  display-name (헤이홈 Iot 플러그 제어) // 추후 수정
+  display-name (Iot 플러그 제어) // 추후 수정
   developer-name (2025년도 남서울대학교 "어 금지" 팀 졸업작품)
   description ([Bixby 플러그 제어]는 언제 어디서나 손 쉽게 Iot플러그 제어할 수 있습니다.)
   dispatch-name (플러그 제어)

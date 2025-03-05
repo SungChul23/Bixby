@@ -28,7 +28,7 @@ export default function DeviceControl({ applianceName, actionType }) {
     // ✅ 액션 타입에 따라 다른 메시지 반환
     if (response?.status === "success") {
       const icon = actionType.toLowerCase() === "on" ? "💡" : "🔴";
-      return { statusMessage: `${icon} 해당 기기를 ${actionType}으로 변경했어요! ${icon}` };
+      return { statusMessage: `${icon}해당 기기를 ${actionType}으로 변경했어요.${icon}` };
     } else {
       const icon = actionType.toLowerCase() === "on" ? "💡" : "🔴";
       return { statusMessage: `${icon} 해당 기기를 ${actionType}으로 변경하는 데 실패했어요. ${icon}` };

@@ -1,7 +1,9 @@
 result-view {
   match: CheckPlugStatusResult (plugStatus)
   message {
-    template ("플러그 상태를 확인해 보세요.")
+    template ("🔌플러그 상태를 확인해 보세요🔌"){
+      speech ("#{value(plugStatus.statusMessage)}")
+    }
   }
   render {
     layout {

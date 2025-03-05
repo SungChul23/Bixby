@@ -15,9 +15,9 @@ export default function CheckPlugStatus({ applianceName }) {
     console.log(`✅ [로그] GET 요청 서버 응답: ${JSON.stringify(response, null, 2)}`);
 
     if (response.power === true) {
-      return { statusMessage: `💡${response.name}이(가) 지금 켜져 있어요!💡` };
+      return { statusMessage: `${response.name}이(가) 지금 켜져 있어요!` };
     } else if (response.power === false) {
-      return { statusMessage: `🔴${response.name}이(가) 꺼져 있어요.🔴` };
+      return { statusMessage: `${response.name}이(가) 꺼져 있어요!` };
     } else {
       return { statusMessage: "😢플러그 상태를 확인할 수 없어요! 다시 시도해 주세요.😢" };
     }

@@ -1,0 +1,9 @@
+structure (RunGroupResult) {
+  description ("그룹 실행 결과 메시지만 포함하는 구조체")
+
+  property (message) {
+    type (viv.core.Text) // ✅ 음성 출력용
+    description ("그룹 실행 결과 메시지")
+    min (Required) max (One)
+  }
+}
