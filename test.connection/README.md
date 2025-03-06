@@ -33,3 +33,10 @@ Learn about submitting your capsule to the [Marketplace](https://bixbydevelopers
 
 * Have a feature request? Please suggest it in our [Support Community](https://support.bixbydevelopers.com/hc/en-us/community/topics/360000183273-Feature-Requests) to help us prioritize.
 * Have a technical question? Ask on [Stack Overflow](https://stackoverflow.com/questions/tagged/bixby) with tag “bixby”. -->
+
+0. Access Token과 Refresh Token 저장 방식 
+1. 네이버 카카오톡 삼성계정 API 키를 가져와 테스트 해보기
+2. 로그인 창 생성 후 로그인 완료 후 계정과 회원이 가지고 있는 Iot 플러그 매핑 (중요)
+3. [주요로직] 서버에서 회원과 회원이 가지고 있는 플러그 Id를 매핑 해야함(그럼 회원 DB랑 플러그 Id랑 조인해야함)
+4. 결과 못찼을 때는 "해당 결과 존재하지 않아요"
+//https://github.com/starjoon/Bixby_Master_Corona/blob/master/models/actions/GetPatients.model.bxb
