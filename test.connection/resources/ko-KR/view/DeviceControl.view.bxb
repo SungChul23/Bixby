@@ -1,22 +1,31 @@
 result-view {
   match: DeviceControlResult (controlResult)
-
   message {
-    template ("기기 상태 변경에 성공했어요.")
+    template ("🔌플러그 상태를 확인해 보세요🔌") {
+      speech ("플러그 제어 결과를 확인해 보세요.") // statusMessage는 이제 text 타입이므로 그대로 사용 가능
+    }
   }
-
   render {
     layout {
       section {
-        title ("✅기기 제어 결과")
         content {
-          paragraph ("#{value(controlResult.statusMessage)}") // ✅ 기기 제어 결과 메시지 출력
+          cell-card {
+            slot1 {
+              image {
+                shape (Square)
+                url ("#{value(controlResult.imageUrl)}") // ✅ JavaScript에서 설정한 로컬 이미지 사용
+              }
+            }
+            slot2 {
+              content {
+                primary ("✅ #{value(controlResult.name)}이(가) #{value(controlResult.statusMessage)}")
+              }
+            }
+          }
         }
       }
     }
   }
-  
-
   conversation-drivers {
     conversation-driver {
       template ("전기밥솥 켜줘")

@@ -1,0 +1,21 @@
+structure (CheckPlugStatusResult) {
+  description ("플러그 상태 정보를 포함하는 구조체")
+
+  property (statusMessage) {
+    type (statusMessage) 
+    description ("플러그 상태 메시지")
+    min (Required) max (One)
+  }
+
+  property (name) {
+    type (deviceName) 
+    description ("기기 이름")
+    min (Required) max (One)
+  }
+
+  property (power) {
+    type (viv.core.Boolean)
+    description ("플러그 전원 상태 (ON/OFF)")
+    min (Required) max (One)
+  }
+}

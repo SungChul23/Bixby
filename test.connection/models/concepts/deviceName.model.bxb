@@ -1,0 +1,3 @@
+text (deviceName) {
+  description ("기기 상태 기능 중에서 기기명을 불러오는 트리거")
+}

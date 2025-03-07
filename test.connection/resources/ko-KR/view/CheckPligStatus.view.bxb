@@ -1,16 +1,28 @@
 result-view {
   match: CheckPlugStatusResult (plugStatus)
   message {
-    template ("🔌플러그 상태를 확인해 보세요🔌"){
-      speech ("#{value(plugStatus.statusMessage)}")
+    template ("🔌플러그 상태를 확인해 보세요🔌") {
+      speech ("#{value(plugStatus.statusMessage)}") // statusMessage는 이제 text 타입이므로 그대로 사용 가능
     }
   }
   render {
     layout {
       section {
-        title ("✅플러그 상태 확인")
         content {
-          paragraph ("#{value(plugStatus.statusMessage)}") // ✅ 플러그 상태 출력
+          split-input-cell {
+            left {
+              input-cell {
+                label ("기기 이름")
+                value ("#{value(plugStatus.name)}") // 기기 이름 표시
+              }
+            }
+            right {
+              input-cell {
+                label ("상태")
+                value ("#{value(plugStatus.power) ? 'ON' : 'OFF'}") // ON/OFF 상태 표시
+              }
+            }
+          }
         }
       }
     }

@@ -1,0 +1,3 @@
+text (statusMessage) { 
+  description ("기기 상태 메시지를 저장하는 텍스트") 
+}
