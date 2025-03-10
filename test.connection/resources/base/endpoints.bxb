@@ -16,5 +16,9 @@ endpoints {
       accepted-inputs (groupName)
       local-endpoint (RunGroup.js)
     }
+    action-endpoint (CheckToken){ // 토큰 확인
+      accepted-inputs ()
+      local-endpoint (CheckToken.js)
+    }
   }
 }

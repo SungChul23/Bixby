@@ -1,0 +1,6 @@
+action (CheckToken) {
+  type (Constructor)
+  description ("토큰 테스트")
+
+  output (viv.core.Text)
+}

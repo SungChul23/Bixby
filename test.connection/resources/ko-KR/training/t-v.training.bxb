@@ -10,3 +10,7 @@ train (t-vvb7fpdbr5vz0sna54t4jty0y) {
   utterance ("[g:DeviceControl] 내 방에 있는 (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] 좀 (꺼줄래)[v:ActionType:off]?")
   last-modified (1739964780708)
 }
+train (t-vjoc1i6n6kqs9o107n4lnj3lu) {
+  utterance ([g:CheckToken] 테스트 토큰 확인해줘)
+  last-modified (1741586513315)
+}
