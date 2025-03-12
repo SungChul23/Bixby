@@ -1,4 +1,4 @@
-action (RunGroup) {
+ action (RunGroup) {
   type (Constructor) 
   description ("사용자가 선택한 그룹을 실행하는 기능")
   

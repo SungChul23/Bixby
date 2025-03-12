@@ -40,3 +40,6 @@ Learn about submitting your capsule to the [Marketplace](https://bixbydevelopers
 3. [주요로직] 서버에서 회원과 회원이 가지고 있는 플러그 Id를 매핑 해야함(그럼 회원 DB랑 플러그 Id랑 조인해야함)
 4. 결과 못찼을 때는 "해당 결과 존재하지 않아요"
 //https://github.com/starjoon/Bixby_Master_Corona/blob/master/models/actions/GetPatients.model.bxb
+
+5. 내가 오어뜨 인증 서버에 요청을 하고 토큰을 발급 받고 이걸 AWS 서버랑 대조후에 맞으면 자원제공 ? ㄱㅊ나
+6. URL 앞에 oauth 단어 하나 추가해서 요청을 보낸다면 헤더에 토큰 전달 그럼 서버에서 이걸 확인해서 올바른 토큰 값이구나

@@ -1,7 +1,7 @@
 result-view {
   match: DeviceControlResult (controlResult)
   message {
-    template ("🔌플러그 상태를 확인해 보세요🔌") {
+    template ("🔌플러그 제어 결과를 확인해 보세요🔌") {
       speech ("플러그 제어 결과를 확인해 보세요.") // statusMessage는 이제 text 타입이므로 그대로 사용 가능
     }
   }
