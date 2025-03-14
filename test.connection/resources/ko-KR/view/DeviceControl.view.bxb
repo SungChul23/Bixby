@@ -18,7 +18,7 @@ result-view {
             }
             slot2 {
               content {
-                primary ("✅ #{value(controlResult.name)}이(가) #{value(controlResult.statusMessage)}")
+                primary ("✅ #{value(controlResult.name)} #{value(controlResult.statusMessage)}")
               }
             }
           }

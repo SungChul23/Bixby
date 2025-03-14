@@ -6,8 +6,8 @@ export default function DeviceControl({ applianceName, actionType }) {
     if (!applianceName || !actionType) {
       return { 
         statusMessage: `🙏 음... 뭔가 빠진 것 같아요! 기기명과 액션을 다시 한번 확인해 주세요. 🙏`,
-        name: "알 수 없음", 
-        imageUrl: "/assets/images/icons/default.jpg"
+        name: " ", 
+        imageUrl: "images/icons/error.jpg"
       };
     }
 
@@ -39,13 +39,13 @@ export default function DeviceControl({ applianceName, actionType }) {
 
     if (response?.status === "success") {
       return {
-        statusMessage: `${actionType} 상태로 변경되었습니다.`,
+        statusMessage: `이(가) ${actionType} 상태로 변경되었습니다.`,
         name: deviceName, // ✅ plugName을 name으로 설정
         imageUrl: imageUrl
       };
     } else {
       return {
-        statusMessage: `${actionType} 상태로 변경하는 데 실패했어요.`,
+        statusMessage: `이(가) ${actionType} 상태로 변경하는 데 실패했어요.`,
         name: deviceName,
         imageUrl: imageUrl
       };
@@ -54,8 +54,8 @@ export default function DeviceControl({ applianceName, actionType }) {
     console.error("[오류] 서버 요청 중 오류 발생:", error);
     return {
       statusMessage: "😵‍💫 서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.",
-      name: "알 수 없음",
-      imageUrl: "/assets/images/icons/error.jpg"
+      name: " ",
+      imageUrl: "images/icons/error.jpg"
     };
   }
 }

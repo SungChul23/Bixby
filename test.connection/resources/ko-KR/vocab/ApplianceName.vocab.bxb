@@ -86,5 +86,6 @@ vocab (ApplianceName) {
   "eb418184ceec03c8af32i" {
     "메인10 오류테스트"
     "오류 테스트 용 플러그"
+    "오류 플러그"
   }
 }

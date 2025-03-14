@@ -1,7 +1,13 @@
 result-view {
-  match: LoginResponse (model)
+  match: LoginResponse
 
-   render {
+  message {
+    template ("로그인이 필요합니다.") { 
+      speech ("로그인이 필요합니다.") 
+    }
+  }
+
+  render {
     layout {
       section {
         content {
@@ -10,12 +16,12 @@ result-view {
               slot1 {
                 paragraph {
                   style(Title_L)
-                  value (model.message)
+                  value ("로그인이 필요합니다.")  
                 }
               }
             }
             on-click {
-              url (model.url)
+              url (url)  
               external-link-badge {
                 label ("로그인 페이지로 이동")
               }
@@ -25,4 +31,5 @@ result-view {
       }
     }
   }
+  
 }

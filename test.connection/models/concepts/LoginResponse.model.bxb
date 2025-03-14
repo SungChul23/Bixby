@@ -1,14 +1,8 @@
 structure (LoginResponse) {
   description ("로그인 요청 시 반환되는 응답 데이터")
 
-  property (message) {
-    type (Message)  // ✅ 명확한 타입 지정
-    description ("사용자에게 표시할 로그인 안내 메시지")
-    min (Required) max (One)
-  }
-
-  property (url) {
-    type (viv.core.Url)  // ✅ URL 타입 유지
+  property (url) {  
+    type (viv.core.Url)  
     description ("로그인 웹페이지로 이동할 수 있는 URL")
     min (Required) max (One)
   }
