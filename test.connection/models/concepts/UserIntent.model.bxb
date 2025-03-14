@@ -1,0 +1,3 @@
+text (UserIntent) {
+  description ("사용자의 로그인 요청을 나타내는 개념")
+}

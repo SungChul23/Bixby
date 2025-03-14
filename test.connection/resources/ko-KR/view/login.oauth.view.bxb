@@ -1,0 +1,28 @@
+result-view {
+  match: LoginResponse (model)
+
+   render {
+    layout {
+      section {
+        content {
+          title-card {
+            title-area {
+              slot1 {
+                paragraph {
+                  style(Title_L)
+                  value (model.message)
+                }
+              }
+            }
+            on-click {
+              url (model.url)
+              external-link-badge {
+                label ("로그인 페이지로 이동")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

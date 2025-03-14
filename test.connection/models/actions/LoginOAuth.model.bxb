@@ -1,0 +1,5 @@
+action (LoginOAuth) {
+  type (Search)  
+
+  output (LoginResponse)
+}

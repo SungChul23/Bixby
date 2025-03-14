@@ -1,32 +1,32 @@
-//   result-view {
-//     match: RunGroup (plugStatus)
-//     message {
-//       template ("🔌플러그 상태를 확인해 보세요🔌"){
+//    result-view {
+//      match: RunGroup (plugStatus)
+//      message {
+//        template ("🔌플러그 상태를 확인해 보세요🔌"){
       
-//       }
-//     }
-//     render {
-//       layout {
-//         section {
+//        }
+//      }
+//      render {
+//        layout {
+//          section {
 //           title ("✅플러그 상태 확인")
 //           content {
 //            c ("#{value(plugStatus.statusMessage)}") // ✅ 플러그 상태 출력
-// // //         }
-// // //       }
-// // //     }
-// // //   }
-// // //   conversation-drivers {
-// // //     conversation-driver {
-// // //       template ("컴퓨터 본체 켜져 있어?")
-// // //     }
-// // //     conversation-driver {
-// // //       template ("밥솥 켜져 있어?")
-// // //     }
-// // //     conversation-driver {
-// // //       template ("핸드폰 충전기 켜져 있어?")
-// // //     }
-// // //     conversation-driver {
-// // //       template ("모니터 켜져 있어?")
-// // //     }
-// // //   }
-// // // }
+// // // //         }
+// // // //       }
+// // // //     }
+// // // //   }
+// // // //   conversation-drivers {
+// // // //     conversation-driver {
+// // // //       template ("컴퓨터 본체 켜져 있어?")
+// // // //     }
+// // // //     conversation-driver {
+// // // //       template ("밥솥 켜져 있어?")
+// // // //     }
+// // // //     conversation-driver {
+// // // //       template ("핸드폰 충전기 켜져 있어?")
+// // // //     }
+// // // //     conversation-driver {
+// // // //       template ("모니터 켜져 있어?")
+// // // //     }
+// // // //   }
+// // // // }

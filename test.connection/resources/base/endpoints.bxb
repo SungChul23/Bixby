@@ -16,5 +16,9 @@ endpoints {
       accepted-inputs (groupName)
       local-endpoint (RunGroup.js)
     }
+    action-endpoint (LoginOAuth){
+      accepted-inputs ()
+      local-endpoint (LoginOAuth.js)
+    }
   }
 }
