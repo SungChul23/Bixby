@@ -1,0 +1,3 @@
+text (accessToken) {
+  description (서버에게서 받은 엑세스 토큰)
+}

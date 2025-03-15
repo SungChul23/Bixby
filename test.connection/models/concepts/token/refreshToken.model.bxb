@@ -1,0 +1,3 @@
+text (refreshToken) {
+  description (서버에게서 받은 리프레시 토큰)
+}
