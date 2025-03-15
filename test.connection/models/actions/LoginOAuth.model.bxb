@@ -1,5 +1,14 @@
 action (LoginOAuth) {
   type (Search)  
+  description ("웹 브라우저에서 로그인 후, Bixby 캡슐로 돌아와 액세스 토큰을 저장합니다.")
 
-  output (LoginResponse)
+  collect { 
+    input (accessToken) {  
+      type (viv.core.Text)  
+      min (Optional)
+      max (One)
+    }
+  }
+
+  output (LoginResponse) // ✅ 로그인 성공 메시지를 반환
 }
