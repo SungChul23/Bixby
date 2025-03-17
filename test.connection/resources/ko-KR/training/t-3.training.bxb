@@ -6,3 +6,7 @@ train (t-3gkpqrghnth91w09cpwz8zklw) {
   utterance ("[g:CheckPlugStatus] 내가 집에 나올때 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj]을 키고왔나 끄고 왔나")
   last-modified (1739961731623)
 }
+train (t-3l3lcoesu9cvwnj9reh5e214n) {
+  utterance ("[g:RunGroup] 이중에서 (테스트 그룹)[v:viv.core.Text] 시작해줘")
+  last-modified (1742129144157)
+}

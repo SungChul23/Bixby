@@ -14,10 +14,23 @@ export default function RunGroup(request) {
     const groupName = request.groupName.trim().replace(/\s+/g, '');
     console.log(`✅ 요청된 그룹 이름 (공백 제거 후): ${groupName}`);
 
+    // 임의로 엑세스 토큰 추가
+    const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MjEyNDgyMCwiZXhwIjoxNzQyNzI5NjIwfQ.1TpizVCPFXafq5I7vXD7GFsFOwjJdIVqVcBYIOox65g";
+    
+
+
     // 그룹 목록 가져오기
     const timestamp = Date.now();
     const listUrl = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
-    const groupList = http.getUrl(listUrl, { format: 'json' });
+    const listOptions = {
+      format: 'json',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`, // ✅ 토큰 추가
+        'Content-Type': 'application/json'
+      }
+    };
+
+    const groupList = http.getUrl(listUrl, listOptions);
 
     if (!groupList || groupList.length === 0) {
       return ["⚠️ 현재 등록된 그룹이 없습니다.", "앱에서 먼저 그룹을 만들어 주세요! 🏠"];
@@ -35,7 +48,15 @@ export default function RunGroup(request) {
 
     const groupId = groupMap[groupName];
     const runUrl = `https://jkah.shop:8443/group/action/run/${groupId}?timestamp=${timestamp}`;
-    const response = http.getUrl(runUrl, { format: 'json' });
+    const runOptions = {
+      format: 'json',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`, // ✅ 실행 요청에도 토큰 추가
+        'Content-Type': 'application/json'
+      }
+    };
+
+    const response = http.getUrl(runUrl, runOptions);
 
     // 응답 데이터 정리
     const successArray = response.successArray || [];

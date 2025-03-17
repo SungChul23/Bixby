@@ -18,7 +18,7 @@ export default function fetchAccessToken() {
         return null;
     }
 
-    // ✅ `refreshToken`을 사용하여 새로운 `accessToken` 요청
+    //  `refreshToken`을 사용하여 새로운 `accessToken` 요청
     const refreshUrl = "https://jkah.shop:8443/api/refresh-access-token"; // 추후 수정
     const options = {
         format: 'json',
@@ -39,7 +39,7 @@ export default function fetchAccessToken() {
             return null;
         }
 
-        // ✅ 새로운 accessToken을 기존 값 위에 덮어쓰기
+        //  새로운 accessToken을 기존 값 위에 덮어쓰기
         config.put("ACCESS_TOKEN", response.accessToken);
         console.log("✅ 새 accessToken 저장 완료:", response.accessToken);
 

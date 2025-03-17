@@ -12,9 +12,9 @@ enum (ApplianceName) {
 /////////////////////////////////////
 
 
-  symbol (eb2a96cb6783d22765mnum) // 준영개발용
+  symbol (s846a3d0d42d10f4f02q66) // 준영개발용
 
-  symbol (eb418184ceec03c8af32ig) // main10 플러그 및 성철개발용2
+  symbol (s821389ff509601c597d5n) // main10 플러그 및 성철개발용2
 
   symbol (eb0e02f3f896b44f7bkunv) // 동균개발용
   

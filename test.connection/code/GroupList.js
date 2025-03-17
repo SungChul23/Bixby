@@ -5,7 +5,19 @@ export default function GroupList() {
   try {
     const timestamp = new Date().getTime(); // 현재 시간을 밀리초 단위로 가져오기
     const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
-    const response = http.getUrl(url, { format: 'json' });
+
+    const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MjEyNDgyMCwiZXhwIjoxNzQyNzI5NjIwfQ.1TpizVCPFXafq5I7vXD7GFsFOwjJdIVqVcBYIOox65g"; 
+    // 임의로 토큰 추가
+
+    const options = {
+      format: 'json',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`, // ✅ 토큰을 Authorization 헤더에 추가
+        'Content-Type': 'application/json'
+      }
+    };
+
+    const response = http.getUrl(url, options);
 
     if (!response || response.length === 0) {
       console.log("🚨 현재 등록된 그룹이 없습니다. 먼저 앱에서 그룹을 만들어 주세요. 🚨");

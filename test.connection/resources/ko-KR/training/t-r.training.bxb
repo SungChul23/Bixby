@@ -7,8 +7,8 @@ train (t-rhz89out7fsj9qe6uvr3e74ni) {
   last-modified (1739883177248)
 }
 train (t-rrln7e7q3orhgtiuu5o72pcty) {
-  utterance ("[g:CheckPlugStatus] (성철 개발 플러그 2)[v:ApplianceName:eb418184ceec03c8af32ig] 켜져있어?")
-  last-modified (1739960259959)
+  utterance ("[g:CheckPlugStatus] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있어?")
+  last-modified (1742195190458)
 }
 train (t-rbrwvw7uijtcofqnrm7uldrz7) {
   utterance ("[g:CheckPlugStatus] (셋톱박스)[v:ApplianceName:eb7b2264d54895f402ppzp]가 켜져있는지 알려줄 수 있어?")

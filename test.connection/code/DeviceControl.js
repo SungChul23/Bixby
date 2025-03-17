@@ -15,12 +15,16 @@ export default function DeviceControl({ applianceName, actionType }) {
     const url = `https://jkah.shop:8443/control/device/${applianceName}?timestamp=${timestamp}`;
     const body = { action: actionType };
 
+
+    const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MjEyNDgyMCwiZXhwIjoxNzQyNzI5NjIwfQ.1TpizVCPFXafq5I7vXD7GFsFOwjJdIVqVcBYIOox65g";
+    //임의로 토큰 하드코딩
+
     const options = {
       passAsJson: true,
       returnHeaders: false,
       format: 'json',
       headers: {
-        'Authorization': 'Bearer <your-auth-token>',
+        'Authorization': `Bearer ${accessToken}`, //  토큰을 Authorization 헤더에 추가
         'Content-Type': 'application/json'
       }
     };
@@ -34,13 +38,13 @@ export default function DeviceControl({ applianceName, actionType }) {
 
     const isOn = actionType.toLowerCase() === "on";
     const imageUrl = isOn
-      ? "images/icons/device-on.jpg"
-      : "images/icons/device-off.jpg";
+      ? "images/icons/deviceon.png"
+      : "images/icons/deviceoff.png";
 
     if (response?.status === "success") {
       return {
         statusMessage: `이(가) ${actionType} 상태로 변경되었습니다.`,
-        name: deviceName, // ✅ plugName을 name으로 설정
+        name: deviceName, //  plugName을 name으로 설정
         imageUrl: imageUrl
       };
     } else {
