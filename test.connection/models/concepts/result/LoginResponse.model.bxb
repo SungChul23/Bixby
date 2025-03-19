@@ -1,10 +1,15 @@
 structure (LoginResponse) {
   description ("로그인 요청 시 반환되는 응답 데이터")
 
-  property (message) {
-    type (viv.core.Text)  // ✅ 단순 메시지 반환
+  property (loginMessage) {
+    type (loginMessage)  
     description ("로그인 안내 메시지")
     min (Required) max (One)
   }
-  
+
+  property (loginUrl) {
+    type (viv.core.Url)  
+    description ("로그인 페이지 링크") 
+    min (Required) max (One)  
+  }
 }

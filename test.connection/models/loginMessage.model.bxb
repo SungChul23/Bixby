@@ -1,0 +1,3 @@
+text (loginMessage) {
+  description (로그인 성공 실패 유무에 대한 메시지 표출)
+}

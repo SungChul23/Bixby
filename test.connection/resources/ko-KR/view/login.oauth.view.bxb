@@ -1,17 +1,21 @@
 result-view {
   match: LoginResponse (this)
+
   message {
-    template ("해당 링크를 통해 로그인을 진행하세요.") {  // ✅ 로그인 결과 메시지를 표시
-      speech ("해당 링크를 통해 로그인을 진행하세요.")
+    template ("#{value(loginMessage)}") {  
+      speech ("#{value(loginMessage)}")
     }
   }
+
   render {
     layout {
       section {
         content {
-          attribution-link {
-            label ("로그인 페이지로 이동")  // ✅ 클릭 가능한 버튼
-            url ("https://jkah.shop:8443/bixby/login")  // ✅ URL 직접 입력
+          if (value(loginUrl) != "") {  // ✅ `loginUrl`이 빈 문자열이 아닐 때만 버튼 표시
+            attribution-link {
+              label ("로그인 페이지로 이동")
+              url ("#{value(loginUrl)}")
+            }
           }
         }
       }
