@@ -1,0 +1,14 @@
+structure (GroupListResult) {
+  description ("그룹 리스트 결과를 포함하는 구조체")
+  property (success) {
+    type (success)
+  }
+  property (messages) {
+    type (messages)
+    max (Many)
+  }
+  property (messageTitle) {
+    type (messageTitle)
+    max (Many)
+  }
+}

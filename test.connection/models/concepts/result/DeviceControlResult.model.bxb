@@ -1,21 +1,27 @@
 structure (DeviceControlResult) {
   description ("기기 제어 결과를 포함하는 구조체")
-
   property (statusMessage) {
     type (statusMessage)
     description ("기기 제어 결과 메시지")
-    min (Required) max (One)
+    min (Required)
+    max (One)
   }
-
   property (name) {
     type (deviceName)
     description ("기기 이름")
-    min (Required) max (One)
+    min (Required)
+    max (One)
   }
-
   property (imageUrl) {
     type (viv.core.Url) // ✅ 이미지 URL을 저장할 속성 추가
     description ("기기 상태에 따른 이미지")
-    min (Required) max (One)
+    min (Required)
+    max (One)
+  }
+  property (success) {
+    type (success)
+    description (플러그 성공 유무)
+    min (Required)
+    max (One)
   }
 }

@@ -5,15 +5,16 @@ action (DeviceControl) {
   collect { 
     input (applianceName) {
       type (ApplianceName)
-      min (Optional)
+      min (Required)
       max (One)
     } 
     input (actionType) {
       type (ActionType)
-      min (Optional)
+      min (Required)
       max (One)
     }
   } 
 
   output (DeviceControlResult)
+    
 }

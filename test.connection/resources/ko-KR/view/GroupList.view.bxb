@@ -1,0 +1,32 @@
+result-view {
+  match: GroupListResult (groupResult)
+
+  message {
+    template ("#{value(groupResult.messageTitle)}") {
+      speech ("#{value(groupResult.messageTitle)}")  // ✅ "총 개의 그룹이 있습니다"까지만 음성 안내
+    }
+  }
+
+  render {
+    layout {
+      section {
+        content {
+          for-each (groupResult.messages) {  // ✅ 그룹 리스트 반복 출력
+            as (messageItem) {
+              title-card {
+                title-area {
+                  slot1 {  // ✅ 그룹명만 출력
+                    paragraph {
+                      style (Title_M)  // ✅ 큰 제목 스타일 적용
+                      value ("#{value(messageItem)}")  // ✅ 그룹 이름 출력
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

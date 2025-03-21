@@ -1,23 +1,26 @@
 import http from 'http';
 import console from 'console';
+import fetchAccessToken from './fetchAccessToken'; // accessToken을 가져오는 함수
 
 export default function RunGroup(request) {
   try {
     console.log("✅ [RunGroup] 실행 시작");
 
     if (!request || !request.groupName) {
-      console.error("🚨 [오류] groupName 값이 전달되지 않음");
-      return ["⚠️ 그룹 이름을 인식하지 못했습니다.", "다시 말씀해 주세요! 😊"];
+      return {
+        success: false,
+        messages: ["⚠️ 그룹 이름을 인식하지 못했습니다.", "다시 말씀해 주세요! 😊"]
+      };
     }
 
-    // 공백 제거
     const groupName = request.groupName.trim().replace(/\s+/g, '');
-    console.log(`✅ 요청된 그룹 이름 (공백 제거 후): ${groupName}`);
-
-    // 임의로 엑세스 토큰 추가
-    const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MjEyNDgyMCwiZXhwIjoxNzQyNzI5NjIwfQ.1TpizVCPFXafq5I7vXD7GFsFOwjJdIVqVcBYIOox65g";
-    
-
+    const accessToken = fetchAccessToken();
+    if (!accessToken) {
+      return {
+        success: false,
+        messages: ["🚨 로그인이 필요합니다. 다시 로그인해 주세요."]
+      };
+    }
 
     // 그룹 목록 가져오기
     const timestamp = Date.now();
@@ -25,25 +28,22 @@ export default function RunGroup(request) {
     const listOptions = {
       format: 'json',
       headers: {
-        'Authorization': `Bearer ${accessToken}`, // ✅ 토큰 추가
+        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
       }
     };
 
     const groupList = http.getUrl(listUrl, listOptions);
-
-    if (!groupList || groupList.length === 0) {
-      return ["⚠️ 현재 등록된 그룹이 없습니다.", "앱에서 먼저 그룹을 만들어 주세요! 🏠"];
-    }
-
     let groupMap = {};
     groupList.forEach(group => {
-      const normalizedGroupName = group.groupName.replace(/\s+/g, '');
-      groupMap[normalizedGroupName] = group.groupId;
+      groupMap[group.groupName.replace(/\s+/g, '')] = group.groupId;
     });
 
     if (!groupMap[groupName]) {
-      return [`⚠️ "${request.groupName}" 그룹을 찾을 수 없습니다.`, "정확한 그룹명을 말해주세요! 📢"];
+      return {
+        success: false,
+        messages: [`⚠️ "${request.groupName}" 을 찾을 수 없습니다.`, "정확한 그룹명을 말해주세요! 📢"]
+      };
     }
 
     const groupId = groupMap[groupName];
@@ -51,32 +51,37 @@ export default function RunGroup(request) {
     const runOptions = {
       format: 'json',
       headers: {
-        'Authorization': `Bearer ${accessToken}`, // ✅ 실행 요청에도 토큰 추가
+        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
       }
     };
 
     const response = http.getUrl(runUrl, runOptions);
-
-    // 응답 데이터 정리
     const successArray = response.successArray || [];
     const errorArray = response.errorArray || [];
 
-    let resultMessage = [`🔌 "${request.groupName}" 실행 결과`];
+    let messages = [];
 
     if (successArray.length > 0) {
-      resultMessage.push("✅ 성공한 플러그", ...successArray.map(device => `- ${device}`));
+      messages.push("✅ 성공한 플러그");
+      messages.push(...successArray.map(device => `🔹 ${device}`));
     }
 
     if (errorArray.length > 0) {
-      resultMessage.push("❌ 실패한 플러그", ...errorArray.map(device => `- ${device}`));
+      messages.push("❌ 실패한 플러그");
+      messages.push(...errorArray.map(device => `🔹 ${device}`));
     }
 
-    console.log("✅ [출력될 실행 결과]", resultMessage);
+    return {
+      success: true,
+      groupName: request.groupName,  
+      messages: messages.length > 0 ? messages : ["ℹ️ 실행 결과가 없습니다."]
+    };
 
-    return resultMessage;
   } catch (error) {
-    console.error("❌ [오류] 그룹 실행 실패:", error);
-    return ["🚨 그룹 실행 중 오류가 발생했습니다.", "잠시 후 다시 시도해 주세요! 🔄"];
+    return {
+      success: false,
+      messages: ["🚨 그룹 실행 중 오류가 발생했습니다.", "잠시 후 다시 시도해 주세요! 🔄"]
+    };
   }
 }

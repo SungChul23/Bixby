@@ -1,0 +1,3 @@
+boolean (success) {
+  description (플러그 제어 성공인지 실패인지 나태냄)
+}

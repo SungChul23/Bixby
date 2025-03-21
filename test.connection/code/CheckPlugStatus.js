@@ -8,11 +8,8 @@ export default function CheckPlugStatus({ applianceName }) {
             return { statusMessage: "😢앗! 기기 이름을 확인해 주세요.😢" };
         }
 
-        // `fetchAccessToken()`을 호출하여 최신 `accessToken` 가져오기
-        //const accessToken = fetchAccessToken(); 잠시 비활성화
-
-        const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MjEyNDgyMCwiZXhwIjoxNzQyNzI5NjIwfQ.1TpizVCPFXafq5I7vXD7GFsFOwjJdIVqVcBYIOox65g";
-        //임의로 토큰추가
+        // ✅ Secrets에서 accessToken 가져오기
+        const accessToken = fetchAccessToken();
 
         if (!accessToken) {
             console.log("🚨 accessToken을 가져올 수 없습니다. 로그인 필요.");

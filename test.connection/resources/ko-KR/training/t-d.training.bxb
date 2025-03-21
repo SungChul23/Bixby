@@ -3,8 +3,8 @@ train (t-drhxf77pw7xnp6v0jtyoe6zcn) {
   last-modified (1739630611780)
 }
 train (t-d961sy8qao5cqozfvlrk0g815) {
-  utterance ("[g:CheckPlugStatus] (동균 개발 플러그)[v:ApplianceName:eb0e02f3f896b44f7bkunv] 켜져있나?")
-  last-modified (1739960493816)
+  utterance ("[g:CheckPlugStatus] (동균 플러그)[v:ApplianceName:eb0e02f3f896b44f7bkunv] 켜져있나?")
+  last-modified (1742392178588)
 }
 train (t-d5pk3zo787qxuyjeth6kcmshz) {
   utterance ("[g:CheckPlugStatus] (전기밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1]이 꽃힌 플러그 상태 확인해줘")

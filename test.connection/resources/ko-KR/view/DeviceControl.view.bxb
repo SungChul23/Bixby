@@ -1,10 +1,18 @@
 result-view {
   match: DeviceControlResult (controlResult)
+  
   message {
-    template ("🔌플러그 제어 결과를 확인해 보세요🔌") {
-      speech ("플러그 제어 결과를 확인해 보세요.") // statusMessage는 이제 text 타입이므로 그대로 사용 가능
+    if (value(controlResult.success)) {
+      template ("✅ 플러그 제어가 성공했어요 ✅") {
+        speech ("#{value(controlResult.statusMessage)}")
+      }
+    } else {
+      template ("❌ 플러그 제어에 실패했어요 ❌") {
+        speech ("#{value(controlResult.statusMessage)}")
+      }
     }
   }
+
   render {
     layout {
       section {
@@ -13,12 +21,12 @@ result-view {
             slot1 {
               image {
                 shape (Square)
-                url ("#{value(controlResult.imageUrl)}") // ✅ JavaScript에서 설정한 로컬 이미지 사용
+                url ("#{value(controlResult.imageUrl)}")
               }
             }
             slot2 {
               content {
-                primary ("✅ #{value(controlResult.name)} #{value(controlResult.statusMessage)}")
+                primary ("#{value(controlResult.statusMessage)}")
               }
             }
           }
@@ -26,18 +34,11 @@ result-view {
       }
     }
   }
+
   conversation-drivers {
-    conversation-driver {
-      template ("전기밥솥 켜줘")
-    }
-    conversation-driver {
-      template ("컴퓨터 본체 켜줘")
-    }
-    conversation-driver {
-      template ("드라이기 꺼줘")
-    }
-    conversation-driver {
-      template ("모니터 꺼줘")
-    }
+    conversation-driver { template ("전기밥솥 켜줘") }
+    conversation-driver { template ("컴퓨터 본체 켜줘") }
+    conversation-driver { template ("드라이기 꺼줘") }
+    conversation-driver { template ("모니터 꺼줘") }
   }
 }

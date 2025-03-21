@@ -1,0 +1,38 @@
+result-view {
+  match: RunGroupResult (groupData)
+
+  message {
+    if (value(groupData.success)) {
+      template ("#{value(groupData.groupName)}의 실행 결과입니다.") {
+        speech ("#{value(groupData.groupName)}의 실행 결과를 확인해보세요.")
+      }
+    } else {
+      template ("앱을 통해 그룹을 생성해 주세요") {
+        speech ("#{value(groupData.messages)}")  // ✅ 실패 시 메시지만 출력
+      }
+    }
+  }
+
+  render {
+    layout {
+      section {
+        content {
+          for-each (groupData.messages) {
+            as (messageItem) {
+              title-card {
+                title-area {
+                  slot1 {
+                    paragraph {
+                      style (Title_M)
+                      value ("#{value(messageItem)}")  // ✅ 성공/실패 리스트를 개별 카드로 표시
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

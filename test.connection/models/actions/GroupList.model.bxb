@@ -2,5 +2,6 @@ action (GroupList) {
   type (Constructor)
   description ("사용자가 만든 그룹 리스트를 가져옵니다.")
 
-  output (viv.core.Text) // ✅ 올바른 structured 컨셉 사용
+  output (GroupListResult)
+   // ✅ 올바른 structured 컨셉 사용
 }

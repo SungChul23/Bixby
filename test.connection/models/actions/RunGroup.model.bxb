@@ -10,7 +10,7 @@
     }
   }
 
-  output (viv.core.Text)
+  output (RunGroupResult)
 }
 
 

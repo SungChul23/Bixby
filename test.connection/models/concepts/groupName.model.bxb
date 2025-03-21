@@ -1,0 +1,3 @@
+text (groupName) {
+  description (그룹 이름)
+}

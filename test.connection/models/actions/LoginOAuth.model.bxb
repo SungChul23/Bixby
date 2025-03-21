@@ -1,17 +1,7 @@
 action (LoginOAuth) {
-  type (Search)
-  description ("서버에서 받은 액세스 토큰과 리프레시 토큰을 저장합니다.")
+  type (Search)  
+  description ("웹 브라우저에서 로그인 후, 서버에서 받은 토큰을 저장합니다.")
 
-  collect {
-    input (accessToken) {
-      type (accessToken)
-      min (Optional) max (One)
-    }
-    input (refreshToken) {
-      type (refreshToken)
-      min (Optional) max (One)
-    }
-  }
 
-  output (LoginResponse)
+  output (LoginResponse) // ✅ 로그인 성공 메시지를 반환
 }

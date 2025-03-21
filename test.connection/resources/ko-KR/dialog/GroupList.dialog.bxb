@@ -1,5 +1,0 @@
- dialog (Result) {
-   match: GroupList (groupCount)
-
-   template ("그룹 리스트를 확인해 보세요.") 
- }
