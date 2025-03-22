@@ -6,7 +6,3 @@ train (t-42ilyx26rzlh6txlcx783fze2) {
   utterance ("[g:CheckPlugStatus] (성철 동방 플러그)[v:ApplianceName:eb0bf86fb8c2b3d20fwq6m] 상태 확인해봐")
   last-modified (1742195331989)
 }
-train (t-490q0zztgydhlvoj46q1aro7m) {
-  utterance ([g:LoginOAuth] 로그인 하자)
-  last-modified (1742484962262)
-}

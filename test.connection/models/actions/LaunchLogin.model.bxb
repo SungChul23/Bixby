@@ -1,0 +1,4 @@
+action (LaunchLogin) {
+  type (Search)
+  output (LoginLink)  // 링크 타입
+}

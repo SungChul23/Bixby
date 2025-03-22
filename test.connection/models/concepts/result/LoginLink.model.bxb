@@ -1,0 +1,5 @@
+structure (LoginLink) {
+  property (url) {
+    type (viv.core.Url)
+  }
+}

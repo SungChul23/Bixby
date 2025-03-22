@@ -1,9 +1,0 @@
-structure (LoginResponse) {
-  description ("로그인 요청 시 반환되는 응답 데이터")
-
-  property (message) {
-    type (viv.core.Text)  
-    description ("로그인 안내 메시지")
-    min (Required) max (One)
-  }
-}
