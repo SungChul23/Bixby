@@ -1,6 +1,6 @@
 train (t-7p0b5b67qa34dgy6ml1m1cv3q) {
-  utterance ("[g:DeviceControl] (동균 플러그)[v:ApplianceName:eb0e02f3f896b44f7bkunv] (키자)[v:ActionType:on]")
-  last-modified (1742392172452)
+  utterance ("[g:DeviceControl] (동균 플러그)[v:ApplianceName:s87d6b37c485d47104vdkb] (키자)[v:ActionType:on]")
+  last-modified (1742652622032)
 }
 train (t-7pn6d6nvdw7d3rkr9a5ajgjpl) {
   utterance ("[g:DeviceControl] (드라이기)[v:ApplianceName:eb5926ea2e2cc6a3a1hhch] (꺼볼래)[v:ActionType:off]?")

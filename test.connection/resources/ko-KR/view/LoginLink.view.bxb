@@ -23,6 +23,12 @@ result-view {
               template ("https://jkah.shop:8443/bixby/login")
             }
           }
+          attribution-link{
+            label("we")
+            intent{
+              goal : LoginOAuth
+            }
+          }
         }
       }
     }

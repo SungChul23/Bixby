@@ -9,7 +9,7 @@ export default function DeviceControl({ applianceName, actionType }) {
         success: false,
         statusMessage: `뭔가 빠진 것 같아요! 기기명과 액션을 다시 한번 확인해 주세요.`,
         name: " ", 
-        imageUrl: "images/icons/error.jpg"
+        imageUrl: "images/icons/error.png"
       };
     }
 
@@ -71,7 +71,7 @@ export default function DeviceControl({ applianceName, actionType }) {
       success: false, // ✅ 예외 발생도 실패 처리
       statusMessage: "서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.",
       name: " ",
-      imageUrl: "images/icons/error.jpg"
+      imageUrl: "images/icons/error.png"
     };
   }
 }
