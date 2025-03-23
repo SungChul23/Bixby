@@ -1,0 +1,5 @@
+structure (LoginResponse) {
+  property (messages) {
+    type (messages)
+  }
+}

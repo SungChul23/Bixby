@@ -1,5 +1,4 @@
 import http from 'http';
-import console from 'console';
 import fetchAccessToken from './fetchAccessToken'; // accessToken을 가져오는 함수
 
 export default function GroupList() {
@@ -45,7 +44,7 @@ export default function GroupList() {
     return {
       success: false,
       messageTitle: "서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.",
-      messages: ["서버에서 그룹 목록을 불러오지 못했어요.", "다시 시도해 주세요."]
+      messages: ["❌ 액세스 토큰이 만료되었습니다. 다시 한 번 로그인해 주세요. ❌"]
     };
   }
 }

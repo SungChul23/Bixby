@@ -1,3 +1,0 @@
-intent (LoginOAuth) {
-  goal: LoginOAuth
-}

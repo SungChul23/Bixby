@@ -1,15 +1,5 @@
 result-view {
-  match: LoginLink (link)
-
-  message {
-    template ("로그인 링크를 열어보세요!") {
-      speech ("로그인 하시려면 아래 링크를 눌러주세요.")
-    }
-  }
-  // app-launch{
-  //   payload-uri("https://jkah.shop:8443/bixby/login")
-  // }
-
+  match: LoginOAuth
   render {
     layout {
       section {
@@ -26,14 +16,15 @@ result-view {
               template ("https://jkah.shop:8443/bixby/login")
             }
           }
-          attribution-link{
-            label("we")
-            intent{
-              goal : LoginOAuth
+          attribution-link {
+            label ("we")
+            intent {
+              goal: LoginOAuth
             }
           }
         }
       }
     }
   }
+
 }

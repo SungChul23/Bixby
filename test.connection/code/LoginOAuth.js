@@ -1,4 +1,5 @@
 export default function LoginOAuth() {
-  return "로그인 성공!";
-  
+  return {
+    messages: "로그인이 완료되었습니다!"
+  };
 }

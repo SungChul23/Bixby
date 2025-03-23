@@ -8,8 +8,9 @@ capsule-info {
     alias (빠른 플러그 제어)
   }
   
+  
 
-  icon-asset (images/icons/SmartHome.jpg) //144 144 준수
+  icon-asset (images/icons/SmartHome.png) //144 144 준수
   
   search-keywords{
     keyword (스마트 홈)

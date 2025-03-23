@@ -1,6 +1,6 @@
-dialog (Result) {
-  match: LoginOAuth
-  template ("로그인 성공!") {
-    speech ("로그인이 완료되었어요!")
-  }
-}
+// dialog (Result) {
+//   match: LoginOAuth
+//   template ("로그인 성공!") {
+//     speech ("로그인이 완료되었어요!")
+//   }
+// }

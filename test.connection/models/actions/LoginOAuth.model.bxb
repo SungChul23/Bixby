@@ -1,4 +1,4 @@
 action (LoginOAuth) {
-  type (Search)
-  output (viv.core.Text)  // 메시지로 반환
+  type (Constructor)
+  output (LoginResponse)  // 메시지로 반환
 }
