@@ -1,30 +1,8 @@
 result-view {
-  match: LoginOAuth
-  render {
-    layout {
-      section {
-        content {
-          paragraph {
-            value ("👇 아래 링크를 눌러 로그인 페이지로 이동하세요.")
-          }
-
-          attribution-link {
-            label {
-              template ("🔗 로그인 페이지 열기")
-            }
-            url {
-              template ("https://jkah.shop:8443/bixby/login")
-            }
-          }
-          attribution-link {
-            label ("we")
-            intent {
-              goal: LoginOAuth
-            }
-          }
-        }
-      }
-    }
+  match: LoginResponse
+  message {
+    template ("환영합니다, #{value(nickname)}님! 🎉")
   }
+
 
 }

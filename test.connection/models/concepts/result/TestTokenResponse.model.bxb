@@ -1,0 +1,13 @@
+structure (TestTokenResponse) {
+  property (access_token) {
+    type (access_token)
+    min (Optional)
+    max (One)
+  }
+
+  property (expires_in) {
+    type (expires_in)
+    min (Optional)
+    max (One)
+  }
+}

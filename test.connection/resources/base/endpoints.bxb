@@ -19,14 +19,17 @@ endpoints {
     action-endpoint (LoginOAuth) { // 그룹 별 제어 엔드포인트
       accepted-inputs ()
       local-endpoint (LoginOAuth.js)
+      authorization {
+        user // ✅ access_token 자동 붙이게 하는 핵심!
+      }
     }
-    action-endpoint (LaunchLogin) { // 그룹 별 제어 엔드포인트
-      accepted-inputs ()
-      local-endpoint (LaunchLogin.js)
-    }
-    action-endpoint (TestGet){
+    action-endpoint (TestGet) {
       accepted-inputs ()
       local-endpoint (TestGet.js)
+    }
+    action-endpoint (TestTokenEndpoint) {
+      accepted-inputs ()
+      local-endpoint (TestTokenEndpoint.js)
     }
   }
 }

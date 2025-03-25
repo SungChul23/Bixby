@@ -9,8 +9,5 @@
       description ("사용자가 실행할 그룹 이름")
     }
   }
-
   output (RunGroupResult)
 }
-
-

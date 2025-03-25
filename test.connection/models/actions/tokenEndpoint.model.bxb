@@ -1,0 +1,4 @@
+action (TestTokenEndpoint) {
+  type (Constructor)
+  output (TestTokenResponse)
+}

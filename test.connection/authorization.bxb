@@ -1,15 +1,16 @@
 authorization {
   user {
-    oauth2-authorization-code ("깜빡") {
-      authorize-endpoint (https://kauth.kakao.com/oauth/authorize) //인가 코드
-
-      client-id (7fd6112fa7ebf21d960c2f2a64f6d690) //카카오톡 왈 REST API를 호출할 때 사용합니다.
-
-      client-secret-key (__KEY_TO_ACCESS_CLIENT_SECRET__)
-
-      scope (profile_nickname,profile_image,account_email)
-
-      token-endpoint (https://kauth.kakao.com/oauth/token) //토큰 받기
+    oauth2-authorization-code ("KakaoLogin") {
+      
+      authorize-endpoint (https://kauth.kakao.com/oauth/authorize) // 인가코드
+      
+      token-endpoint (https://kauth.kakao.com/oauth/token) // 인가코드로 토큰 발급
+      
+      client-id (7fd6112fa7ebf21d960c2f2a64f6d690)
+      
+      client-secret-key ("")  // Kakao에서 사용 안 하면 반드시 빈 문자열!
+     
+      scope (profile_nickname, profile_image, account_email)
     }
   }
 }

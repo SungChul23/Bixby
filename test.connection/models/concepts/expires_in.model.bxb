@@ -1,0 +1,3 @@
+integer (expires_in) {
+  description (__DESCRIPTION__)
+}
