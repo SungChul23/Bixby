@@ -1,0 +1,5 @@
+structure (TestResponse) {
+  property (messages) {
+    type (messages)
+  }
+}

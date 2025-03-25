@@ -1,0 +1,4 @@
+action (TestGet) {
+  type (Search)
+  output (TestResponse)
+}

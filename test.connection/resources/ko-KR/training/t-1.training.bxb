@@ -2,3 +2,7 @@ train (t-10f02c5cuig2chjwfra54wd82) {
   utterance ("[g:DeviceControl] (오류)[v:ApplianceName:eb418184ceec03c8af32i] 플러그 (켜줘)[v:ActionType:on]")
   last-modified (1742569728660)
 }
+train (t-1w6scllhc2j15q0gg6p46f16g) {
+  utterance ([g:TestGet] 서버에게 겟 요청 보내줘)
+  last-modified (1742830368311)
+}

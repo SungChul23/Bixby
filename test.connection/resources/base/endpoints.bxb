@@ -24,5 +24,9 @@ endpoints {
       accepted-inputs ()
       local-endpoint (LaunchLogin.js)
     }
+    action-endpoint (TestGet){
+      accepted-inputs ()
+      local-endpoint (TestGet.js)
+    }
   }
 }

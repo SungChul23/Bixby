@@ -9,7 +9,7 @@
     all
   }
   store-sections {
-    section (Productivity) // 마켓 플레이스 섹션
+    section (SmartHome) // 마켓 플레이스 섹션
   }
   targets {
     target (bixby-mobile-ko-KR) //대한민국
