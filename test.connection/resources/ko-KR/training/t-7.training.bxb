@@ -10,3 +10,7 @@ train (t-7p1g82ex4gmankvdeovkvxani) {
   utterance ("[g:DeviceControl] (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] (멈춰)[v:ActionType:off]줄래?")
   last-modified (1739964442961)
 }
+train (t-72kuo6jac2sa0nhndda8r1hpe) {
+  utterance ([g:LoginOAuth] 깜빡 로그인)
+  last-modified (1742983397870)
+}

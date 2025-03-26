@@ -16,20 +16,16 @@ endpoints {
       accepted-inputs (groupName)
       local-endpoint (RunGroup.js)
     }
-    action-endpoint (LoginOAuth) { // 그룹 별 제어 엔드포인트
+    action-endpoint (LoginOAuth) { // 카카오 로그인 엔드포인트
       accepted-inputs ()
       local-endpoint (LoginOAuth.js)
-      authorization {
-        user // ✅ access_token 자동 붙이게 하는 핵심!
+      authorization {              // OAuth 설정
+        user 
       }
     }
-    action-endpoint (TestGet) {
+    action-endpoint (OpenAppAction) { // "깜박" 앱 넘어가기
       accepted-inputs ()
-      local-endpoint (TestGet.js)
-    }
-    action-endpoint (TestTokenEndpoint) {
-      accepted-inputs ()
-      local-endpoint (TestTokenEndpoint.js)
+      local-endpoint (OpenAppAction.js)
     }
   }
 }

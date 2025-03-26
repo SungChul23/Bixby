@@ -53,7 +53,7 @@ export default function DeviceControl({ applianceName, actionType }) {
     if (response?.status === "success") {
       return {
         success: true, // ✅ 성공 여부 전달
-        statusMessage: `${deviceName}이(가) ${actionType} 상태로 변경되었습니다.`,
+        statusMessage: `${deviceName}이(가) ${actionType} 상태로 변경되었습니다 :D`,
         name: deviceName,
         imageUrl: imageUrl
       };

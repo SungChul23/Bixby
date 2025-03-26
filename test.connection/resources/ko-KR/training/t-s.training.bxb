@@ -2,3 +2,7 @@ train (t-sqgeqbi2sxh2tdlkd3d2xh297) {
   utterance ("[g:CheckPlugStatus] (준섭 플러그)[v:ApplianceName:s8591ba1f394fda564m30o] 꺼져있나?")
   last-modified (1742195220122)
 }
+train (t-s1fgj9d22a9m879s4j2pvc6p0) {
+  utterance ([g:GroupList] 내가 만든 그룹이 뭐가 있더라?)
+  last-modified (1742977853528)
+}

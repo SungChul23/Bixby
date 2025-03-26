@@ -18,3 +18,7 @@ train (t-rlsgfpkc7j8fbk806zm7c1v5d) {
   utterance ([g:GroupList] 무슨 그룹 있더라)
   last-modified (1739961851056)
 }
+train (t-rnz4ozjp89acm1m56o7l6wphx) {
+  utterance ([g:LoginOAuth] 로그인하고 싶어)
+  last-modified (1742983418639)
+}

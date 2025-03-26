@@ -1,4 +1,0 @@
-action (LaunchLogin) {
-  type (Constructor)
-  output (LoginLink)  // 링크 타입
-}

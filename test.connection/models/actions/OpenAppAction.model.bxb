@@ -1,0 +1,5 @@
+action (OpenAppAction) {
+  type (Search)
+  description (깜빡 앱을 실행합니다)
+  output (OpenApp)
+}

@@ -1,0 +1,4 @@
+train (t-04txbswk94u7m4oslvcrhddq2) {
+  utterance ("[g:DeviceControl] 날씨가 너무 더운거 같아 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj] (켜 줘)[v:ActionType:on]")
+  last-modified (1742977547866)
+}

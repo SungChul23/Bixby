@@ -1,8 +1,27 @@
 result-view {
   match: LoginResponse
   message {
-    template ("환영합니다, #{value(nickname)}님! 🎉")
+    template ("🎉 깜빡에 오신 걸 환영합니다 🎉") {
+      speech ("깜빡에 오신 걸 환영합니다.")
+    }
   }
-
-
+  render {
+    layout {
+      section {
+        content {
+          input-cell {
+            label ("카카오 로그인")
+            value ("#{value(nickname)}님 환영합니다")
+          }
+        }
+      }
+    }
+  }
+  conversation-drivers {
+    conversation-driver {
+      template ("깜빡 앱 열기!") {
+        speech ("깜빡 앱을 실행합니다.")
+      }
+    }
+  }
 }

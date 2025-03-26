@@ -1,16 +1,16 @@
 import http from 'http';
 import console from 'console';
 
-export const authorization = "KakaoLogin"; // 🔐 이게 있어야 oauthGetUrl 사용 가능
-
 export default function GroupList(input) {
-  const timestamp = new Date().getTime();
-  const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
+  const { access_token } = input; // ✅ 서버 토큰 받음
+
+  const url = `https://jkah.shop:8443/group/check/list`;
 
   try {
-    const response = http.oauthGetUrl(url, {
+    const response = http.getUrl(url, {
       format: 'json',
       headers: {
+        Authorization: `Bearer ${access_token}`, // ✅ 서버 인증 토큰 붙이기
         'Content-Type': 'application/json'
       }
     });
@@ -34,8 +34,8 @@ export default function GroupList(input) {
     console.error("❌ 오류 발생:", error);
     return {
       success: false,
-      messageTitle: "서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.",
-      messages: ["❌ 액세스 토큰이 만료되었거나 요청에 실패했습니다. ❌"]
+      messageTitle: "서버 오류",
+      messages: ["❌ 다시 시도해 주세요"]
     };
   }
 }
