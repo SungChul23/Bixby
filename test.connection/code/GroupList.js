@@ -1,29 +1,19 @@
 import http from 'http';
-import fetchAccessToken from './fetchAccessToken'; // accessToken을 가져오는 함수
+import console from 'console';
 
-export default function GroupList() {
+export const authorization = "KakaoLogin"; // 🔐 이게 있어야 oauthGetUrl 사용 가능
+
+export default function GroupList(input) {
+  const timestamp = new Date().getTime();
+  const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
+
   try {
-    const timestamp = new Date().getTime();
-    const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
-
-    const accessToken = fetchAccessToken();
-    if (!accessToken) {
-      return {
-        success: false,
-        messageTitle: "🚨 로그인이 필요합니다.",
-        messages: ["다시 로그인해 주세요."]
-      };
-    }
-
-    const options = {
+    const response = http.oauthGetUrl(url, {
       format: 'json',
       headers: {
-        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
       }
-    };
-
-    const response = http.getUrl(url, options);
+    });
 
     if (!response || response.length === 0) {
       return {
@@ -33,7 +23,7 @@ export default function GroupList() {
       };
     }
 
-    let groupNames = response.map(group => `📌 ${group.groupName}`);
+    const groupNames = response.map(group => `📌 ${group.groupName}`);
 
     return {
       success: true,
@@ -41,10 +31,11 @@ export default function GroupList() {
       messages: groupNames
     };
   } catch (error) {
+    console.error("❌ 오류 발생:", error);
     return {
       success: false,
       messageTitle: "서버가 바쁜가 봐요! 다시 한 번만 시도해 주세요.",
-      messages: ["❌ 액세스 토큰이 만료되었습니다. 다시 한 번 로그인해 주세요. ❌"]
+      messages: ["❌ 액세스 토큰이 만료되었거나 요청에 실패했습니다. ❌"]
     };
   }
 }

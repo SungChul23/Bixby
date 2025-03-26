@@ -43,3 +43,10 @@ Learn about submitting your capsule to the [Marketplace](https://bixbydevelopers
 
 5. 내가 오어뜨 인증 서버에 요청을 하고 토큰을 발급 받고 이걸 AWS 서버랑 대조후에 맞으면 자원제공 ? ㄱㅊ나
 6. URL 앞에 oauth 단어 하나 추가해서 요청을 보낸다면 헤더에 토큰 전달 그럼 서버에서 이걸 확인해서 올바른 토큰 값이구나
+
+
+18.219.154.73
+52.15.218.90
+18.188.238.231
+
+Bixby 서버 IP 범위(AWS IP 대역)를 파악해서 CIDR로 넣는 방법 (ex: 18.0.0.0/8)
