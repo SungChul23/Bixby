@@ -1,15 +1,9 @@
 structure (LoginResponse) {
   description (카카오 로그인 후 사용자 정보를 담는 구조입니다.)
-
   property (nickname) {
     type (nickname)
-    min (Optional)
-    max (One)
   }
   property (access_token) {
     type (access_token)
-    min (Optional)
-    max (One)
   }
-
 }

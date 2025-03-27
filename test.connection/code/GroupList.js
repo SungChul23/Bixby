@@ -23,7 +23,7 @@ export default function GroupList(input) {
       };
     }
 
-    const groupNames = response.map(group => `📌 ${group.groupName}`);
+    const groupNames = response.map(group => ` 📌 ${group.groupName}`);
 
     return {
       success: true,

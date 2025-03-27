@@ -9,7 +9,7 @@ endpoints {
       local-endpoint (CheckPlugStatus.js)
     }
     action-endpoint (GroupList) { // 그룹 별 리스트 엔드포인트
-      accepted-inputs ()
+      accepted-inputs (access_token) // 엑세스 토큰
       local-endpoint (GroupList.js)
     }
     action-endpoint (RunGroup) { // 그룹 별 제어 엔드포인트
@@ -17,7 +17,7 @@ endpoints {
       local-endpoint (RunGroup.js)
     }
     action-endpoint (LoginOAuth) { // 카카오 로그인 엔드포인트
-      accepted-inputs ()
+      accepted-inputs ($vivContext)
       local-endpoint (LoginOAuth.js)
       authorization {              // OAuth 설정
         user 

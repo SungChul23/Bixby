@@ -1,10 +1,10 @@
 action (GroupList) {
-  type (Constructor)
+  type (Search)
   description ("사용자가 만든 그룹 리스트를 가져옵니다.")
 
   collect{
     input (access_token){
-      type (access_token) // AWS 서버에서 받아올 토큰
+      type (access_token)
     }
   }
 
