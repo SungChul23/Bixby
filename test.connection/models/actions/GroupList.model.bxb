@@ -1,13 +1,12 @@
 action (GroupList) {
   type (Search)
   description ("사용자가 만든 그룹 리스트를 가져옵니다.")
-
   collect{
-    input (access_token){
-      type (access_token)
+    input (userSession){
+      type (userSession)
+      min (Optional)
     }
   }
 
-  output (GroupListResult)
-   // ✅ 올바른 structured 컨셉 사용
+  output (GroupListResult) // ✅ 올바른 structured 컨셉 사용
 }

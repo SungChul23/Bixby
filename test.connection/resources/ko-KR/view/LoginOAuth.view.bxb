@@ -1,5 +1,5 @@
 result-view {
-  match: LoginResponse
+  match: userSession
   message {
     template ("🎉 깜빡에 오신 걸 환영합니다 🎉") {
       speech ("깜빡에 오신 걸 환영합니다.")
@@ -16,6 +16,7 @@ result-view {
         }
       }
     }
+    
   }
   conversation-drivers {
     conversation-driver {

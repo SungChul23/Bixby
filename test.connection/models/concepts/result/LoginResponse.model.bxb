@@ -3,7 +3,8 @@ structure (LoginResponse) {
   property (nickname) {
     type (nickname)
   }
-  property (access_token) {
-    type (access_token)
+  property (accessToken) {
+    type (accessToken)
   }
+  
 }

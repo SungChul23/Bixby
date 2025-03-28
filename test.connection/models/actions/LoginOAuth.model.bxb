@@ -1,6 +1,4 @@
 action (LoginOAuth) {
   type (Constructor)
-  output (LoginResponse) 
-  
-   // 메시지로 반환
+  output (userSession) 
 }

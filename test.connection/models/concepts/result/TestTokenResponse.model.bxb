@@ -1,6 +1,6 @@
 structure (TestTokenResponse) {
-  property (access_token) {
-    type (access_token)
+  property (accessToken) {
+    type (accessToken)
     min (Optional)
     max (One)
   }
