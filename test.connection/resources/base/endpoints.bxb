@@ -1,11 +1,11 @@
 endpoints {
   action-endpoints {
     action-endpoint (DeviceControl) { // 기기 제어 엔드포인트
-      accepted-inputs (applianceName, actionType)
+      accepted-inputs (applianceName, actionType, userSession)
       local-endpoint (DeviceControl.js)
     }
     action-endpoint (CheckPlugStatus) { // 플러그 상태 조회 엔드포인트
-      accepted-inputs (applianceName)
+      accepted-inputs (applianceName, userSession)
       local-endpoint (CheckPlugStatus.js)
     }
     action-endpoint (GroupList) {

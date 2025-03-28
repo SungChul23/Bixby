@@ -2,3 +2,7 @@ train (t-xth0taj1ithr9txq1bl1zc7aw) {
   utterance ([g:GroupList] 어떤 그룹이 등록되어 있는지 보여줘)
   last-modified (1739630588458)
 }
+train (t-xx99zssv6ttjens2zq4h7e7nx) {
+  utterance ([g:LoginOAuth] 깜빡 세션 유지!)
+  last-modified (1743175157999)
+}

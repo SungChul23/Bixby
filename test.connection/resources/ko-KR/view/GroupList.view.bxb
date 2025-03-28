@@ -3,7 +3,7 @@ result-view {
 
   message {
     template ("#{value(groupResult.messageTitle)}") {
-      speech ("#{value(groupResult.messageTitle)}")  // ✅ "총 개의 그룹이 있습니다"까지만 음성 안내
+      speech ("#{value(groupResult.messageTitle)}")
     }
   }
 
@@ -11,20 +11,30 @@ result-view {
     layout {
       section {
         content {
-          for-each (groupResult.messages) {  // ✅ 그룹 리스트 반복 출력
+          for-each (groupResult.messages) {
             as (messageItem) {
               title-card {
                 title-area {
-                  slot1 {  // ✅ 그룹명만 출력
+                  slot1 {
                     paragraph {
-                      style (Title_M)  // ✅ 큰 제목 스타일 적용
-                      value ("#{value(messageItem)}")  // ✅ 그룹 이름 출력
+                      style (Title_M)
+                      value ("#{value(messageItem)}")
                     }
                   }
                 }
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  conversation-drivers {
+    if (!groupResult.success) {
+      conversation-driver {
+        template ("🔓 깜빡 세션 유지!") {
+          speech ("세션을 유지합니다.")
         }
       }
     }

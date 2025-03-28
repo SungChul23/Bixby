@@ -1,18 +1,11 @@
 authorization {
   user {
     oauth2-authorization-code ("KakaoLogin") {
-      
       authorize-endpoint (https://kauth.kakao.com/oauth/authorize) // 인가코드
-      
       token-endpoint (https://kauth.kakao.com/oauth/token) // 인가코드로 토큰 발급
-      
       client-id (7fd6112fa7ebf21d960c2f2a64f6d690)
-      
-      client-secret-key ("")  // Kakao에서 사용 안 하면 반드시 빈 문자열!
-     
+      client-secret-key ("") // Kakao에서 사용 안 하면 반드시 빈 문자열!
       scope (profile_nickname, profile_image, account_email)
     }
   }
-
-  
 }

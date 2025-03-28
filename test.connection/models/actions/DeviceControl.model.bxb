@@ -1,20 +1,21 @@
 action (DeviceControl) {
   type (Constructor)
   description ("기기 제어 액션")
-
-  collect { 
+  collect {
     input (applianceName) {
       type (ApplianceName)
       min (Required)
       max (One)
-    } 
+    }
     input (actionType) {
       type (ActionType)
       min (Required)
       max (One)
     }
-  } 
-
+    input (userSession) {
+      type (userSession)
+      min (Optional)
+    }
+  }
   output (DeviceControlResult)
-    
 }

@@ -1,15 +1,16 @@
 action (CheckPlugStatus) {
   type (Search)
   description ("기기 상태 조회")
-
-  collect { 
-    // 기기 이름 
+  collect { // 기기 이름 
     input (applianceName) {
       type (ApplianceName)
       min (Required)
       max (One)
-    } 
-  } 
-
+    }
+    input (userSession) {
+      type (userSession)
+      min (Optional) // ✅ accessToken이 필요하므로 Required
+    }
+  }
   output (CheckPlugStatusResult)
 }

@@ -2,9 +2,18 @@ import http from 'http';
 import console from 'console';
 
 export default function GroupList({ userSession }) {
-  const accessToken = userSession.accessToken;
   const timestamp = new Date().getTime();
 
+  // ✅ userSession 또는 accessToken이 없을 경우 로그인 요청
+  if (!userSession || !userSession.accessToken || userSession.accessToken === '없음') {
+    return {
+      success: false,
+      messageTitle: "로그인이 필요합니다.",
+      messages: ["🔒 먼저 로그인을 해주세요 🙏"]
+    };
+  }
+
+  const accessToken = userSession.accessToken;
   const url = `https://jkah.shop:8443/group/check/list?timestamp=${timestamp}`;
 
   console.log("🔐 accessToken ▶", accessToken);

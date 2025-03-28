@@ -1,25 +1,34 @@
 result-view {
   match: CheckPlugStatusResult (plugStatus)
   message {
-    template ("🔌플러그 상태를 확인해 보세요🔌") {
-      speech ("#{value(plugStatus.statusMessage)}") // statusMessage는 이제 text 타입이므로 그대로 사용 가능
+    if (plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
+      template ("#{value(plugStatus.statusMessage)}") {
+        speech ("#{value(plugStatus.statusMessage)}")
+      }
+    }
+    else {
+      template ("🔌플러그 상태를 확인해 보세요🔌") {
+        speech ("#{value(plugStatus.statusMessage)}")
+      }
     }
   }
   render {
     layout {
       section {
         content {
-          split-input-cell {
-            left {
-              input-cell {
-                label ("기기 이름")
-                value ("#{value(plugStatus.name)}") // 기기 이름 표시
+          if (!(plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.")) {
+            split-input-cell {
+              left {
+                input-cell {
+                  label ("기기 이름")
+                  value ("#{value(plugStatus.name)}")
+                }
               }
-            }
-            right {
-              input-cell {
-                label ("상태")
-                value ("#{value(plugStatus.power) ? 'ON' : 'OFF'}") // ON/OFF 상태 표시
+              right {
+                input-cell {
+                  label ("상태")
+                  value ("#{plugStatus.power ? 'ON' : 'OFF'}")
+                }
               }
             }
           }
@@ -28,25 +37,33 @@ result-view {
     }
   }
   conversation-drivers {
-    conversation-driver {
-      template ("컴퓨터 본체 켜져 있어?"){
-        speech ("컴퓨터 본체 상태를 확인해 보세요.")
+    if (plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
+      conversation-driver {
+        template ("🔓 깜빡 세션 유지!") {
+          speech ("세션을 유지합니다.")
+        }
       }
     }
-    conversation-driver {
-      template ("밥솥 켜져 있어?"){
-        speech ("밥솥 상태를 확인 해 보세요")
+    else {
+      conversation-driver {
+        template ("컴퓨터 본체 켜져 있어?") {
+          speech ("컴퓨터 본체 상태를 확인해 보세요.")
+        }
       }
-    }
-    conversation-driver {
-      template ("핸드폰 충전기 켜져 있어?"){
-        speech ("핸드폰 충전기 상태를 확인 해 보세요.")
+      conversation-driver {
+        template ("밥솥 켜져 있어?") {
+          speech ("밥솥 상태를 확인 해 보세요")
+        }
       }
-    }
-    conversation-driver {
-      template ("모니터 켜져 있어?")
-      {
-        speech ("모니터 상태를 확인 해 보세요")
+      conversation-driver {
+        template ("핸드폰 충전기 켜져 있어?") {
+          speech ("핸드폰 충전기 상태를 확인 해 보세요.")
+        }
+      }
+      conversation-driver {
+        template ("모니터 켜져 있어?") {
+          speech ("모니터 상태를 확인 해 보세요")
+        }
       }
     }
   }
