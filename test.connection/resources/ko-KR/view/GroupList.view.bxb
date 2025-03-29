@@ -37,6 +37,15 @@ result-view {
           speech ("세션을 유지합니다.")
         }
       }
+
+
+      if (groupResult.messageTitle == "현재 등록된 그룹이 없습니다.") {
+        conversation-driver {
+          template ("📱 깜빡 앱 열기!") {
+            speech ("깜빡 앱을 실행합니다.")
+          }
+        }
+      }
     }
   }
 }

@@ -1,12 +1,14 @@
  capsule {
-  id (smarthomecontrolusingbixby.kim)
+  id (smarthomecontrolusingbixby.blink)
   format (3) // 캡슐 형식 버전 (3 또는 3.0 사용)
   version (1.0.0) // 캡슐의 버전
   runtime-version (9) {
     js-runtime-version (2)
   }
   store-countries {
-    all
+    only{
+      allow (KR) // 한국에서만
+    }
   }
   store-sections {
     section (SmartHome) // 마켓 플레이스 섹션
@@ -14,10 +16,5 @@
   targets {
     target (bixby-mobile-ko-KR) //대한민국
   }
-  capsule-categories {
-    category (News) // 카테고리 뉴스 설정  https://bixbydevelopers.com/dev/docs/reference/categories
-  }
 
-
-  
 }

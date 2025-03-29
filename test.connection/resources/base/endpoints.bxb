@@ -13,7 +13,7 @@ endpoints {
       local-endpoint (GroupList.js) // 
     }
     action-endpoint (RunGroup) { // 그룹 별 제어 엔드포인트
-      accepted-inputs (groupName)
+      accepted-inputs (groupName,userSession)
       local-endpoint (RunGroup.js)
     }
     action-endpoint (LoginOAuth) { // 카카오 로그인 엔드포인트

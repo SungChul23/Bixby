@@ -6,9 +6,10 @@ result-view {
       template ("#{value(groupData.groupName)}의 실행 결과입니다.") {
         speech ("#{value(groupData.groupName)}의 실행 결과를 확인해보세요.")
       }
-    } else {
-      template ("앱을 통해 그룹을 생성해 주세요") {
-        speech ("#{value(groupData.messages)}")  // ✅ 실패 시 메시지만 출력
+    }
+    else {
+      template ("#{value(groupData.messages)}") {
+        speech ("#{value(groupData.messages)}")
       }
     }
   }
@@ -17,14 +18,16 @@ result-view {
     layout {
       section {
         content {
-          for-each (groupData.messages) {
-            as (messageItem) {
-              title-card {
-                title-area {
-                  slot1 {
-                    paragraph {
-                      style (Title_M)
-                      value ("#{value(messageItem)}")  // ✅ 성공/실패 리스트를 개별 카드로 표시
+          if (value(groupData.success)) {
+            for-each (groupData.messages) {
+              as (messageItem) {
+                title-card {
+                  title-area {
+                    slot1 {
+                      paragraph {
+                        style (Title_M)
+                        value ("#{value(messageItem)}")
+                      }
                     }
                   }
                 }
@@ -33,6 +36,17 @@ result-view {
           }
         }
       }
+    }
+  }
+
+  conversation-drivers {
+    if (!value(groupData.success)) {
+      conversation-driver {
+        template ("🔓 깜빡 세션 유지!") {
+          speech ("세션을 유지합니다.")
+        }
+      }
+      
     }
   }
 }

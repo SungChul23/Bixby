@@ -15,7 +15,7 @@ structure (RunGroupResult) {
   property (groupName) {
     type (groupName) //  음성 출력용
     description ("그룹 실행 결과 메시지")
-    min (Required)
+    min (Optional)
     max (One)
   }
 }
