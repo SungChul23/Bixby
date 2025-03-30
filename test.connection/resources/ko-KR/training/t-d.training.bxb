@@ -1,20 +1,20 @@
 train (t-drhxf77pw7xnp6v0jtyoe6zcn) {
-  utterance ([g:GroupList] 그룹 리스트 보여줘)
-  last-modified (1739630611780)
+  utterance ([g:GroupList] 깜빡에서 그룹 리스트 보여줘)
+  last-modified (1743331144137)
 }
 train (t-d961sy8qao5cqozfvlrk0g815) {
-  utterance ("[g:CheckPlugStatus] (동균 플러그)[v:ApplianceName:s87d6b37c485d47104vdkb] 켜져있나?")
-  last-modified (1742652610746)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (동균 플러그)[v:ApplianceName:s87d6b37c485d47104vdkb] 켜져있나?")
+  last-modified (1743330948522)
 }
 train (t-d5pk3zo787qxuyjeth6kcmshz) {
-  utterance ("[g:CheckPlugStatus] (전기밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1]이 꽃힌 플러그 상태 확인해줘")
-  last-modified (1739961064572)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (전기밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1]이 꽃힌 플러그 상태 확인해줘")
+  last-modified (1743331065497)
 }
 train (t-d8258tkbthlyy128btz5nhxbg) {
-  utterance ("[g:CheckPlugStatus] (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] 내가 키고 왔나?")
-  last-modified (1739961492551)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] 내가 키고 왔나?")
+  last-modified (1743331021678)
 }
 train (t-d34fwuq55kf9m5gl3cakoc7tx) {
-  utterance ("[g:DeviceControl] (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj] (꺼줘)[v:ActionType:off]")
-  last-modified (1739964312569)
+  utterance ("[g:DeviceControl] 깜빡에서 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj] (꺼줘)[v:ActionType:off]")
+  last-modified (1743330890792)
 }

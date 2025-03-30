@@ -1,4 +1,4 @@
-vocab (ActionType) {
+vocab (ActionType){
   "on" {
     "켜"
     "가동시켜"
@@ -11,9 +11,7 @@ vocab (ActionType) {
     "켜줘"
     "작동"
     "켜 줘"
-
   }
-
   "off" {
     "꺼"
     "멈춰"
@@ -26,6 +24,3 @@ vocab (ActionType) {
     "꺼 줘"
   }
 }
-
-
-

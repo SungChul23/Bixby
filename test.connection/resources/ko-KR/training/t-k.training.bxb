@@ -1,4 +1,4 @@
 train (t-kmdrkck3bm4x1wvrp5tiieaym) {
-  utterance ("[g:CheckPlugStatus] (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj]켜져 있나 확인해봐")
-  last-modified (1739961170541)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj]켜져 있나 확인해봐")
+  last-modified (1743331042803)
 }

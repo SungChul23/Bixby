@@ -20,7 +20,7 @@ result-view {
   }
   conversation-drivers {
     conversation-driver {
-      template ("📱 깜빡 앱 열기!") {
+      template ("깜빡에서 앱 열기!") {
         speech ("깜빡 앱을 실행합니다.")
       }
     }

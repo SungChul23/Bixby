@@ -22,6 +22,4 @@ enum (ApplianceName) {
 
   symbol (s8591ba1f394fda564m30o) //준섭게발용
 
-  /////////////////////////////////////////////
-  symbol (eb418184ceec03c8af32i) // main10 플러그 테승트
 }

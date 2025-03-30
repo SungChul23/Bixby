@@ -1,4 +1,4 @@
 train (t-ea6tmc7npbnvzhlh4szf9e9rf) {
-  utterance ("[g:CheckPlugStatus] (드라이기)[v:ApplianceName:eb5926ea2e2cc6a3a1hhch] 전원이 들어와 있나?")
-  last-modified (1739961228341)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (드라이기)[v:ApplianceName:eb5926ea2e2cc6a3a1hhch] 전원이 들어와 있나?")
+  last-modified (1743331035293)
 }

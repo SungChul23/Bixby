@@ -1,0 +1,13 @@
+action (LogoutOAuth) {
+  type (Search)
+  description ("카카오 로그아웃 처리")
+
+  collect {
+    input (userSession) {
+      type (userSession)
+      min (Required)
+    }
+  }
+
+  output (LogoutResult)
+}

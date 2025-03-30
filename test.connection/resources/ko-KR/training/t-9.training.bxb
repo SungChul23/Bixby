@@ -1,4 +1,4 @@
 train (t-9skqhenlpgm6p7reb2gt6exiz) {
-  utterance ("[g:CheckPlugStatus] 내가 집에 나올때 (컴퓨터 본체)[v:ApplianceName:eb5607bd7dcddce97bsmno] 키고 나왔나?")
-  last-modified (1742977695065)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 내가 집에 나올때 (컴퓨터 본체)[v:ApplianceName:eb5607bd7dcddce97bsmno] 키고 나왔나?")
+  last-modified (1743330941126)
 }

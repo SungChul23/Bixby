@@ -1,10 +1,11 @@
 action (GroupList) {
   type (Search)
-  description ("사용자가 만든 그룹 리스트를 가져옵니다.")
+  description ("사용자가 만든 그룹 리스트를 가져옴")
   collect{
-    input (userSession){
+    input (userSession){ 
       type (userSession)
       min (Optional)
+      description ("AWS서버에서 받은 가공된 토큰이 들어있는 userSession")
     }
   }
 

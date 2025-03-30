@@ -2,19 +2,20 @@ action (DeviceControl) {
   type (Constructor)
   description ("기기 제어 액션")
   collect {
-    input (applianceName) {
+    input (applianceName) { //기기이름
       type (ApplianceName)
       min (Required)
       max (One)
     }
-    input (actionType) {
+    input (actionType) { //기기 on/off
       type (ActionType)
       min (Required)
       max (One)
     }
-    input (userSession) {
+    input (userSession) { 
       type (userSession)
       min (Optional)
+      description ("AWS서버에서 받은 가공된 토큰이 들어있는 userSession")
     }
   }
   output (DeviceControlResult)

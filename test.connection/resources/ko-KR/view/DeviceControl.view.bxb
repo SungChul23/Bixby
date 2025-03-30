@@ -45,7 +45,7 @@ result-view {
   conversation-drivers {
     if (controlResult.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
       conversation-driver {
-        template ("🔓 깜빡 세션 유지!") {
+        template ("깜빡에서 세션 유지!") {
           speech ("세션을 유지합니다.")
         }
       }

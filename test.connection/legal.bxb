@@ -2,10 +2,10 @@ legal {
   country-documents {
     store-country (KR) // 대한민국 마켓플레이스 대상
     terms-and-conditions {
-      url ("https://jkah.shop/legal/terms") // 서비스 이용약관
+      url ("https://jkah.shop:8443/legal/terms") // 서비스 이용약관
     }
     privacy-policy {
-      url ("https://jkah.shop/legal/privacy") // 개인정보 처리방침
+      url ("https://jkah.shop:8443/legal/privacy") // 개인정보 처리방침
     }
   }
 }

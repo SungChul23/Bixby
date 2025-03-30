@@ -1,0 +1,3 @@
+text (kakaoAccessToken) {
+  description ("카카오에서 받은 엑세스 토큰")
+}

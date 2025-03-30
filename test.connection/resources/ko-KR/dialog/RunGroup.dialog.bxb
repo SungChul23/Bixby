@@ -1,7 +1,0 @@
-// dialog (Result) {
-//   match: RunGroup (groupData)
-
-//   template ("#{groupData.groupName}의 실행 결과입니다.") {
-//     speech ("#{groupData.groupName}의 실행 결과를 확인해보세요.")
-//   }
-// }

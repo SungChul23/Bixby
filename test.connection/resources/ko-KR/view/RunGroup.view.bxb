@@ -42,11 +42,10 @@ result-view {
   conversation-drivers {
     if (!value(groupData.success)) {
       conversation-driver {
-        template ("🔓 깜빡 세션 유지!") {
+        template ("깜빡에서 세션 유지!") {
           speech ("세션을 유지합니다.")
         }
       }
-      
     }
   }
 }

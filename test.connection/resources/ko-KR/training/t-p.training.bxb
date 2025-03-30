@@ -1,4 +1,4 @@
 train (t-pvk5bk0dy1bntj8rvdra8ad35) {
-  utterance ("[g:DeviceControl] (전기밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1] (꺼주라)[v:ActionType:off]")
-  last-modified (1739964090161)
+  utterance ("[g:DeviceControl] 깜빡에서 (전기밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1] (꺼주라)[v:ActionType:off]")
+  last-modified (1743330908591)
 }

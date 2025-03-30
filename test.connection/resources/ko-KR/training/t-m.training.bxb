@@ -1,4 +1,4 @@
 train (t-m4y3mcoijx2y14bmphhh5vpok) {
-  utterance ("[g:DeviceControl] (전자레인지)[v:ApplianceName:eb8fd0a2d8c5f32c06eewp] (끄자)[v:ActionType:off]")
-  last-modified (1739964689469)
+  utterance ("[g:DeviceControl] 깜빡에서 (전자레인지)[v:ApplianceName:eb8fd0a2d8c5f32c06eewp] (끄자)[v:ActionType:off]")
+  last-modified (1743330856557)
 }

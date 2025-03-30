@@ -1,5 +1,5 @@
 structure (LoginResponse) {
-  description (카카오 로그인 후 사용자 정보를 담는 구조입니다.)
+  description ("카카오 로그인 후 사용자 정보를 담는 구조")
   property (nickname) {
     type (nickname)
   }

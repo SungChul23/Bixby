@@ -4,11 +4,11 @@ import console from 'console';
 export default function GroupList({ userSession }) {
   const timestamp = new Date().getTime();
 
-  // ✅ userSession 또는 accessToken이 없을 경우 로그인 요청
+  // ✅ 로그인 여부 확인
   if (!userSession || !userSession.accessToken || userSession.accessToken === '없음') {
     return {
       success: false,
-      messageTitle: "로그인이 필요합니다.",
+      messageTitle: "로그인이 필요합니다. 먼저 로그인해 주세요.",
       messages: ["🔒 먼저 로그인을 해주세요 🙏"]
     };
   }
@@ -20,6 +20,7 @@ export default function GroupList({ userSession }) {
   console.log("🕒 timestamp ▶", timestamp);
 
   try {
+    // ✅ 그룹 목록 요청
     const response = http.getUrl(url, {
       format: 'json',
       headers: {
@@ -28,6 +29,7 @@ export default function GroupList({ userSession }) {
       }
     });
 
+    // ✅ 등록된 그룹이 없는 경우
     if (!response || response.length === 0) {
       return {
         success: false,
@@ -36,6 +38,7 @@ export default function GroupList({ userSession }) {
       };
     }
 
+    // ✅ 그룹 이름만 추출
     const groupNames = response.map(group => `📌 ${group.groupName}`);
 
     return {
@@ -44,11 +47,12 @@ export default function GroupList({ userSession }) {
       messages: groupNames
     };
   } catch (e) {
+    // ✅ 서버 오류 처리
     console.error("❌ 그룹 리스트 조회 실패:", e);
     return {
       success: false,
-      messageTitle: "서버 오류",
-      messages: ["❌ 다시 시도해 주세요"]
+      messageTitle: "서버가 바쁜가봐요 다시 한 번 시도해주세요.",
+      messages: ["❌ 다시 시도해 주세요 ❌"]
     };
   }
 }

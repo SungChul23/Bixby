@@ -1,4 +1,8 @@
 train (t-h2vpgccxm5hrg7hzjo72tqp1v) {
-  utterance ([g:LoginOAuth] 로그인 시작)
-  last-modified (1742983435189)
+  utterance ([g:LoginOAuth] 깜빡에서 로그인 시작)
+  last-modified (1743331490627)
+}
+train (t-hplp8m8asrjgdpuvzdarpxy89) {
+  utterance ([g:LogoutOAuth] 깜빡에서 로그아웃 하자)
+  last-modified (1743336214373)
 }

@@ -1,8 +1,8 @@
 train (t-ckd97pcto21sm3ajlka2bnmbv) {
-  utterance ("[g:CheckPlugStatus] (준영 플러그)[v:ApplianceName:s846a3d0d42d10f4f02q66] 상태 확인해줘")
-  last-modified (1742195206568)
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (준영 플러그)[v:ApplianceName:s846a3d0d42d10f4f02q66] 상태 확인해줘")
+  last-modified (1743330990241)
 }
 train (t-c1y1pyjmjxjmmqr2ixo1izg6q) {
-  utterance ([g:LoginOAuth] 로그인 할래)
-  last-modified (1742983277935)
+  utterance ([g:LoginOAuth] 깜빡에서 로그인 할래)
+  last-modified (1743331511283)
 }

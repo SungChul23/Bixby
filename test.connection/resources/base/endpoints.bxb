@@ -1,31 +1,35 @@
 endpoints {
-  action-endpoints {
-    action-endpoint (DeviceControl) { // 기기 제어 엔드포인트
+  action-endpoints { //[기능]기기제어
+    action-endpoint (DeviceControl) {
       accepted-inputs (applianceName, actionType, userSession)
       local-endpoint (DeviceControl.js)
-    }
-    action-endpoint (CheckPlugStatus) { // 플러그 상태 조회 엔드포인트
+    } //[기능] 단일 기기 상태 조회
+    action-endpoint (CheckPlugStatus) {
       accepted-inputs (applianceName, userSession)
       local-endpoint (CheckPlugStatus.js)
-    }
+    } //[기능] 그룹 리스트 불러오기
     action-endpoint (GroupList) {
       accepted-inputs (userSession)
-      local-endpoint (GroupList.js) // 
-    }
-    action-endpoint (RunGroup) { // 그룹 별 제어 엔드포인트
+      local-endpoint (GroupList.js)
+    } //[기능]그룹 별 제어
+    action-endpoint (RunGroup) {
       accepted-inputs (groupName,userSession)
       local-endpoint (RunGroup.js)
-    }
-    action-endpoint (LoginOAuth) { // 카카오 로그인 엔드포인트
+    } //[기능] 카카오 로그인 진행 + OAuth 설정
+    action-endpoint (LoginOAuth) {
       accepted-inputs ($vivContext)
       local-endpoint (LoginOAuth.js)
-      authorization { // OAuth 설정
+      authorization {
         user
       }
-    }
-    action-endpoint (OpenAppAction) { // "깜박" 앱 넘어가기
+    } //[기능] 깜빡 어플리케이션 실행
+    action-endpoint (OpenAppAction) {
       accepted-inputs ()
       local-endpoint (OpenAppAction.js)
+    } //[기능] 깜빡 로그아웃
+    action-endpoint (LogoutOAuth) {
+      accepted-inputs (userSession)
+      local-endpoint (LogoutOAuth.js)
     }
   }
 }

@@ -1,8 +1,12 @@
 train (t-nkk5x2vt3mgudfgl9z7qlb148) {
-  utterance ("[g:DeviceControl] (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜)[v:ActionType:on]")
-  last-modified (1739965481911)
+  utterance ("[g:DeviceControl] 깜빡에서 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜)[v:ActionType:on]")
+  last-modified (1743330836451)
 }
 train (t-n4i45vwq9n0cie4szrqjq2fjr) {
-  utterance ([g:LoginOAuth] 로그인할래)
-  last-modified (1742983293232)
+  utterance ([g:LoginOAuth] 깜빡에서 로그인할래)
+  last-modified (1743331503904)
+}
+train (t-np2nbw6n7k47ln9dsgu1zyn3t) {
+  utterance ([g:LogoutOAuth] 깜빡에서 로그아웃 할래)
+  last-modified (1743336190028)
 }

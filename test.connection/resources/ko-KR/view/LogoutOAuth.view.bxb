@@ -1,0 +1,9 @@
+result-view {
+  match: LogoutResult (logout)
+
+  message {
+    template ("#{value(logout.messages)}") {
+      speech ("#{value(logout.messages)}")
+    }
+  }
+}

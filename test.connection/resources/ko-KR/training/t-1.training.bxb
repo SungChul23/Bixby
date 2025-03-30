@@ -1,8 +1,4 @@
-train (t-10f02c5cuig2chjwfra54wd82) {
-  utterance ("[g:DeviceControl] (오류)[v:ApplianceName:eb418184ceec03c8af32i] 플러그 (켜줘)[v:ActionType:on]")
-  last-modified (1742569728660)
-}
 train (t-1tw26li0zfe45dvq08xz6t5g9) {
-  utterance ([g:OpenAppAction] 깜빡 앱 열기!)
-  last-modified (1742980570069)
+  utterance ([g:OpenAppAction] 깜빡에서 앱 열기!)
+  last-modified (1743330272109)
 }

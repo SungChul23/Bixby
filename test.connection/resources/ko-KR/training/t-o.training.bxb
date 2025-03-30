@@ -1,8 +1,8 @@
 train (t-okwlmwf6y2sp2pc22ct4uam0f) {
-  utterance ("[g:DeviceControl] (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜줘)[v:ActionType:on]")
-  last-modified (1739963797717)
+  utterance ("[g:DeviceControl] 깜빡에서 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜줘)[v:ActionType:on]")
+  last-modified (1743330923775)
 }
 train (t-otqrhc8vda0pjcrf6e7cei2fk) {
-  utterance ("[g:DeviceControl] (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (꺼)[v:ActionType:off]")
-  last-modified (1739965533216)
+  utterance ("[g:DeviceControl] 깜빡에서 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (꺼)[v:ActionType:off]")
+  last-modified (1743330825919)
 }

@@ -6,6 +6,12 @@ result-view {
         speech ("#{value(plugStatus.statusMessage)}")
       }
     }
+    else
+    if (plugStatus.statusMessage == "서버가 바쁜가 봐요! 다시 시도해 주세요.") {
+      template ("❌ 해당 플러그가 존재 하지 않아요 ❌") {
+        speech ("해당 플러그가 존재 하지 않아요.")
+      }
+    }
     else {
       template ("🔌플러그 상태를 확인해 보세요🔌") {
         speech ("#{value(plugStatus.statusMessage)}")
@@ -16,7 +22,7 @@ result-view {
     layout {
       section {
         content {
-          if (!(plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.")) {
+          if (plugStatus.name != null && plugStatus.power != null) {
             split-input-cell {
               left {
                 input-cell {
@@ -37,14 +43,18 @@ result-view {
     }
   }
   conversation-drivers {
-    if (plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
+    if (
+    plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요." ||
+    plugStatus.statusMessage == "서버가 바쁜가 봐요! 다시 시도해 주세요."
+  ) {
       conversation-driver {
-        template ("🔓 깜빡 세션 유지!") {
+        template ("깜빡에서 세션 유지!") {
           speech ("세션을 유지합니다.")
         }
       }
     }
-    else {
+    else
+    if (plugStatus.name != null && plugStatus.power != null) {
       conversation-driver {
         template ("컴퓨터 본체 켜져 있어?") {
           speech ("컴퓨터 본체 상태를 확인해 보세요.")
@@ -61,7 +71,7 @@ result-view {
         }
       }
       conversation-driver {
-        template ("모니터 켜져 있어?") {
+        template ("모니터 꺼져 있어?") {
           speech ("모니터 상태를 확인 해 보세요")
         }
       }

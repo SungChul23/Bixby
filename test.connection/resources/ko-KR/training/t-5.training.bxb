@@ -4,6 +4,6 @@ train (t-5wom62o3e2yzyx8rz5t119xv4) {
   last-modified (1739960692398)
 }
 train (t-50nh95eq9efixygaqyheb8id2) {
-  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 시작해줘")
-  last-modified (1739887837440)
+  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 시작해볼래?")
+  last-modified (1743331228073)
 }

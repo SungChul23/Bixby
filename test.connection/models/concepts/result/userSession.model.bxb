@@ -1,0 +1,19 @@
+structure (userSession) {
+  description ("로그인 후 사용자 세션 정보")
+  property (nickname) {
+    type (nickname) // 사용자의 닉네임
+    min (Optional)
+  }
+  property (accessToken) { // AWS서버 엑세스 토큰
+    type (accessToken)
+    visibility (Private)
+    min (Required)
+    description ("AWS서버에서 받은 엑세스 토큰")
+  }
+  property (kakaoAccessToken) { // 카카오 엑세스 토큰
+    type (kakaoAccessToken)
+    visibility (Private)
+    min (Required)
+    description ("카카오에서 받은 엑세스 토큰")
+  }
+}
