@@ -2,8 +2,14 @@ structure (LogoutResult) {
   description ("카카오 로그아웃 후 성공 유무 및 메시지 출력")
   property (success) {
     type (success)
+    description ("성공 실패 유무")
   }
-  property (messages) {
+  property (statusMessage) {
+    type (statusMessage)
+    description ("상태 메시지 (상단)")
+  }
+  property (messages){
     type (messages)
+    description ("상태 메시지 (하단)")
   }
 }

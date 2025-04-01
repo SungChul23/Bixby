@@ -1,15 +1,17 @@
+// ✅ result-view for CheckPlugStatus
 result-view {
   match: CheckPlugStatusResult (plugStatus)
   message {
-    if (plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
+    if (plugStatus.statusMessage == "로그인이 필요합니다.") {
       template ("#{value(plugStatus.statusMessage)}") {
         speech ("#{value(plugStatus.statusMessage)}")
       }
     }
     else
-    if (plugStatus.statusMessage == "서버가 바쁜가 봐요! 다시 시도해 주세요.") {
-      template ("❌ 해당 플러그가 존재 하지 않아요 ❌") {
-        speech ("해당 플러그가 존재 하지 않아요.")
+    if (plugStatus.statusMessage == "해당 플러그가 존재 하지 않아요. 앱에서 플러그를 등록해 주세요." ||
+             plugStatus.statusMessage == "해당 기기가 존재하지 않아요.") {
+      template ("❌ 해당 플러그가 존재하지 않아요 ❌") {
+        speech ("#{value(plugStatus.statusMessage)}")
       }
     }
     else {
@@ -22,7 +24,19 @@ result-view {
     layout {
       section {
         content {
-          if (plugStatus.name != null && plugStatus.power != null) {
+          if (plugStatus.statusMessage == "로그인이 필요합니다.") {
+            paragraph {
+              style (Title_M)
+              value ("#{value(plugStatus.messages)}")
+            }
+          }
+          if (plugStatus.statusMessage == "해당 플러그가 존재 하지 않아요. 앱에서 플러그를 등록해 주세요.") {
+            paragraph {
+              style (Title_M)
+              value ("#{value(plugStatus.messages)}")
+            }
+          } // 기존 상태 정보 UI (조건 유지)
+          if (value(plugStatus.name) != null && value(plugStatus.power) != null) {
             split-input-cell {
               left {
                 input-cell {
@@ -44,17 +58,23 @@ result-view {
   }
   conversation-drivers {
     if (
-    plugStatus.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요." ||
-    plugStatus.statusMessage == "서버가 바쁜가 봐요! 다시 시도해 주세요."
-  ) {
+      plugStatus.statusMessage == "로그인이 필요합니다." ||
+      plugStatus.statusMessage == "해당 플러그가 존재 하지 않아요. 앱에서 플러그를 등록해 주세요." ||
+      plugStatus.statusMessage == "해당 기기가 존재하지 않아요."
+    ) {
       conversation-driver {
-        template ("깜빡에서 세션 유지!") {
+        template ("🔓 깜빡에서 로그인!") {
           speech ("세션을 유지합니다.")
+        }
+      }
+      conversation-driver {
+        template ("📱 깜빡에서 앱 열기!") {
+          speech ("깜빡 앱을 실행합니다.")
         }
       }
     }
     else
-    if (plugStatus.name != null && plugStatus.power != null) {
+    if (value(plugStatus.name) != null && value(plugStatus.power) != null) {
       conversation-driver {
         template ("깜빡에서 컴퓨터 본체 켜져 있어?") {
           speech ("컴퓨터 본체 상태를 확인해 보세요.")

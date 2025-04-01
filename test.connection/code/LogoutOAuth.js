@@ -8,7 +8,8 @@ export default function LogoutOAuth({ userSession }) {
   if (!kakaoAccessToken || kakaoAccessToken === '없음') {
     return {
       success: false,
-      messages: "⚠️ 카카오 accessToken이 존재하지 않습니다. 다시 로그인 해주세요."
+      statusMessage: "이미 로그아웃인 상태 입니다.",
+      messages: "아래 버튼을 눌러 로그인을 진행 할 수 있어요 😀"
     };
   }
 
@@ -26,14 +27,15 @@ export default function LogoutOAuth({ userSession }) {
     // 🔓 로그아웃 성공
     return {
       success: true,
-      messages: "깜빡 로그아웃이 완료되었습니다."
+      statusMessage: "깜빡 로그아웃이 완료되었습니다.",
+      messages: "다음에 또 찾아주세요! 🙏"
     };
 
   } catch (e) {
     // ❌ 로그아웃 실패 처리
     return {
       success: false,
-      messages: "로그아웃 중 오류가 발생했습니다. 다시 시도해 주세요."
+      statusMessage: "로그아웃 중 오류가 발생했습니다. 다시 시도해 주세요."
     };
   }
 }

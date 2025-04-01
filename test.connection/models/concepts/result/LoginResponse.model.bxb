@@ -2,9 +2,11 @@ structure (LoginResponse) {
   description ("카카오 로그인 후 사용자 정보를 담는 구조")
   property (nickname) {
     type (nickname)
+    description ("사용자 닉네임")
   }
   property (accessToken) {
     type (accessToken)
+    description ("AWS서버어 받은 엑세스 토큰")
   }
   
 }

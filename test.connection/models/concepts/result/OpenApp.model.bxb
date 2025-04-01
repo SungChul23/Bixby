@@ -2,5 +2,6 @@ structure (OpenApp) {
   description ("앱 실행 결과")
   property (uri){
     type (viv.core.Text)
+    description ("깜빡 앱 URI")
   }
 }

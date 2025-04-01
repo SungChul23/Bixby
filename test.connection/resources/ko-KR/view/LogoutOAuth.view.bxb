@@ -2,8 +2,33 @@ result-view {
   match: LogoutResult (logout)
 
   message {
-    template ("#{value(logout.messages)}") {
-      speech ("#{value(logout.messages)}")
+    template ("#{value(logout.statusMessage)}") {
+      speech ("#{value(logout.statusMessage)}")
+    }
+  }
+
+  render {
+    layout {
+      section {
+        content {
+          if (value(logout.messages) != null) {
+            paragraph {
+              style (Title_M)
+              value ("#{value(logout.messages)}")
+            }
+          }
+        }
+      }
+    }
+  }
+
+  conversation-drivers {
+    if (logout.statusMessage == "이미 로그아웃인 상태 입니다.") {
+      conversation-driver {
+        template ("🔓 깜빡에서 로그인!") {
+          speech ("깜빡 로그인을 진행합니다.")
+        }
+      }
     }
   }
 }

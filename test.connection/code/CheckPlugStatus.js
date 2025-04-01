@@ -1,3 +1,4 @@
+// ✅ CheckPlugStatus.js (JavaScript)
 import http from 'http';
 import console from 'console';
 
@@ -7,10 +8,11 @@ export default function CheckPlugStatus({
 }) {
   const timestamp = new Date().getTime();
 
-  // ✅ 로그인 체크 (토큰 없으면 로그인 유도)
+  // ✅ 로그인 체크
   if (!userSession || !userSession.accessToken || userSession.accessToken === '없음') {
     return {
-      statusMessage: "로그인이 필요합니다. 먼저 로그인해 주세요."
+      statusMessage: "로그인이 필요합니다.",
+      messages: "🔒 먼저 로그인을 해주세요 🙏"
     };
   }
 
@@ -26,7 +28,6 @@ export default function CheckPlugStatus({
   const url = `https://jkah.shop:8443/check/plugState/${applianceName}?timestamp=${timestamp}`;
 
   try {
-    // ✅ 서버로 기기 상태 조회 요청
     const response = http.getUrl(url, {
       format: 'json',
       headers: {
@@ -35,36 +36,52 @@ export default function CheckPlugStatus({
       }
     });
 
-    // ✅ 기기 상태 정상 반환
+    const name = response?.name ?? null;
+    const power = typeof response?.power === 'boolean' ? response.power : null;
+
+    if (name === null || power === null) {
+      return {
+        statusMessage: "해당 기기가 존재하지 않아요."
+      };
+    }
+
     return {
-      statusMessage: response.power ?
-        `${response.name}이(가) 지금 켜져 있어요!` :
-        `${response.name}이(가) 꺼져 있어요!`,
-      name: response.name,
-      power: response.power
+      statusMessage: power ?
+        `${name}이(가) 지금 켜져 있어요!` :
+        `${name}이(가) 꺼져 있어요!`,
+      name: name,
+      power: power
     };
 
   } catch (error) {
     console.error("❌ 서버 요청 중 오류 ▶", error);
 
-    // ✅ 404일 경우 서버 메시지 파싱 or 기본 메시지 사용
-    if (error?.response?.status === 404) {
+    const statusCode = error?.response?.status;
+    if (statusCode === 404) {
+      let message = "해당 기기가 존재하지 않아요.";
       try {
-        const errorBody = JSON.parse(error.response.body);
-        const message = errorBody?.message || "해당 기기가 존재하지 않아요.";
-        return {
-          statusMessage: message
-        };
+        const body = error?.response?.body;
+
+        if (typeof body === 'string') {
+          const parsed = JSON.parse(body);
+          if (parsed && typeof parsed === 'object' && parsed.message) {
+            message = parsed.message;
+          }
+        } else if (typeof body === 'object' && body !== null && body.message) {
+          message = body.message;
+        }
       } catch (e2) {
-        return {
-          statusMessage: "해당 기기가 존재하지 않아요."
-        };
+        console.error("❗ 메시지 파싱 실패:", e2);
       }
+
+      return {
+        statusMessage: message
+      };
     }
 
-    // ✅ 기타 서버 오류
     return {
-      statusMessage: "서버가 바쁜가 봐요! 다시 시도해 주세요."
+      statusMessage: "해당 플러그가 존재 하지 않아요. 앱에서 플러그를 등록해 주세요.",
+      messages: "📱 앱에서 플러그를 등록해 주세요 📱"
     };
   }
 }

@@ -8,7 +8,7 @@ export default function GroupList({ userSession }) {
   if (!userSession || !userSession.accessToken || userSession.accessToken === '없음') {
     return {
       success: false,
-      messageTitle: "로그인이 필요합니다. 먼저 로그인해 주세요.",
+      messageTitle: "로그인이 필요합니다.",
       messages: ["🔒 먼저 로그인을 해주세요 🙏"]
     };
   }

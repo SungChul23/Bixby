@@ -34,13 +34,13 @@ result-view {
     // ✅ 로그인 실패 등 accessToken 없을 때
     if (!groupResult.success) {
       conversation-driver {
-        template ("깜빡에서 세션 유지!") {
+        template ("🔓 깜빡에서 로그인!") {
           speech ("세션을 유지합니다.")
         }
       }
       if (groupResult.messageTitle == "현재 등록된 그룹이 없습니다.") {
         conversation-driver {
-          template ("깜빡에서 앱 열기!") {
+          template ("📱 깜빡에서 앱 열기!") {
             speech ("깜빡 앱을 실행합니다.")
           }
         }

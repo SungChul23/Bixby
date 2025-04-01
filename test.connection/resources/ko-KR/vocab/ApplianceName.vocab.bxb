@@ -13,6 +13,7 @@ vocab (ApplianceName) {
     "헤어 드라이어"
     "머리말리는기계"
     "바람나오는거"
+    "Drigyy"
   }
   "ebf3b877b6c2a593eefygj" {
     "에어컨"
@@ -27,6 +28,7 @@ vocab (ApplianceName) {
     "렌지"
     "마이크로파오븐"
     "음식데우는기계"
+    "렌즈"
   }
   "eb35d8d2cda1521998hok1" {
     "밥솥"

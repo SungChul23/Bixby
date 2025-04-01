@@ -2,13 +2,16 @@ structure (GroupListResult) {
   description ("그룹 리스트 결과를 포함하는 구조체")
   property (success) {
     type (success)
+    description ("성공 실패 유무")
   }
   property (messages) {
     type (messages)
+    description ("상태 메시지 (상단)")
     max (Many)
   }
   property (messageTitle) {
     type (messageTitle)
+    description ("상태 메시지 (하단)")
     max (Many)
   }
 }

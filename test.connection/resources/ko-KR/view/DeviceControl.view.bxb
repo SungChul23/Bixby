@@ -9,7 +9,7 @@ result-view {
     else {
       if (value(controlResult.success)) {
         template ("✅ 플러그 제어가 성공했어요 ✅") {
-          speech ("#{value(controlResult.statusMessage)}")
+          speech ("#{value(controlResult.statusMessage)}:D")
         }
       }
       else {
@@ -43,10 +43,16 @@ result-view {
     }
   }
   conversation-drivers {
-    if (controlResult.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요.") {
+    if (controlResult.statusMessage == "로그인이 필요합니다. 먼저 로그인해 주세요." ||
+      controlResult.statusMessage == "해당 기기가 존재하지 않아요.") {
       conversation-driver {
-        template ("깜빡에서 세션 유지!") {
+        template ("🔓 깜빡에서 로그인!") {
           speech ("세션을 유지합니다.")
+        }
+      }
+      conversation-driver {
+        template ("📱 깜빡에서 앱 열기!") {
+          speech ("깜빡 앱을 실행합니다.")
         }
       }
     }

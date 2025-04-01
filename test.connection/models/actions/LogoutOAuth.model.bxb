@@ -5,7 +5,7 @@ action (LogoutOAuth) {
   collect {
     input (userSession) {
       type (userSession)
-      min (Required)
+      min (Optional)
     }
   }
 

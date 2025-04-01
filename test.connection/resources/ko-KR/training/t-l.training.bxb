@@ -2,3 +2,7 @@ train (t-l6tp2kldbuuflr2f5fpwj0wae) {
   utterance ("[g:CheckPlugStatus] 깜빡에서 (전자레인지)[v:ApplianceName:eb8fd0a2d8c5f32c06eewp] 꺼저있어?")
   last-modified (1743331072733)
 }
+train (t-l2fw9ha701g76g9y7rz1tcark) {
+  utterance ([g:LoginOAuth] 깜빡에서 로그인!)
+  last-modified (1743507967714)
+}

@@ -20,7 +20,7 @@ structure (DeviceControlResult) {
   }
   property (success) {
     type (success)
-    description (플러그 성공 유무)
+    description ("플러그 성공 유무")
     min (Required)
     max (One)
   }

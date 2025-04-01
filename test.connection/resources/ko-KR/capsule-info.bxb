@@ -8,7 +8,7 @@ capsule-info {
     alias (감빡)
     alias (감박)
   }
-  icon-asset (images/icons/SmartHome.png) //200 200
+  icon-asset (/images/icons/blink.png) //200 200
   search-keywords { // 사용자가 어떻게 캡슐을 찾을 것인가
     keyword (스마트 홈)
     keyword (Iot 플러그)
