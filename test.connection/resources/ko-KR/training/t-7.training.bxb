@@ -1,6 +1,6 @@
 train (t-7p0b5b67qa34dgy6ml1m1cv3q) {
-  utterance ("[g:DeviceControl] 깜빡에서 (동균 플러그)[v:ApplianceName:s87d6b37c485d47104vdkb] (키자)[v:ActionType:on]")
-  last-modified (1743330348173)
+  utterance ("[g:DeviceControl] (동균 플러그)[v:ApplianceName:s87d6b37c485d47104vdkb] (키자)[v:ActionType:on]")
+  last-modified (1743392093125)
 }
 train (t-7pn6d6nvdw7d3rkr9a5ajgjpl) {
   utterance ("[g:DeviceControl] 깜빡에서 (드라이기)[v:ApplianceName:eb5926ea2e2cc6a3a1hhch] (꺼볼래)[v:ActionType:off]?")
@@ -13,4 +13,8 @@ train (t-7p1g82ex4gmankvdeovkvxani) {
 train (t-72kuo6jac2sa0nhndda8r1hpe) {
   utterance ([g:LoginOAuth] 깜빡에서 로그인 할까?)
   last-modified (1743331526796)
+}
+train (t-75u0akvh5qui2k9b6get2daw0) {
+  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 시작해줘 지금")
+  last-modified (1743392824986)
 }

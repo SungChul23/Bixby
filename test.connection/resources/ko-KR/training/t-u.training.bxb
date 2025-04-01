@@ -1,8 +1,8 @@
-train (t-ublq1ujihrmyubwrer3pb2kpg) {
-  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 활성화해줘")
-  last-modified (1743331237011)
-}
 train (t-u0vcqlvb8ee4yh6xg7bo5bt2b) {
   utterance ("[g:DeviceControl] 깜빡에서 우리 집에 있는 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜줘)[v:ActionType:on]")
   last-modified (1743330340403)
+}
+train (t-u4qhtmdfwclh9udf6rdq23cdj) {
+  utterance ("[g:CheckPlugStatus] (밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1] 켜져 있어?")
+  last-modified (1743392024943)
 }

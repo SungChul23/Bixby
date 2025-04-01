@@ -2,17 +2,9 @@ train (t-r95b410i1zxvpqz21nns82d8p) {
   utterance ([g:GroupList] 깜빡에서 설정된 그룹 목록 확인해줘)
   last-modified (1743331158292)
 }
-train (t-rhz89out7fsj9qe6uvr3e74ni) {
-  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 작동해줘 지금")
-  last-modified (1743331243791)
-}
 train (t-rrln7e7q3orhgtiuu5o72pcty) {
-  utterance ("[g:CheckPlugStatus] 깜빡에서 (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있어?")
-  last-modified (1743330998030)
-}
-train (t-rbrwvw7uijtcofqnrm7uldrz7) {
-  utterance ("[g:CheckPlugStatus] 깜빡에서 (셋톱박스)[v:ApplianceName:eb7b2264d54895f402ppzp]가 켜져있는지 알려줄 수 있어?")
-  last-modified (1743331052361)
+  utterance ("[g:CheckPlugStatus] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있어?")
+  last-modified (1743392048346)
 }
 train (t-rlsgfpkc7j8fbk806zm7c1v5d) {
   utterance ([g:GroupList] 깜빡에서 무슨 그룹 있더라)

@@ -2,7 +2,3 @@ train (t-27495p0oqlzgkco7m5sb2buzf) {
   utterance ([g:GroupList] 깜빡에서 등록된 그룹 확인해줘)
   last-modified (1743331166583)
 }
-train (t-276c8atf8zzy1j3f7wuxiwcq4) {
-  utterance ([g:GroupList] 깜빡에서 내가 등록한 그룹 좀 알려줄래)
-  last-modified (1743331113149)
-}

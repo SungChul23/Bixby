@@ -2,3 +2,7 @@ train (t-65h4ghsx3iu6ejmd56i9xhghp) {
   utterance ([g:GroupList] 깜빡에서 그룹 보여줘)
   last-modified (1743331101611)
 }
+train (t-61ftrnz7w5wx9wksppsezkk7q) {
+  utterance ("[g:CheckPlugStatus] 깜빡에서 (셋톱박스)[v:ApplianceName:eb7b2264d54895f402ppzp] 상태 확인해줘")
+  last-modified (1743354254648)
+}

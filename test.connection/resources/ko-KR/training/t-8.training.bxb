@@ -2,7 +2,3 @@ train (t-8wmbqpwwg5z6kmhzv97t699au) {
   utterance ([g:GroupList] 깜빡에서 내가 만든 그룹 뭐 있어?)
   last-modified (1743331136443)
 }
-train (t-8bkrm763wom6u0td84v61bdfr) {
-  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 작동시켜줘 지금")
-  last-modified (1743331249166)
-}

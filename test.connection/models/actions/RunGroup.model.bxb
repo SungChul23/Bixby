@@ -1,17 +1,21 @@
 action (RunGroup) {
-  type (Constructor)
-  description ("사용자가 선택한 그룹을 실행하는 기능")
+  type (Search)
+  description ("사용자가 선택한 그룹을 실행하는 기능입니다.")
+
   collect {
     input (groupName) {
-      type (viv.core.Text) //빅스비 캡슐 공식 출시 이후 추가된 그룹이 있어도 viv.core.Text를 통해 그룹 별 제어 가능
-      min (Optional) 
+      type (viv.core.Text)  // 일반 텍스트 그룹명 입력
+      min (Required)
       description ("사용자가 실행할 그룹 이름")
-    }
-    input (userSession) { 
+    } 
+    
+
+    input (userSession) {
       type (userSession)
-      min (Optional)
-      description ("AWS서버에서 받은 가공된 토큰이 들어있는 userSession")
+      min (Optional)  // 세션이 없으면 로그인 유도 메시지 출력
+      description ("AWS 서버에서 받은 accessToken과 kakaoAccessToken이 담긴 사용자 세션")
     }
   }
+
   output (RunGroupResult)
 }

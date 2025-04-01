@@ -52,22 +52,22 @@ result-view {
     }
     else {
       conversation-driver {
-        template ("전기밥솥 켜줘") {
+        template ("깜빡에서 전기밥솥 켜줘") {
           speech ("전기밥솥을 ON 상태로 변경 되었습니다.")
         }
       }
       conversation-driver {
-        template ("컴퓨터 본체 켜줘") {
+        template ("깜빡에서 컴퓨터 본체 켜줘") {
           speech ("컴퓨터 본체가 ON 상태로 변경 되었습니다.")
         }
       }
       conversation-driver {
-        template ("드라이기 꺼줘") {
+        template ("깜빡에서 드라이기 꺼줘") {
           speech ("드라이기가 OFF 상태로 변경 되었습니다.")
         }
       }
       conversation-driver {
-        template ("모니터 꺼줘") {
+        template ("깜빡에서 모니터 꺼줘") {
           speech ("모니터가 ON 상태로 변경되었습니다.")
         }
       }

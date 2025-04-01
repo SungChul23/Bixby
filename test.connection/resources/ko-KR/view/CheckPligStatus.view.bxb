@@ -56,22 +56,22 @@ result-view {
     else
     if (plugStatus.name != null && plugStatus.power != null) {
       conversation-driver {
-        template ("컴퓨터 본체 켜져 있어?") {
+        template ("깜빡에서 컴퓨터 본체 켜져 있어?") {
           speech ("컴퓨터 본체 상태를 확인해 보세요.")
         }
       }
       conversation-driver {
-        template ("밥솥 켜져 있어?") {
+        template ("깜빡에서 밥솥 켜져 있어?") {
           speech ("밥솥 상태를 확인 해 보세요")
         }
       }
       conversation-driver {
-        template ("핸드폰 충전기 켜져 있어?") {
+        template ("깜빡에서 핸드폰 충전기 켜져 있어?") {
           speech ("핸드폰 충전기 상태를 확인 해 보세요.")
         }
       }
       conversation-driver {
-        template ("모니터 꺼져 있어?") {
+        template ("깜빡에서 모니터 꺼져 있어?") {
           speech ("모니터 상태를 확인 해 보세요")
         }
       }

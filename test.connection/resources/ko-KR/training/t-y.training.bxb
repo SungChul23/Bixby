@@ -1,12 +1,8 @@
 train (t-yaiv8gq7xcfiwlb3ej29myznl) {
-  utterance ("[g:DeviceControl] 깜빡에서 (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] (가동시켜줘)[v:ActionType:on]")
-  last-modified (1743330806743)
+  utterance ("[g:DeviceControl] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] (가동시켜줘)[v:ActionType:on]")
+  last-modified (1743392114757)
 }
 train (t-ya4r1f2o1h2bjijyg1w34aoft) {
-  utterance ("[g:DeviceControl] 깜빡에서 (준섭 플러그)[v:ApplianceName:s8591ba1f394fda564m30o] (켜볼래)[v:ActionType:on]?")
-  last-modified (1743330795965)
-}
-train (t-y3mo0dklzyjbsnj97lu77ykfg) {
-  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 실행 시켜줘")
-  last-modified (1743331209754)
+  utterance ("[g:DeviceControl] (준섭 플러그)[v:ApplianceName:s8591ba1f394fda564m30o] (켜볼래)[v:ActionType:on]?")
+  last-modified (1743392120927)
 }

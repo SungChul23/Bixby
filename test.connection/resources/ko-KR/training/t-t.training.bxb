@@ -2,3 +2,11 @@ train (t-tvc7yufi3p6ax5wa22vfttwfq) {
   utterance ("[g:DeviceControl] 깜빡에서 (컴퓨터본체)[v:ApplianceName:eb5607bd7dcddce97bsmno] 좀 (가동시켜)[v:ActionType:on] 줄래?")
   last-modified (1743330915652)
 }
+train (t-tlnjgq63bzq3pdzlh5pb0to9e) {
+  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 활성화해줘")
+  last-modified (1743392796699)
+}
+train (t-t28sfbxezerpolapnix8ldpdl) {
+  utterance ("[g:RunGroup] 깜빡에서 (퇴근 그룹)[v:viv.core.Text] 시작!")
+  last-modified (1743395682747)
+}

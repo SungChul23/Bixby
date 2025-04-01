@@ -2,7 +2,3 @@ train (t-bvbvyfac3ufnf4ahgn2wzrtb6) {
   utterance ("[g:DeviceControl] 깜빡에서 (컴퓨터모니터)[v:ApplianceName:ebaa3d69095c0f9048iipj] (꺼줘)[v:ActionType:off]")
   last-modified (1743330863392)
 }
-train (t-b8pjqkilzv6ran4i8r21vbz47) {
-  utterance ("[g:RunGroup] 깜빡에서 (퇴근 그룹)[v:viv.core.Text] 시작!")
-  last-modified (1743332129799)
-}

@@ -2,3 +2,7 @@ train (t-1tw26li0zfe45dvq08xz6t5g9) {
   utterance ([g:OpenAppAction] 깜빡에서 앱 열기!)
   last-modified (1743330272109)
 }
+train (t-1remuslhshyfuckp7obpzbztf) {
+  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 활성화 하자")
+  last-modified (1743394493703)
+}

@@ -1,7 +1,3 @@
-train (t-js57k116na1gp5pwey2q9ivh3) {
-  utterance ("[g:RunGroup] 깜빡에서 (출근 그룹)[v:viv.core.Text] 시작!")
-  last-modified (1743332044617)
-}
 train (t-jkj2x6uvm7jo7u4cyvs8jyd1o) {
   utterance ([g:LogoutOAuth] 깜빡에서 로그아웃)
   last-modified (1743333291157)

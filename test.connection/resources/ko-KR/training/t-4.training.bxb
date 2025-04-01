@@ -3,6 +3,6 @@ train (t-4g28mz8xcyrbt2d9dbjam9ezc) {
   last-modified (1743331130061)
 }
 train (t-42ilyx26rzlh6txlcx783fze2) {
-  utterance ("[g:CheckPlugStatus] 깜빡에서 (성철 동방 플러그)[v:ApplianceName:eb0bf86fb8c2b3d20fwq6m] 상태 확인해봐")
-  last-modified (1743330967567)
+  utterance ("[g:CheckPlugStatus] (성철 동방 플러그)[v:ApplianceName:eb0bf86fb8c2b3d20fwq6m] 상태 확인해봐")
+  last-modified (1743392076689)
 }

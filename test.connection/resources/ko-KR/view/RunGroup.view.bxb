@@ -1,6 +1,5 @@
 result-view {
   match: RunGroupResult (groupData)
-
   message {
     if (value(groupData.success)) {
       template ("#{value(groupData.groupName)}의 실행 결과입니다.") {
@@ -13,7 +12,6 @@ result-view {
       }
     }
   }
-
   render {
     layout {
       section {
@@ -38,12 +36,16 @@ result-view {
       }
     }
   }
-
   conversation-drivers {
     if (!value(groupData.success)) {
       conversation-driver {
         template ("깜빡에서 세션 유지!") {
           speech ("세션을 유지합니다.")
+        }
+      }
+      conversation-driver {
+        template ("깜빡에서 앱 열기!") {
+          speech ("깜빡 앱을 실행합니다.")
         }
       }
     }

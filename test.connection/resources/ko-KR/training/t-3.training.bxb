@@ -1,16 +1,8 @@
-train (t-3fheo044k271kl5mttpv38js1) {
-  utterance ("[g:CheckPlugStatus] 깜빡에서 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow]가 꽃힌 플러그 상태 알려줘")
-  last-modified (1743331081835)
-}
-train (t-3gkpqrghnth91w09cpwz8zklw) {
-  utterance ("[g:CheckPlugStatus] 깜빡에서 내가 집에 나올때 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj]을 키고왔나 끄고 왔나")
-  last-modified (1743331008895)
-}
-train (t-3l3lcoesu9cvwnj9reh5e214n) {
-  utterance ("[g:RunGroup] 깜빡에서 (테스트 그룹)[v:viv.core.Text] 시작해줘")
-  last-modified (1743331198130)
-}
 train (t-389fwp7xdx38ke2riyo3ubvuf) {
   utterance ([g:LoginOAuth] 깜빡에서 로그인 하자)
   last-modified (1743331553605)
+}
+train (t-30qvlvvmaqxabuffs8ihifrvc) {
+  utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 실행해줘")
+  last-modified (1743392772537)
 }

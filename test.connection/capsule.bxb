@@ -1,7 +1,7 @@
  capsule {
   id (smarthomecontrolusingbixby.blink)
   format (3) // 캡슐 형식 버전 (3 또는 3.0 사용)
-  version (1.0.0) // 캡슐의 버전
+  version (1.2.0) // 캡슐의 버전
   runtime-version (9) {
     js-runtime-version (2)
   }

@@ -2,3 +2,7 @@ train (t-f6u6q9hswmvtt7t1m4eg5vjfc) {
   utterance ([g:GroupList] 깜빡에서 현재 등록된 그룹 보여줘)
   last-modified (1743331172618)
 }
+train (t-fag2w60ks1f54nbnhxz89qbo2) {
+  utterance ("[g:RunGroup] 깜빡에서 (출근 그룹)[v:viv.core.Text] 시작!")
+  last-modified (1743395261029)
+}
