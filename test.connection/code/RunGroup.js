@@ -43,7 +43,8 @@ export default function RunGroup({ groupName, userSession }) {
     if (!groupList || groupList.length === 0) {
       return {
         success: false,
-        messages: [" 현재 등록된 그룹이 없습니다.", "앱에서 그룹을 먼저 생성해 주세요."]
+        messages: "그룹 리스트가 비어있어 기능을 수행 할 수 없어요!",
+        statusMessage : "📱 앱에서 그룹을 먼저 생성해 주세요 📱"
       };
     }
 
@@ -57,7 +58,7 @@ export default function RunGroup({ groupName, userSession }) {
       console.error(`🚨 [오류] 그룹을 찾을 수 없음: ${groupName}`);
       return {
         success: false,
-        messages: [` "${groupName}" 을 찾을 수 없습니다.`, "정확한 그룹명을 말해주세요!"]
+        messages: [` "${groupName}" 을 찾을 수 없습니다. `, "정확한 그룹명을 말해주세요!"]
       };
     }
 

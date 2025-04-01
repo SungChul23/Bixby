@@ -2,20 +2,25 @@ structure (RunGroupResult) {
   description ("그룹 실행 결과 메시지만 포함하는 구조체")
   property (messages) {
     type (messages) //  음성 출력용
-    description ("그룹 실행 결과 메시지")
+    description ("그룹 실행 결과 메시지(상단)")
     min (Required)
     max (Many)
   }
   property (success) {
     type (success) //  음성 출력용
-    description ("그룹 실행 결과 메시지")
+    description ("성공/실패 유무")
     min (Required)
     max (One)
   }
   property (groupName) {
     type (groupName) //  음성 출력용
-    description ("그룹 실행 결과 메시지")
+    description ("그룹 이름 출력")
     min (Optional)
     max (One)
+  }
+  property (statusMessage){
+    type (statusMessage)
+    description ("그룹 실행 결과 메시지(하단)")
+
   }
 }

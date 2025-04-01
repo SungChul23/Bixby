@@ -2,3 +2,7 @@ train (t-04txbswk94u7m4oslvcrhddq2) {
   utterance ("[g:DeviceControl] 깜빡에서 날씨가 너무 더운거 같아 (에어컨)[v:ApplianceName:ebf3b877b6c2a593eefygj] (켜 줘)[v:ActionType:on]")
   last-modified (1743330332552)
 }
+train (t-0m6zimz5ctadai7kizqxpm3l1) {
+  utterance ("[g:DeviceControl] 깜빡에서 (전자레인지)[v:ApplianceName:eb8fd0a2d8c5f32c06eewp] (켜볼까)[v:ActionType:on]")
+  last-modified (1743519594047)
+}

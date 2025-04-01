@@ -6,3 +6,7 @@ train (t-otqrhc8vda0pjcrf6e7cei2fk) {
   utterance ("[g:DeviceControl] 깜빡에서 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (꺼)[v:ActionType:off]")
   last-modified (1743330825919)
 }
+train (t-o4wvfyo4ox8vpu1kutbbvun7w) {
+  utterance ("[g:DeviceControl] 깜빡에서 (핸드폰 충전기)[v:ApplianceName:eb93422b93d4779663cltg] (꺼줄 수 있어)[v:ActionType:off]?")
+  last-modified (1743519268807)
+}

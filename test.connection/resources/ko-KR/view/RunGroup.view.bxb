@@ -1,5 +1,6 @@
 result-view {
   match: RunGroupResult (groupData)
+
   message {
     if (value(groupData.success)) {
       template ("#{value(groupData.groupName)}의 실행 결과입니다.") {
@@ -12,10 +13,20 @@ result-view {
       }
     }
   }
+
   render {
     layout {
       section {
         content {
+          // ❗ 그룹이 없을 경우 안내 메시지 표시
+          if (value(groupData.statusMessage) != null) {
+            paragraph {
+              style (Title_M)
+              value ("#{value(groupData.statusMessage)}")
+            }
+          }
+
+          // ✅ 실행 성공 시 결과 메시지 출력
           if (value(groupData.success)) {
             for-each (groupData.messages) {
               as (messageItem) {
@@ -36,6 +47,7 @@ result-view {
       }
     }
   }
+
   conversation-drivers {
     if (!value(groupData.success)) {
       conversation-driver {

@@ -18,3 +18,7 @@ train (t-75u0akvh5qui2k9b6get2daw0) {
   utterance ("[g:RunGroup] (테스트 그룹)[v:viv.core.Text] 시작해줘 지금")
   last-modified (1743392824986)
 }
+train (t-7q9hv94t9uvlv65f2ouxyhykn) {
+  utterance ("[g:DeviceControl] 깜빡에서 (셋톱박스)[v:ApplianceName:eb7b2264d54895f402ppzp] (꺼볼까)[v:ActionType:off]")
+  last-modified (1743519660765)
+}

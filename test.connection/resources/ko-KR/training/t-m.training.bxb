@@ -2,3 +2,7 @@ train (t-m4y3mcoijx2y14bmphhh5vpok) {
   utterance ("[g:DeviceControl] 깜빡에서 (전자레인지)[v:ApplianceName:eb8fd0a2d8c5f32c06eewp] (끄자)[v:ActionType:off]")
   last-modified (1743330856557)
 }
+train (t-mfj1j80ar4oavjr1zww3r55jb) {
+  utterance ("[g:DeviceControl] 깜빡에서 (드라이기)[v:ApplianceName:eb5926ea2e2cc6a3a1hhch] (켜줄 수 있어)[v:ActionType:on]?")
+  last-modified (1743519391654)
+}
