@@ -1,4 +1,4 @@
 train (t-sqgeqbi2sxh2tdlkd3d2xh297) {
-  utterance ("[g:CheckPlugStatus] (준섭 플러그)[v:ApplianceName:s8591ba1f394fda564m30o] 꺼져있나?")
-  last-modified (1743392041203)
+  utterance ("[g:CheckPlugStatus] (선풍기)[v:ApplianceName:s8591ba1f394fda564m30o] 꺼져있나?")
+  last-modified (1745557448583)
 }

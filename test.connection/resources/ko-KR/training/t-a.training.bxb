@@ -1,10 +1,10 @@
 train (t-a9cq77uogxh9au80f3mpqg0hg) {
-  utterance ("[g:DeviceControl] (준영 플러그)[v:ApplianceName:s846a3d0d42d10f4f02q66] (작동)[v:ActionType:on]시켜줘")
-  last-modified (1743392104895)
+  utterance ("[g:DeviceControl] (가습기)[v:ApplianceName:s846a3d0d42d10f4f02q66] (작동)[v:ActionType:on]시켜줘")
+  last-modified (1745557287090)
 }
 train (t-aznsd7rzhx3pmr9ktho5w5qko) {
-  utterance ("[g:DeviceControl] 깜빡에서 (TV)[v:ApplianceName:eb57d28ce6e3827541yzow] (꺼볼래)[v:ActionType:off]? 이제 잘거야")
-  last-modified (1743330316025)
+  utterance ("[g:DeviceControl] 깜빡에서 (TV)[v:ApplianceName:s81d3e359a4cb02371elir] (꺼볼래)[v:ActionType:off]? 이제 잘거야")
+  last-modified (1745559483865)
 }
 train (t-a312bpyg4sq5krjav5fnwt88u) {
   utterance ([g:LoginOAuth] 깜빡에서 로그인하고 싶어)

@@ -7,8 +7,8 @@ train (t-7pn6d6nvdw7d3rkr9a5ajgjpl) {
   last-modified (1743330882193)
 }
 train (t-7p1g82ex4gmankvdeovkvxani) {
-  utterance ("[g:DeviceControl] 깜빡에서 (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] (멈춰)[v:ActionType:off]줄래?")
-  last-modified (1743330873264)
+  utterance ("[g:DeviceControl] 깜빡에서 (핸드폰충전기)[v:ApplianceName:s83b1896cc2d3e115fa9ci] (멈춰)[v:ActionType:off]줄래?")
+  last-modified (1745558260676)
 }
 train (t-72kuo6jac2sa0nhndda8r1hpe) {
   utterance ([g:LoginOAuth] 깜빡에서 로그인 할까?)

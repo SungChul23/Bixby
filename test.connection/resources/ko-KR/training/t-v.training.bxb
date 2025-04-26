@@ -7,8 +7,8 @@ train (t-vct786vc2ehq8htn57pf4wt1r) {
   last-modified (1743392131987)
 }
 train (t-vvb7fpdbr5vz0sna54t4jty0y) {
-  utterance ("[g:DeviceControl] 내 방에 있는 (핸드폰충전기)[v:ApplianceName:eb93422b93d4779663cltg] 좀 (꺼줄래)[v:ActionType:off]?")
-  last-modified (1743392163188)
+  utterance ("[g:DeviceControl] 내 방에 있는 (핸드폰충전기)[v:ApplianceName:s83b1896cc2d3e115fa9ci] 좀 (꺼줄래)[v:ActionType:off]?")
+  last-modified (1745558249483)
 }
 train (t-v006mpk58dkcpocimo1aj1czl) {
   utterance ("[g:CheckPlugStatus] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있니")

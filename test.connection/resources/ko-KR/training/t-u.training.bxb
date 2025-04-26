@@ -1,6 +1,6 @@
 train (t-u0vcqlvb8ee4yh6xg7bo5bt2b) {
-  utterance ("[g:DeviceControl] 깜빡에서 우리 집에 있는 (티비)[v:ApplianceName:eb57d28ce6e3827541yzow] (켜줘)[v:ActionType:on]")
-  last-modified (1743330340403)
+  utterance ("[g:DeviceControl] 깜빡에서 우리 집에 있는 (티비)[v:ApplianceName:s81d3e359a4cb02371elir] (켜줘)[v:ActionType:on]")
+  last-modified (1745559478136)
 }
 train (t-u4qhtmdfwclh9udf6rdq23cdj) {
   utterance ("[g:CheckPlugStatus] (밥솥)[v:ApplianceName:eb35d8d2cda1521998hok1] 켜져 있어?")
