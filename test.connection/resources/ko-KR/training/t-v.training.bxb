@@ -11,6 +11,6 @@ train (t-vvb7fpdbr5vz0sna54t4jty0y) {
   last-modified (1745558249483)
 }
 train (t-v006mpk58dkcpocimo1aj1czl) {
-  utterance ("[g:CheckPlugStatus] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있니")
-  last-modified (1743392057540)
+  utterance ("[g:CheckPlugStatus] (조명)[v:ApplianceName:s821389ff509601c597d5n] 켜져있니")
+  last-modified (1748166699909)
 }

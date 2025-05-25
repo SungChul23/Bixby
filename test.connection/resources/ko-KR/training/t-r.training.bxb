@@ -3,8 +3,8 @@ train (t-r95b410i1zxvpqz21nns82d8p) {
   last-modified (1743331158292)
 }
 train (t-rrln7e7q3orhgtiuu5o72pcty) {
-  utterance ("[g:CheckPlugStatus] (성철 플러그)[v:ApplianceName:s821389ff509601c597d5n] 켜져있어?")
-  last-modified (1743392048346)
+  utterance ("[g:CheckPlugStatus] (무드등)[v:ApplianceName:s821389ff509601c597d5n] 켜져있어?")
+  last-modified (1748166714030)
 }
 train (t-rlsgfpkc7j8fbk806zm7c1v5d) {
   utterance ([g:GroupList] 깜빡에서 무슨 그룹 있더라)
