@@ -5,21 +5,21 @@ enum (ApplianceName) {
   symbol (ebf3b877b6c2a593eefygj) //에어컨
   symbol (eb8fd0a2d8c5f32c06eewp) //전자레인지
   symbol (eb35d8d2cda1521998hok1) //전기밥솥
-  symbol (ebaa3d69095c0f9048iipj) //컴퓨터모니터
+  symbol (s86a16b40c1b18b815pdsl) //컴퓨터모니터 -> 벡스코용 모니터 수정
   symbol (eb5607bd7dcddce97bsmno) //컴퓨터 본체
   symbol (s81d3e359a4cb02371elir) //티비
   symbol (eb7b2264d54895f402ppzp) //셋톱박스
 /////////////////////////////////////
 
 
-  symbol (s846a3d0d42d10f4f02q66) // 준영개발용 -> 가습기
+  symbol (s880a574aaa607d4a6x9yu) // 준영개발용 -> 가습기 -> 벡스코용 가습기 수정
 
-  symbol (s821389ff509601c597d5n) // main10 플러그 및 성철개발용2
+  symbol (s87f706acb259357cd9ar5) // main10 플러그 및 성철개발용2 -> 벡스코용 전등 수정
 
   symbol (s87d6b37c485d47104vdkb) // 동균개발용 -> 스태드
   
   symbol (eb0bf86fb8c2b3d20fwq6m) // 성철개발용(동방에 있음)
 
-  symbol (s8591ba1f394fda564m30o) //준섭게발용 -> 선풍기
+  symbol (s8e025f8a0e21780c8fyxw) //준섭게발용 -> 선풍기 -> 벡스코용 선풍기 수정
 
 }

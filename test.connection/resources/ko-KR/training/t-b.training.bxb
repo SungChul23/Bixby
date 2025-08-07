@@ -1,4 +1,4 @@
 train (t-bvbvyfac3ufnf4ahgn2wzrtb6) {
-  utterance ("[g:DeviceControl] 깜빡에서 (컴퓨터모니터)[v:ApplianceName:ebaa3d69095c0f9048iipj] (꺼줘)[v:ActionType:off]")
-  last-modified (1743330863392)
+  utterance ("[g:DeviceControl] 깜빡에서 (모니터)[v:ApplianceName:s86a16b40c1b18b815pdsl] (꺼줘)[v:ActionType:off]")
+  last-modified (1754546502121)
 }

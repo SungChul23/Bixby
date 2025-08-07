@@ -1,8 +1,4 @@
-train (t-yaiv8gq7xcfiwlb3ej29myznl) {
-  utterance ("[g:DeviceControl] (전등)[v:ApplianceName:s821389ff509601c597d5n] (가동시켜줘)[v:ActionType:on]")
-  last-modified (1748166685876)
-}
 train (t-ya4r1f2o1h2bjijyg1w34aoft) {
-  utterance ("[g:DeviceControl] (선풍기)[v:ApplianceName:s8591ba1f394fda564m30o] (켜볼래)[v:ActionType:on]?")
-  last-modified (1745557438659)
+  utterance ("[g:DeviceControl] (선풍기)[v:ApplianceName:s8e025f8a0e21780c8fyxw] (켜볼래)[v:ActionType:on]?")
+  last-modified (1754546574174)
 }
