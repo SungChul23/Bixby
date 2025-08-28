@@ -192,7 +192,6 @@ smarthomecontrolusingbixby.blink/
 │
 ├── models/ # Bixby 모델 정의
 │ ├── actions/ # 액션 정의
-│ │ ├── CheckPlugStatus.model.bxb
 │ │ ├── DeviceControl.model.bxb
 │ │ ├── GroupList.model.bxb
 │ │ ├── LoginOAuth.model.bxb
@@ -207,27 +206,23 @@ smarthomecontrolusingbixby.blink/
 │ │ ├── deviceName.model.bxb
 │ │ ├── groupName.model.bxb
 │ │ ├── kakaoAccessToken.model.bxb
-│ │ ├── messageTitle.model.bxb
-│ │ ├── messages.model.bxb
 │ │ ├── nickname.model.bxb
-│ │ └── statusMessage.model.bxb
+│ │ ├── statusMessage.model.bxb
+│ │ └── ...
 │ │
 │ └── result/ # 결과 개념 정의
-│ ├── CheckPlugStatusResult.model.bxb
 │ ├── DeviceControlResult.model.bxb
 │ ├── GroupListResult.model.bxb
 │ ├── LoginResponse.model.bxb
 │ ├── LogoutResult.model.bxb
-│ ├── OpenApp.model.bxb
 │ ├── RunGroupResult.model.bxb
-│ └── userSession.model.bxb
+│ └── ...
 │
 ├── resources/ # 리소스 및 UI 뷰
 │ ├── base/endpoints.bxb
 │ ├── ko-KR/
 │ │ ├── training/ # 학습 데이터
 │ │ └── view/ # 사용자 뷰 정의
-│ │ ├── CheckPlugStatus.view.bxb
 │ │ ├── DeviceControl.view.bxb
 │ │ ├── GroupList.view.bxb
 │ │ ├── LoginOAuth.view.bxb
