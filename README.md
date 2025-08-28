@@ -13,7 +13,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 본 프로젝트에서는 빅스비 캡슐을 활용하여 IoT 플러그를 자연어 기반 음성 명령으로 제어할 수 있도록 구현하였습니다.  
 
 <p align="center">
-  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/logobixby.png" width="250">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/logobixby.png" width="400">
 </p>
 
 ---
