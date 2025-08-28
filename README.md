@@ -69,6 +69,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 6. 빅스비 서버가 사용자에게 토큰 전달 → 인증 완료  
 
 ---
+
 ## ⚙️ 7. 주요 기능
 
 ### 7-1) 기본 기능
@@ -81,7 +82,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 
 | 로그인 | 로그아웃 |
 |--------|----------|
-| ![Login](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/login.png) | ![Logout](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/logout.png) |
+| ![Login](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/login.jpg) | ![Logout](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/logout.jpg) |
 
 ---
 
@@ -93,7 +94,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 
 | 기기 제어 | 그룹 제어 |
 |-----------|-----------|
-| ![Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/control.png) | ![Group Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/listcontrol.png) |
+| ![Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/control.jpg) | ![Group Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/listcontrol.jpg) |
 
 ---
 
@@ -103,7 +104,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
   - "[기기명] 전원 들어왔어?"  
   - "[기기명] 상태 알려줘"  
 
-![State](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/state.png)
+![State](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/state.jpg)
 
 ---
 
@@ -113,7 +114,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
   - "무슨 그룹 있어?"  
   - "동작 가능한 그룹 알려줘"  
 
-![List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/list.png)
+![List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/list.jpg)
 
 ---
 
@@ -123,7 +124,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
   - "깜빡 열어줘"  
   - "깜빡 앱 켜"  
 
-![MoveApp](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/moveapp.png)
+![MoveApp](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/moveapp.jpg)
 
 ---
 
@@ -135,7 +136,7 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
   - "[기기명] 꺼"  
   - "[기기명] 상태 알려줘"  
 
-![No Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nocontrol.png)
+![No Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nocontrol.jpg)
 
 ---
 
@@ -147,6 +148,6 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 
 | 리스트 없음 | 그룹 없음 |
 |-------------|-----------|
-| ![No List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.png) | ![No Group](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.png) |
+| ![No List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.jpg) | ![No Group](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.jpg) |
 
 
