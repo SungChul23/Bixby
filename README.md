@@ -1,9 +1,7 @@
 <p align="center">
   <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="1000">
 </p>
-# 🔌 깜빡 (Blink AI)
-> **"깜빡 잊고 켜둔 전기, 음성으로 제어해보자"**  
-IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트홈 에너지 관리 시스템
+
 
 ---
 
