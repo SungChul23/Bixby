@@ -3,7 +3,7 @@
 IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트홈 에너지 관리 시스템  
 
 <p align="center">
-  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="400">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="1000">
 </p>
 
 ---
@@ -180,3 +180,5 @@ MQTT 프로토콜을 기반으로, **App / Bixby / IoT 서버 / AI 서버 / 데�
 | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.jpg" width="300"> | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.jpg" width="300"> |
 
 ---
+
+
