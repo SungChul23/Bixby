@@ -1,57 +1,54 @@
-<p align="center">
-  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="1000">
-</p>
+# 🔌 깜빡 (Blink AI)
+> **"깜빡 잊고 켜둔 전기, 음성으로 제어해보자"**  
+IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트홈 에너지 관리 시스템  
 
+<p align="center">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="400">
+</p>
 
 ---
 
 ## 🧠 1. 빅스비란 무엇인가?
+빅스비(Bixby)는 삼성전자가 개발한 **AI 음성 비서 플랫폼**으로, 한국어 인식 성능이 우수하고 Android 기반 기기와의 호환성이 뛰어납니다.  
+본 프로젝트에서는 빅스비 캡슐을 활용하여 IoT 플러그를 자연어 기반 음성 명령으로 제어할 수 있도록 구현하였습니다.  
 
-<img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/logobixby.png" width="200" align="right">
-
-빅스비(Bixby)는 삼성전자가 개발한 **AI 음성 비서 플랫폼**으로, 단순한 명령 수행을 넘어 **자연어 이해(NLU)** 기술을 기반으로 사용자의 의도를 파악하고 맞춤형 응답을 제공합니다.  
-특히 한국어 음성 인식 성능이 뛰어나며, 스마트폰을 비롯해 가전, 웨어러블 등 다양한 삼성 디바이스와의 높은 호환성을 자랑합니다.  
-
-본 프로젝트에서는 이러한 빅스비의 강점을 활용하여 IoT 플러그와 연결되는 **빅스비 캡슐(Bixby Capsule)**을 제작하였고, 사용자가 “전등 꺼줄래?”, “컴퓨터 켜” 같은 **자연어 발화**를 통해 직관적으로 기기를 제어할 수 있도록 구현했습니다.  
-즉, 빅스비는 단순한 음성 입력 수단을 넘어, 사용자의 명령을 구조화하여 실제 기기 제어와 서비스 로직으로 연결하는 **중앙 허브 역할**을 수행합니다.  
+<p align="center">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/logobixby.png" width="250">
+</p>
 
 ---
 
 ## 🎯 2. 빅스비를 적용한 이유
-스마트홈 환경에서는 리모컨, 앱 UI, 물리적 스위치 등 다양한 제어 수단이 존재하지만, **1인 가구나 바쁜 현대인**에게는 손이 자유롭지 않을 때 쉽게 접근할 수 있는 방법이 필요합니다.  
-이를 검증하기 위해 진행한 사전 설문조사에서는, 응답자의 다수가 “음성 명령 기반의 제어 기능이 가장 직관적이고 편리하다”라고 답변했습니다.  
+사용자 중심의 스마트홈 시스템을 구현하기 위해 사전 설문조사를 진행한 결과, 많은 사용자들이 **음성 명령 기반의 직관적인 제어**를 선호하는 것으로 나타났습니다.  
+이에 따라 본 프로젝트는 한국어 인식 성능과 호환성이 뛰어난 빅스비를 채택하여, **자연어 기반의 음성 제어 환경**을 제공하였습니다.  
 
-이에 따라 본 프로젝트에서는 여러 음성 플랫폼(Alexa, Google Assistant 등)을 비교 검토했으며,  
-- 한국어 인식 성능  
-- 안드로이드 기반 기기와의 높은 호환성  
-- 개발 환경의 유연성  
-
-을 고려하여 **빅스비를 최종 선택**했습니다.  
-덕분에 사용자는 버튼 클릭이나 별도의 앱 실행 없이 **자연어 발화만으로 기기 상태 확인, 제어, 그룹 관리** 등을 수행할 수 있게 되었으며, 이는 접근성과 사용자 경험(UX)을 크게 향상시켰습니다.  
+특히, 1인 가구 및 스마트홈 초기 사용자들에게 **손쉬운 접근성과 직관적인 UX**를 제공한다는 점에서 빅스비는 효과적인 선택이었습니다.  
 
 ---
 
 ## 🏗️ 3. 시스템 아키텍처
-다음 그림은 MQTT 프로토콜 기반의 **깜빡 프로젝트 전체 아키텍처**를 나타낸 것입니다.  
+MQTT 프로토콜을 기반으로, **App / Bixby / IoT 서버 / AI 서버 / 데이터베이스** 간의 흐름을 설계하였습니다.  
+- 클라이언트(App, Bixby) → 서버 → IoT 제어 → AI 학습 모델 → DB 저장  
+- 각 모듈은 인증, 데이터 전송, 제어 및 응답 과정을 수행하며, 주기적 전력 사용 데이터를 AI 모델로 학습시켜 **예측·알림 기능**을 제공합니다.  
 
-![System Architecture](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/blinkarchitecture.png)
+<p align="center">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/blinkarchitecture.png" width="650">
+</p>
 
 ---
 
 ## 🧩 4. 빅스비 캡슐 구조
-사용자가 “선풍기 켜줄래”라고 말하면, 빅스비는 이를 그대로 실행하지 않습니다.  
-대신 발화를 **의미 단위로 구조화(Parsing)** 하여,  
-1. 제어 대상 기기명 *(applianceName)*  
-2. 동작 유형 *(actionType)*  
-3. 사용자 인증 정보 *(userSession)*  
-의 세 가지 입력 요소로 나눕니다.  
+사용자의 발화 예: **“선풍기 켜줄래”**  
+- 제어 대상 기기명 (applianceName)  
+- 동작 유형 (actionType)  
+- 사용자 인증 정보 (userSession)  
 
-이후 이 요소들은 `DeviceControl.model.bxb` 파일의 **Goal**(목표 단위)로 전달되고, 실제 동작은 `DeviceControl.js` 액션 코드에서 수행됩니다.  
-이 단계에서 API 호출 또는 내부 로직이 실행되어 기기가 제어되며, 처리 결과는 `DeviceControlResult`를 통해 사용자에게 **자연스러운 언어 피드백**으로 전달됩니다.  
+이 값들은 `DeviceControl.model.bxb` 모델 파일에 매핑되고, 이후 `DeviceControl.js` 액션 코드에서 API 호출 및 제어 로직이 실행됩니다.  
+최종 결과는 `DeviceControlResult`로 사용자에게 시각적·언어적 피드백을 제공합니다.  
 
-즉, 빅스비 캡슐은 **자연어 → 구조화된 파라미터 → 서비스 로직 실행 → 사용자 피드백**의 흐름을 담당하며, 사용자 발화를 실제 서비스 동작으로 연결하는 **중추적 역할**을 담당합니다.  
-
-![Bixby Capsule Flow](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbystructure.png)
+<p align="center">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbystructure.png" width="650">
+</p>
 
 ---
 
@@ -77,9 +74,11 @@
 ---
 
 ## 🔐 6. OAuth 기반 인증 절차
-로그인이 필요한 발화가 수행되면, 빅스비 캡슐은 서버와 연동하여 OAuth 2.0 기반 인증을 진행합니다.  
+로그인이 필요한 발화가 수행되면, 빅스비 캡슐은 서버와 연동하여 **OAuth 2.0 인증 절차**를 거칩니다.  
 
-![OAuth Flow](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyOauth.png)
+<p align="center">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyOauth.png" width="650">
+</p>
 
 1. 사용자 발화 전달  
 2. 빅스비 서버 검사  
@@ -87,6 +86,8 @@
 4. 빅스비 서버가 카카오 토큰을 AWS 서버용 내부 토큰으로 변환 요청  
 5. AWS 내부 로직에서 최종 서비스 토큰 생성  
 6. 빅스비 서버가 사용자에게 토큰 전달 → 인증 완료  
+
+이 과정은 **보안성과 연동성**을 동시에 보장합니다.  
 
 ---
 
@@ -178,67 +179,4 @@
 |-------------|-----------|
 | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.jpg" width="300"> | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.jpg" width="300"> |
 
-## 📂 8. 프로젝트 구조
-
-smarthomecontrolusingbixby.blink/
-├── code/ # JS 액션 코드
-│ ├── CheckPlugStatus.js
-│ ├── DeviceControl.js
-│ ├── GroupList.js
-│ ├── LoginOAuth.js
-│ ├── LogoutOAuth.js
-│ ├── OpenAppAction.js
-│ └── RunGroup.js
-│
-├── models/ # Bixby 모델 정의
-│ ├── actions/ # 액션 정의
-│ │ ├── DeviceControl.model.bxb
-│ │ ├── GroupList.model.bxb
-│ │ ├── LoginOAuth.model.bxb
-│ │ ├── LogoutOAuth.model.bxb
-│ │ ├── OpenAppAction.model.bxb
-│ │ └── RunGroup.model.bxb
-│ │
-│ ├── concepts/input/ # 입력 개념 정의
-│ │ ├── ActionType.model.bxb
-│ │ ├── ApplianceName.model.bxb
-│ │ ├── accessToken.model.bxb
-│ │ ├── deviceName.model.bxb
-│ │ ├── groupName.model.bxb
-│ │ ├── kakaoAccessToken.model.bxb
-│ │ ├── nickname.model.bxb
-│ │ ├── statusMessage.model.bxb
-│ │ └── ...
-│ │
-│ └── result/ # 결과 개념 정의
-│ ├── DeviceControlResult.model.bxb
-│ ├── GroupListResult.model.bxb
-│ ├── LoginResponse.model.bxb
-│ ├── LogoutResult.model.bxb
-│ ├── RunGroupResult.model.bxb
-│ └── ...
-│
-├── resources/ # 리소스 및 UI 뷰
-│ ├── base/endpoints.bxb
-│ ├── ko-KR/
-│ │ ├── training/ # 학습 데이터
-│ │ └── view/ # 사용자 뷰 정의
-│ │ ├── DeviceControl.view.bxb
-│ │ ├── GroupList.view.bxb
-│ │ ├── LoginOAuth.view.bxb
-│ │ ├── LogoutOAuth.view.bxb
-│ │ ├── RunGroup.view.bxb
-│ │ └── OpenAppAction.view.bxb
-│ │
-│ └── vocab/ # 어휘 사전
-│ ├── ActionType.vocab.bxb
-│ └── ApplianceName.vocab.bxb
-│
-├── authorization.bxb # 인증 관련 설정
-├── capsule.bxb # 캡슐 메타데이터
-├── capsule-info.bxb # 캡슐 정보
-├── blink.hints.bxb # 힌트(추천 발화)
-├── legal.bxb # 법적 문구
-├── README.md
-├── Training/ # 학습 관련 파일
-└── Training Evaluation/ # 학습 평가 관련 파일
+---
