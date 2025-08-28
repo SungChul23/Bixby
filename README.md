@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="600">
+  <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/mainlogo.png" width="1000">
 </p>
 # 🔌 깜빡 (Blink AI)
 > **"깜빡 잊고 켜둔 전기, 음성으로 제어해보자"**  
