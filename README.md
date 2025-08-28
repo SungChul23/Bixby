@@ -69,4 +69,84 @@ IoT 플러그 + AI 전력 예측 + 빅스비 음성 제어 기반의 스마트�
 6. 빅스비 서버가 사용자에게 토큰 전달 → 인증 완료  
 
 ---
+## ⚙️ 7. 주요 기능
+
+### 7-1) 기본 기능
+
+#### 🟢 로그인 / 로그아웃
+- 발화 예시  
+  - "로그인하자"  
+  - "로그인 해줘"  
+  - "로그아웃 할래"  
+
+| 로그인 | 로그아웃 |
+|--------|----------|
+| ![Login](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/login.png) | ![Logout](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/logout.png) |
+
+---
+
+#### 🔌 기기 제어 / 그룹 제어
+- 발화 예시  
+  - "[기기명] 켜"  
+  - "[기기명] 꺼줄래"  
+  - "[그룹명] 시작하자"  
+
+| 기기 제어 | 그룹 제어 |
+|-----------|-----------|
+| ![Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/control.png) | ![Group Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/listcontrol.png) |
+
+---
+
+#### 📡 기기 상태 확인
+- 발화 예시  
+  - "[기기명] 켜져있어?"  
+  - "[기기명] 전원 들어왔어?"  
+  - "[기기명] 상태 알려줘"  
+
+![State](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/state.png)
+
+---
+
+#### 📋 그룹 리스트 확인
+- 발화 예시  
+  - "그룹 리스트 보여줘"  
+  - "무슨 그룹 있어?"  
+  - "동작 가능한 그룹 알려줘"  
+
+![List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/list.png)
+
+---
+
+#### 📱 깜빡 앱 이동
+- 발화 예시  
+  - "깜빡 앱 실행"  
+  - "깜빡 열어줘"  
+  - "깜빡 앱 켜"  
+
+![MoveApp](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/moveapp.png)
+
+---
+
+### 7-2) 예외 상황 처리
+
+#### 🚫 플러그가 없을 때 (기기 제어 / 상태 확인)
+- 발화 예시  
+  - "[기기명] 켜"  
+  - "[기기명] 꺼"  
+  - "[기기명] 상태 알려줘"  
+
+![No Control](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nocontrol.png)
+
+---
+
+#### 🚫 등록된 리스트 및 그룹이 없을 때
+- 발화 예시  
+  - "그룹 리스트 보여줘"  
+  - "무슨 그룹 있어?"  
+  - "등록된 그룹 확인해줘"  
+
+| 리스트 없음 | 그룹 없음 |
+|-------------|-----------|
+| ![No List](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.png) | ![No Group](https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.png) |
+
 
