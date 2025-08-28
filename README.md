@@ -177,3 +177,73 @@
 | 리스트 없음 | 그룹 없음 |
 |-------------|-----------|
 | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nolist.jpg" width="300"> | <img src="https://blinkbixby.s3.ap-northeast-2.amazonaws.com/bixbyui/nogroup.jpg" width="300"> |
+
+## 📂 8. 프로젝트 구조
+
+smarthomecontrolusingbixby.blink/
+├── code/ # JS 액션 코드
+│ ├── CheckPlugStatus.js
+│ ├── DeviceControl.js
+│ ├── GroupList.js
+│ ├── LoginOAuth.js
+│ ├── LogoutOAuth.js
+│ ├── OpenAppAction.js
+│ └── RunGroup.js
+│
+├── models/ # Bixby 모델 정의
+│ ├── actions/ # 액션 정의
+│ │ ├── CheckPlugStatus.model.bxb
+│ │ ├── DeviceControl.model.bxb
+│ │ ├── GroupList.model.bxb
+│ │ ├── LoginOAuth.model.bxb
+│ │ ├── LogoutOAuth.model.bxb
+│ │ ├── OpenAppAction.model.bxb
+│ │ └── RunGroup.model.bxb
+│ │
+│ ├── concepts/input/ # 입력 개념 정의
+│ │ ├── ActionType.model.bxb
+│ │ ├── ApplianceName.model.bxb
+│ │ ├── accessToken.model.bxb
+│ │ ├── deviceName.model.bxb
+│ │ ├── groupName.model.bxb
+│ │ ├── kakaoAccessToken.model.bxb
+│ │ ├── messageTitle.model.bxb
+│ │ ├── messages.model.bxb
+│ │ ├── nickname.model.bxb
+│ │ └── statusMessage.model.bxb
+│ │
+│ └── result/ # 결과 개념 정의
+│ ├── CheckPlugStatusResult.model.bxb
+│ ├── DeviceControlResult.model.bxb
+│ ├── GroupListResult.model.bxb
+│ ├── LoginResponse.model.bxb
+│ ├── LogoutResult.model.bxb
+│ ├── OpenApp.model.bxb
+│ ├── RunGroupResult.model.bxb
+│ └── userSession.model.bxb
+│
+├── resources/ # 리소스 및 UI 뷰
+│ ├── base/endpoints.bxb
+│ ├── ko-KR/
+│ │ ├── training/ # 학습 데이터
+│ │ └── view/ # 사용자 뷰 정의
+│ │ ├── CheckPlugStatus.view.bxb
+│ │ ├── DeviceControl.view.bxb
+│ │ ├── GroupList.view.bxb
+│ │ ├── LoginOAuth.view.bxb
+│ │ ├── LogoutOAuth.view.bxb
+│ │ ├── RunGroup.view.bxb
+│ │ └── OpenAppAction.view.bxb
+│ │
+│ └── vocab/ # 어휘 사전
+│ ├── ActionType.vocab.bxb
+│ └── ApplianceName.vocab.bxb
+│
+├── authorization.bxb # 인증 관련 설정
+├── capsule.bxb # 캡슐 메타데이터
+├── capsule-info.bxb # 캡슐 정보
+├── blink.hints.bxb # 힌트(추천 발화)
+├── legal.bxb # 법적 문구
+├── README.md
+├── Training/ # 학습 관련 파일
+└── Training Evaluation/ # 학습 평가 관련 파일
